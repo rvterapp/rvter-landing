@@ -1,0 +1,53 @@
+/* RVTER v2.0 - Global Theme & CSS Variables */
+:root {
+  /* Brand Constants */
+  --rvter-primary: #2DA933;
+  --rvter-primary-hover: #25882A;
+  --rvter-primary-glow: rgba(45, 169, 51, 0.25);
+  
+  /* Status Colors */
+  --rvter-warning: #F59E0B;
+  --rvter-error: #EF4444;
+  --rvter-success: #10B981;
+  --rvter-info: #3B82F6;
+
+  /* Theme Defaults (Light Mode Oficial RVTER) */
+  --bg-primary: #F8FAFC;
+  --bg-surface: #FFFFFF;
+  --bg-surface-elevated: #FFFFFF;
+  --bg-card: #F1F5F9;
+  --border-color: #CBD5E1;
+  --border-light: #E2E8F0;
+  --text-primary: #0F172A;
+  --text-secondary: #334155;
+  --text-muted: #64748B;
+  --glass-bg: rgba(255, 255, 255, 0.90);
+  --glass-border: rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] {
+  --bg-primary: #F8FAFC;
+  --bg-surface: #FFFFFF;
+  --bg-surface-elevated: #FFFFFF;
+  --bg-card: #F1F5F9;
+  --border-color: #E2E8F0;
+  --border-light: #CBD5E1;
+  --text-primary: #0F172A;
+  --text-secondary: #64748B;
+  --text-muted: #94A3B8;
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(0, 0, 0, 0.06);
+}
+
+/* Glassmorphism Utility */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+}
+
+/* Brand Accent Glow */
+.glow-green {
+  box-shadow: 0 0 20px var(--rvter-primary-glow);
+}
