@@ -4,7 +4,7 @@ import { ShieldCheck } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-slate-50 border-t border-slate-200 text-slate-600 text-xs py-16">
+    <footer className="relative liquid-glass border-t border-white/60 text-slate-600 text-xs py-16 backdrop-blur-2xl">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
@@ -28,8 +28,6 @@ export const Footer: React.FC = () => {
                 <ShieldCheck className="w-4 h-4 text-[#2DA933]" />
                 Custodia C2P (PIN en Destino)
               </span>
-              <span>•</span>
-              <span className="font-medium">Tasa Oficial BCV</span>
             </div>
           </div>
 
@@ -37,24 +35,22 @@ export const Footer: React.FC = () => {
           <div className="space-y-3">
             <h4 className="font-bold text-[#0F172A] uppercase tracking-wider text-xs">Cómo Funciona</h4>
             <ul className="space-y-2">
-              <li><a href="#flujo-usuarios" className="hover:text-[#2DA933] transition-colors">Para Generadores de Carga</a></li>
+              <li><a href="#flujo-usuarios" className="hover:text-[#2DA933] transition-colors">Para Usuarios</a></li>
               <li><a href="#flujo-transportistas" className="hover:text-[#2DA933] transition-colors">Para Transportistas</a></li>
-              <li><a href="#maquinaria" className="hover:text-[#2DA933] transition-colors">Alquiler de Maquinaria Pesada</a></li>
               <li><a href="#seguridad" className="hover:text-[#2DA933] transition-colors">Custodia C2P con PIN</a></li>
               <li><a href="#seguridad" className="hover:text-[#2DA933] transition-colors">Offline Sync & Rastreo GPS</a></li>
-              <li><a href="#seguridad" className="hover:text-[#2DA933] transition-colors">Guías SIGESAI / INSAI</a></li>
+              <li><a href="#seguridad" className="hover:text-[#2DA933] transition-colors">Guías Únicas de Movilización</a></li>
             </ul>
           </div>
 
-          {/* Column 2: Flota y Tipologías */}
+          {/* Column 2: Plataforma de Intermediación */}
           <div className="space-y-3">
-            <h4 className="font-bold text-[#0F172A] uppercase tracking-wider text-xs">Flota y Maquinaria</h4>
+            <h4 className="font-bold text-[#0F172A] uppercase tracking-wider text-xs">Intermediación Segura</h4>
             <ul className="space-y-2">
-              <li><a href="#flota" className="hover:text-[#2DA933] transition-colors">Camiones Cava (3.5T - 12T)</a></li>
-              <li><a href="#flota" className="hover:text-[#2DA933] transition-colors">Tritón F-350 / NPR (3.5T - 5T)</a></li>
-              <li><a href="#flota" className="hover:text-[#2DA933] transition-colors">Toronto / Volteo (12T - 20T)</a></li>
-              <li><a href="#flota" className="hover:text-[#2DA933] transition-colors">Batea / Plataforma (25T - 35T)</a></li>
-              <li><a href="#flota" className="hover:text-[#2DA933] transition-colors">Maquinaria Pesada & Gandolas</a></li>
+              <li><a href="#como-funciona" className="hover:text-[#2DA933] transition-colors">Fletes Terrestres</a></li>
+              <li><a href="#como-funciona" className="hover:text-[#2DA933] transition-colors">Marketplace de Maquinaria Pesada</a></li>
+              <li><a href="#seguridad" className="hover:text-[#2DA933] transition-colors">Custodia de Pago C2P</a></li>
+              <li><a href="#seguridad" className="hover:text-[#2DA933] transition-colors">Verificación de Conductores</a></li>
             </ul>
           </div>
 
@@ -70,8 +66,6 @@ export const Footer: React.FC = () => {
                 </a>
               </li>
               <li><a href="/privacy.html" className="hover:text-[#2DA933] transition-colors font-medium">Política de Privacidad</a></li>
-              <li><a href="/delete-account.html" className="text-red-600 hover:text-red-700 transition-colors font-medium">Eliminar Cuenta (Stores)</a></li>
-              <li><a href="#descargar" className="hover:text-[#2DA933] transition-colors">Centro de Descargas</a></li>
             </ul>
           </div>
 

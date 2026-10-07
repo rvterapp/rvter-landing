@@ -41,12 +41,12 @@ export interface FaqItem {
 export const USER_STEPS: StepItem[] = [
   {
     number: '01',
-    title: 'Publica tu Carga en Minutos',
-    shortDesc: 'Indica origen, destino, tipo de producto, peso y fecha de recogida.',
-    fullDesc: 'Define el tipo de carga (Agropecuario, Mercancía General, Mudanza, Escombros, Graneles o Maquinaria). Agrega instrucciones de estiba y el sistema calculará una tarifa sugerida de mercado en tiempo real.',
+    title: 'Publica tu Carga o Requerimiento de Maquinaria',
+    shortDesc: 'Indica origen, destino, tipo de producto, o el equipo pesado que necesitas para tu obra.',
+    fullDesc: 'Define tu necesidad: flete terrestre (Agropecuario, Mercancía General, Graneles) o alquiler de maquinaria en nuestro marketplace. Puedes cotizar directamente con propietarios verificados y calcular tarifas con la Brújula de Costos.',
     icon: 'PackagePlus',
     badge: 'Sin Costo Inicial',
-    highlight: 'Selector multisectorial y cálculo automático de distancia'
+    highlight: 'Marketplace directo con propietarios y Brújula de Costos'
   },
   {
     number: '02',
@@ -59,79 +59,79 @@ export const USER_STEPS: StepItem[] = [
   },
   {
     number: '03',
-    title: 'Custodia C2P (Pago 100% Protegido)',
-    shortDesc: 'Tu dinero se resguarda en custodia neutra a tasa oficial BCV antes de iniciar viaje.',
-    fullDesc: 'Pagas de forma segura vía Pago Móvil C2P o transferencia a la tasa oficial del BCV del día. El transportista sabe que el dinero está garantizado, pero los fondos quedan bloqueados en custodia hasta la entrega conforme en destino.',
+    title: 'Custodia C2P (Pago Previo al Viaje)',
+    shortDesc: 'Pagas antes de iniciar. El transportista solo busca la carga cuando los fondos están en custodia.',
+    fullDesc: 'Pagas de forma segura vía Pago Móvil C2P o transferencia bancaria antes de iniciar. Únicamente cuando el dinero está confirmado en custodia neutral, el transportista acude a buscar la carga e inicia el viaje; nunca se busca la carga sin antes tener el pago en custodia garantizado.',
     icon: 'ShieldCheck',
-    badge: 'Custodia C2P Oficial BCV',
-    highlight: 'Tasa oficial BCV y fondos retenidos hasta confirmación de entrega'
+    badge: 'Pago Previo al Viaje',
+    highlight: 'El transportista solo busca la carga tras confirmar el dinero en custodia'
   },
   {
     number: '04',
-    title: 'Rastreo GPS, Dashcam & Offline Sync',
+    title: 'Rastreo GPS & Sincronización Offline',
     shortDesc: 'Monitorea el avance del camión con telemetría continua incluso en tramos sin señal.',
-    fullDesc: 'Visualiza la telemetría satelital en vivo en el mapa. En tramos de carretera sin cobertura celular, la app almacena localmente el recorrido y lo sincroniza de inmediato al recuperar señal, con soporte de Dashcam para evidencia de viaje.',
+    fullDesc: 'Visualiza la telemetría satelital en vivo en el mapa. En tramos de carretera sin cobertura celular, la app almacena localmente el recorrido y lo sincroniza de inmediato al recuperar señal.',
     icon: 'MapPin',
     badge: 'Monitoreo Satelital Continuo',
     highlight: 'Geocercas activas, sincronización offline en carretera y telemetría'
   },
   {
     number: '05',
-    title: 'Entrega en Romana y Código de Liberación',
+    title: 'Entrega en Destino y Código de Liberación',
     shortDesc: 'Verifica la mercancía en destino, suministra el código de entrega y libera los fondos.',
-    fullDesc: 'Al recibir la carga a satisfacción o certificar la faena en romana/almacén, entregas el código de entrega de seguridad. Al validarlo en la app, los fondos en custodia de pago se transfieren de forma irrevocable al transportista.',
+    fullDesc: 'Al recibir la carga a satisfacción o certificar la faena en destino o almacén, entregas el código de entrega de seguridad. Al validarlo en la app, los fondos en custodia de pago se transfieren de forma irrevocable al transportista.',
     icon: 'CheckCircle2',
     badge: 'Liberación Inmediata',
-    highlight: 'Código de entrega en romana y liquidación bancaria instantánea'
+    highlight: 'Código de entrega en destino y liquidación bancaria instantánea'
   }
 ];
 
-// Pasos para Transportistas y Operadores de Maquinaria (Rol: CARRIER)
+// Pasos para Transportistas y Propietarios de Maquinaria (Rol: CARRIER)
 export const DRIVER_STEPS: StepItem[] = [
   {
     number: '01',
-    title: 'Registro y Verificación KYC de Unidad',
-    shortDesc: 'Sube tu Cédula, Licencia (5ta), RIF y carnet de circulación del vehículo.',
-    fullDesc: 'Nuestro sistema valida la titularidad del camión o autorización de manejo, antecedentes y documentación vial para otorgarte el distintivo de Transportista Certificado RVTER.',
+    title: 'Registro y Verificación KYC de Unidad o Maquinaria',
+    shortDesc: 'Sube tu Cédula, Licencia, RIF y documentación de tu camión o equipo pesado.',
+    fullDesc: 'Validamos la titularidad de tu unidad o maquinaria pesada para otorgarte el sello certificado. Dueños de equipos pesados pueden publicar su maquinaria para recibir ofertas de contratación directa.',
     icon: 'UserCheck',
     badge: 'Verificación Digital KYC',
-    highlight: 'Certificación oficial de chofer y unidad verificada'
+    highlight: 'Certificación oficial de choferes, unidades y maquinaria'
   },
   {
     number: '02',
-    title: 'Marketplace de Cargas y Retornos Vacíos',
-    shortDesc: 'Postúlate a fletes en tu zona o cotiza viajes de regreso con contraofertas.',
-    fullDesc: 'Accede a la bolsa de cargas filtradas por tipología de unidad (Cava, Tritón, Toronto, Batea, Gandola o Maquinaria). Envía tu contraoferta de tarifa y elimina los viajes de retorno vacíos para maximizar tus ingresos.',
+    title: 'Marketplace de Cargas, Faenas y Cero Retornos Vacíos',
+    shortDesc: 'Dueños de camiones y maquinaria reciben solicitudes directas de clientes sin intermediarios informales.',
+    fullDesc: 'Accede a la bolsa de fletes y requerimientos de obra. Para transportistas, la meta operativa es lograr cero retornos vacíos enlazando viajes de regreso. Para dueños de maquinaria, el marketplace te conecta con contratistas que requieren tus equipos en su zona.',
     icon: 'Truck',
-    badge: 'Cero Retornos Vacíos',
-    highlight: 'Filtro inteligente por carrocería y contraoferta de tarifa'
+    badge: 'Meta Cero Retornos Vacíos',
+    highlight: 'Filtro por unidad o maquinaria y conexión directa con clientes'
   },
   {
     number: '03',
     title: 'Garantía de Pago Previo y Modo Cabina',
-    shortDesc: 'Viaja con pago 100% garantizado y accede con tu PIN de Cabina sin fricciones.',
-    fullDesc: 'Antes de arrancar, tienes la certeza de que el cliente depositó el flete en Custodia C2P protegida. Además, los conductores asignados acceden de forma expedita a su hoja de ruta con su PIN de Cabina temporal.',
+    shortDesc: 'Cero riesgos: nunca buscas la carga sin antes tener el pago en custodia garantizado.',
+    fullDesc: 'Antes de mover tu unidad o acudir al origen, tienes la certeza de que el cliente depositó el flete en Custodia C2P. El transportista acude a buscar la carga y comienza el viaje únicamente cuando el dinero está en custodia; nunca vas a buscar la carga sin el pago previamente resguardado. Además, accedes a tu hoja de ruta con tu PIN de Cabina temporal.',
     icon: 'BadgeDollarSign',
-    badge: 'PIN de Cabina & Pago Protegido',
-    highlight: 'Garantía de cobro antes de ruta y acceso rápido por PIN de Cabina'
+    badge: 'Cobro Garantizado Previo a Cargar',
+    highlight: 'Solo buscas la carga y viajas con los fondos confirmados en custodia'
   },
   {
     number: '04',
-    title: 'Conducción en Ruta, Telemetría & SIGESAI',
-    shortDesc: 'Navegación GPS, escaneo de guías INSAI y telemetría con soporte de Dashcam.',
-    fullDesc: 'Transmite telemetría en tiempo real mientras conduces con registro continuo aun sin señal celular. Escanea el código QR de la Guía Única de Movilización SIGESAI para transitar sin demoras por alcabalas.',
+    title: 'Conducción en Ruta & Guías de Movilización',
+    shortDesc: 'Navegación GPS, verificación de Guías Únicas de Movilización y telemetría.',
+    fullDesc: 'Transmite telemetría en tiempo real mientras conduces con registro continuo aun sin señal celular. Verifica los datos de la Guía Única de Movilización para transitar sin demoras por alcabalas.',
     icon: 'Navigation',
-    badge: 'Telemetría & SIGESAI',
-    highlight: 'Validación fitosanitaria QR y telemetría de carretera Offline'
+    badge: 'Guías de Movilización',
+    highlight: 'Validación de Guías Únicas de Movilización y telemetría Offline'
   },
   {
     number: '05',
     title: 'Liquidación al Instante con Código de Entrega',
     shortDesc: 'El receptor suministra el código en destino y el Pago Móvil se liquida de inmediato.',
-    fullDesc: 'Al descargar en romana o finalizar la faena, el receptor te entrega el código de confirmación. Al ingresarlo en la app, la custodia de pago se libera automáticamente a tu cuenta bancaria a tasa oficial del día.',
+    fullDesc: 'Al descargar en destino o finalizar la faena de maquinaria, el receptor o contratante te entrega el código de confirmación. Al ingresarlo en la app, la custodia de pago se libera automáticamente a tu cuenta bancaria.',
     icon: 'Wallet',
     badge: 'Pago Móvil Automático',
-    highlight: 'Liquidación automática por validación en romana/destino'
+    highlight: 'Liquidación automática por validación en destino'
   }
 ];
 
@@ -140,13 +140,13 @@ export const SECURITY_PILLARS: PillarItem[] = [
   {
     id: 'custodia',
     title: 'Custodia C2P & Doble Validación',
-    subtitle: 'Protección financiera bidireccional: Pago Móvil C2P a tasa oficial BCV.',
-    description: 'RVTER actúa como intermediario fiduciario neutral. El cliente deposita el 100% en custodia C2P a tasa oficial BCV antes de iniciar la ruta. Para la operación se aplican dos niveles de seguridad: PIN de Cabina para el chofer en carretera y Código de Entrega en romana/destino para liberar los fondos.',
+    subtitle: 'El transportista busca la carga únicamente cuando el dinero está en custodia.',
+    description: 'RVTER actúa como intermediario fiduciario neutral. El cliente deposita el 100% en custodia protegida antes de comenzar la operación. El transportista acude a buscar la carga y comienza el viaje cuando el dinero está en custodia; nunca va a buscar la carga sin antes tener el pago garantizado en custodia. Para la operación se aplican dos niveles: PIN de Cabina en carretera y Código de Entrega en destino para liberar los fondos.',
     bulletPoints: [
-      'Depósito en custodia C2P y liquidación automática a tasa oficial BCV del día.',
+      'Pago previo obligatorio: el transportista solo acude a cargar con fondos en custodia.',
+      'Cero viajes sin garantía: jamás se busca la carga sin el pago previamente resguardado.',
       'PIN de Cabina: Acceso expedito del chofer a su hoja de ruta y telemetría.',
-      'Código de Entrega en Romana: Liberación irrevocable de fondos al certificar la carga.',
-      'Trazabilidad auditada con comprobante bancario digital descargable.'
+      'Código de Entrega en Destino: Liberación irrevocable de fondos al certificar la carga.'
     ],
     icon: 'Lock',
     accentColor: '#2DA933',
@@ -155,13 +155,13 @@ export const SECURITY_PILLARS: PillarItem[] = [
   },
   {
     id: 'gps',
-    title: 'Rastreo GPS, Dashcam & Offline Sync',
+    title: 'Rastreo GPS & Offline Sync',
     subtitle: 'Telemetría continua de carretera garantizada aun en zonas sin cobertura celular.',
-    description: 'La app móvil transmite la posición satelital del viaje. Si la señal se interrumpe en carretera, el módulo OfflineSyncManager almacena la telemetría y eventos de Dashcam en memoria local y los sincroniza de inmediato al recuperar conectividad.',
+    description: 'La app móvil transmite la posición satelital del viaje. Si la señal se interrumpe en carretera, el módulo de sincronización offline almacena la telemetría en memoria local y la transmite de inmediato al recuperar conectividad.',
     bulletPoints: [
       'Seguimiento visual en vivo con cálculo dinámico de velocidad y tiempo estimado (ETA).',
-      'Tecnología Offline Sync: telemetría continua ininterrumpida sin pérdida de paquetes.',
-      'Soporte de Dashcam en ruta para respaldo visual ante eventualidades o disputas.',
+      'Tecnología Offline Sync: telemetría continua ininterrumpida sin pérdida de datos.',
+      'Historial de ruta verificado para respaldo ante cualquier eventualidad.',
       'Detección automática de desvíos, paradas no programadas y alertas de viaje.'
     ],
     icon: 'Radio',
@@ -170,20 +170,20 @@ export const SECURITY_PILLARS: PillarItem[] = [
     statValue: 'Sub-métrica'
   },
   {
-    id: 'sigesai',
-    title: 'Validación Digital SIGESAI / INSAI',
-    subtitle: 'Cruce óptico de Guías Únicas de Movilización fitosanitarias y de insumos.',
-    description: 'Para cargas del sector agropecuario, RVTER incorpora un validador con lectura OCR de Guías Únicas de Movilización SIGESAI emitidas por el INSAI, cruzando RIF, placa del vehículo y rubro para evitar demoras en alcabalas.',
+    id: 'guias',
+    title: 'Guías Únicas de Movilización',
+    subtitle: 'Cruce y validación digital de Guías Únicas de Movilización para el transporte de carga.',
+    description: 'RVTER incorpora validación y lectura de Guías Únicas de Movilización, cruzando datos del vehículo asignado, transportista y rubro para agilizar el tránsito y evitar demoras en puntos de control vial.',
     bulletPoints: [
-      'Escaneo óptico instantáneo de código QR y número de guía oficial SIGESAI.',
-      'Cruce de concordancia entre vehículo asignado, transportista y rubro agropecuario.',
+      'Lectura digital instantánea de datos y código de la Guía Única de Movilización.',
+      'Cruce de concordancia entre vehículo asignado, transportista y rubro de carga.',
       'Reducción drástica de tiempos de espera en puntos de control y alcabalas viales.',
       'Archivo digital de la guía vinculado a la orden de flete para respaldo contable.'
     ],
     icon: 'QrCode',
     accentColor: '#F59E0B',
-    statLabel: 'Cumplimiento Legal',
-    statValue: 'INSAI / SIGESAI'
+    statLabel: 'Validación',
+    statValue: 'Guías de Movilización'
   }
 ];
 
@@ -320,22 +320,27 @@ export const FAQ_ITEMS: FaqItem[] = [
   {
     category: 'general',
     question: '¿Qué es RVTER y en qué se diferencia de un flete tradicional?',
-    answer: 'RVTER es la plataforma tecnológica que conecta directamente a dueños de carga con transportistas y operadores de maquinaria certificados en toda Venezuela. A diferencia del mercado informal, RVTER garantiza pagos seguros con custodia C2P protegida a tasa oficial BCV, rastreo GPS continuo, telemetría Dashcam y validación de documentos oficiales.'
+    answer: 'RVTER es la plataforma tecnológica que conecta directamente a dueños de carga con transportistas y operadores de maquinaria certificados en toda Venezuela. A diferencia del mercado informal, RVTER garantiza pagos seguros con custodia C2P protegida, rastreo GPS continuo y validación de documentos oficiales.'
   },
   {
     category: 'maquinaria',
-    question: '¿Cómo funciona el alquiler de maquinaria pesada en RVTER?',
-    answer: 'Puedes cotizar y contratar maquinaria pesada (Jumbos, Retroexcavadoras, Payloaders, Motoniveladoras, Vibrocompactadores y Grúas) por Jornada de trabajo (8 horas) o por Horómetro. Puedes acordar el servicio con operador calificado o sin él, definir el suministro de combustible (incluido o a cargo del cliente) y coordinar el traslado en camión Lowboy directamente dentro de la plataforma.'
+    question: '¿Cómo funciona el marketplace de maquinaria pesada en RVTER?',
+    answer: 'RVTER no posee ni arrienda maquinaria propia; funciona como un marketplace tecnológico donde dueños y empresas de maquinaria pesada certificadas publican sus equipos disponibles (Jumbos, Retroexcavadoras, Payloaders, Motoniveladoras, Vibrocompactadores y Grúas). Como cliente o contratista, puedes contactar y cotizar directamente con los propietarios por Jornada (8 horas) o por Horómetro, pactar si incluye operador y combustible, coordinar el traslado en camión Lowboy y resguardar el pago mediante custodia fiduciaria C2P.'
+  },
+  {
+    category: 'maquinaria',
+    question: '¿Cómo pueden los dueños de maquinaria publicar sus equipos en RVTER?',
+    answer: 'Los propietarios o empresas contratistas registran sus unidades en la plataforma subiendo los documentos de propiedad y ficha técnica. Una vez verificados, sus equipos se publican en el marketplace geolocalizado, permitiéndoles recibir solicitudes de trabajo directamente de empresas agrícolas, industriales y de construcción sin comisionistas informales.'
   },
   {
     category: 'pagos',
-    question: '¿Cómo funciona la custodia de pago (Custodia C2P) y la tasa de cambio?',
-    answer: 'Al acordar un flete o servicio de maquinaria, el usuario deposita mediante Pago Móvil C2P o transferencia a la tasa oficial del BCV del día. Los fondos quedan bloqueados de forma neutral en la plataforma. Solo cuando el receptor certifica la entrega conforme en destino o culminación de faena mediante el código de entrega, el sistema transfiere los fondos automáticamente al transportista o contratista de maquinaria.'
+    question: '¿Cuándo se realiza el pago y cuándo acude el transportista a buscar la carga?',
+    answer: 'El pago se realiza en su totalidad antes de comenzar el viaje. Al acordar un flete o servicio de maquinaria, el usuario deposita mediante Pago Móvil C2P o transferencia bancaria. Cuando el dinero está confirmado en custodia, el transportista busca la carga y comienza el viaje; el transportista nunca va a buscar la carga sin antes tener el pago en custodia garantizado. Solo cuando el receptor certifica la entrega conforme en destino o culminación de faena mediante el código de entrega, el sistema transfiere los fondos automáticamente.'
   },
   {
     category: 'seguridad',
-    question: '¿Cuál es la diferencia entre el PIN de Cabina y el Código de Entrega en Romana?',
-    answer: 'El PIN de Cabina es un código temporal que el transportista o dueño de flota genera para que el chofer acceda de inmediato al Modo Cabina en carretera sin compartir credenciales. El Código de Entrega en Romana es el código que el receptor en destino entrega al chofer al verificar la carga; al ingresarlo en la app, se valida la descarga y se liberan automáticamente los fondos en custodia de pago.'
+    question: '¿Cuál es la diferencia entre el PIN de Cabina y el Código de Entrega en Destino?',
+    answer: 'El PIN de Cabina es un código temporal que el transportista o dueño de unidad genera para que el chofer acceda de inmediato al Modo Cabina en carretera sin compartir credenciales. El Código de Entrega en Destino es el código que el receptor entrega al chofer al verificar la carga; al ingresarlo en la app, se valida la descarga y se liberan automáticamente los fondos en custodia de pago.'
   },
   {
     category: 'conductores',
@@ -345,7 +350,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   {
     category: 'conductores',
     question: '¿Cómo me ayuda RVTER a evitar retornos vacíos?',
-    answer: 'Nuestra app permite a los transportistas registrar su ruta planificada de regreso. Si viajaste de Barquisimeto a Caracas con una carga, la plataforma te notificará fletes disponibles de Caracas hacia Barquisimeto u otras ciudades intermedias en tu ruta, maximizando tus ingresos.'
+    answer: 'La meta central de RVTER es lograr cero retornos vacíos. La plataforma permite a los transportistas registrar su ruta planificada de regreso; si viajaste con carga en un trayecto, el sistema te enlaza de inmediato con cargas disponibles hacia tu origen o ciudades intermedias, asegurando que ruedes siempre con flete asignado y maximices tu rentabilidad.'
   },
   {
     category: 'seguridad',
@@ -354,8 +359,8 @@ export const FAQ_ITEMS: FaqItem[] = [
   },
   {
     category: 'seguridad',
-    question: '¿Cómo se manejan las Guías SIGESAI / INSAI para rubros agrícolas?',
-    answer: 'Al publicar una carga del sector Agropecuario, el generador puede adjuntar el número o código QR de su Guía SIGESAI. El transportista y las autoridades pueden verificar en la app la vigencia del documento mediante cruce óptico OCR, agilizando el paso por puntos de control y alcabalas.'
+    question: '¿Cómo se manejan las Guías Únicas de Movilización?',
+    answer: 'Al publicar una carga, el usuario puede adjuntar el número o código de su Guía Única de Movilización. El transportista y las autoridades pueden verificar en la app la vigencia del documento mediante cruce digital, agilizando el paso por puntos de control y alcabalas.'
   },
   {
     category: 'conductores',

@@ -11,7 +11,7 @@ export const FaqSection: React.FC = () => {
   const categories = [
     { id: 'all', label: 'Todas las Preguntas' },
     { id: 'general', label: 'General' },
-    { id: 'maquinaria', label: 'Alquiler de Maquinaria' },
+    { id: 'maquinaria', label: 'Marketplace de Maquinaria' },
     { id: 'pagos', label: 'Pagos y Custodia C2P' },
     { id: 'seguridad', label: 'Seguridad y GPS' },
     { id: 'conductores', label: 'Para Transportistas' }
@@ -26,12 +26,12 @@ export const FaqSection: React.FC = () => {
   };
 
   return (
-    <section id="faq" className="py-24 bg-white relative border-t border-slate-200">
+    <section id="faq" className="py-24 relative">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Heading */}
         <div className="text-center space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#2DA933]/10 text-[#2DA933] text-xs font-bold uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full liquid-glass border border-[#2DA933]/30 text-[#2DA933] text-xs font-bold uppercase tracking-wider shadow-xs">
             Resolución de Dudas
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0F172A] tracking-tight">
@@ -49,8 +49,8 @@ export const FaqSection: React.FC = () => {
                 onClick={() => { setActiveCategory(cat.id); setOpenIndex(null); }}
                 className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
                   activeCategory === cat.id
-                    ? 'bg-[#2DA933] text-white shadow-md'
-                    : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
+                    ? 'bg-[#2DA933] text-white shadow-md shadow-[#2DA933]/25'
+                    : 'liquid-glass-subtle text-slate-700 hover:bg-white border border-white/60 shadow-2xs'
                 }`}
               >
                 {cat.label}
@@ -66,10 +66,10 @@ export const FaqSection: React.FC = () => {
             return (
               <div
                 key={index}
-                className={`rounded-2xl border transition-all overflow-hidden ${
+                className={`rounded-2xl transition-all overflow-hidden ${
                   isOpen
-                    ? 'border-[#2DA933] bg-white shadow-sm'
-                    : 'border-slate-200 bg-white hover:border-slate-300'
+                    ? 'border-2 border-[#2DA933] liquid-glass-card shadow-lg shadow-[#2DA933]/10'
+                    : 'border border-white/70 liquid-glass hover:bg-white/80 shadow-xs'
                 }`}
               >
                 <button
@@ -79,7 +79,7 @@ export const FaqSection: React.FC = () => {
                   <span className="font-bold text-base sm:text-lg text-[#0F172A]">
                     <FormattedRvterText text={faq.question} wordmarkHeight={15} />
                   </span>
-                  <div className={`w-8 h-8 rounded-full flex items-center justify-center bg-slate-100 shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180 text-[#2DA933]' : 'text-slate-500'}`}>
+                  <div className={`w-8 h-8 rounded-full flex items-center justify-center bg-slate-100/80 shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180 text-[#2DA933]' : 'text-slate-500'}`}>
                     <ChevronDown className="w-5 h-5" />
                   </div>
                 </button>

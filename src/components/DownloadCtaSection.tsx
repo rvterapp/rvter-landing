@@ -17,23 +17,24 @@ export const DownloadCtaSection: React.FC = () => {
                 Fletes Terrestres & Maquinaria Pesada
               </div>
 
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#0F172A] leading-tight">
-                Control total de tus fletes y faenas en tu bolsillo
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#0F172A] leading-tight flex items-center justify-center lg:justify-start flex-wrap gap-2">
+                <span>Control total en tu bolsillo con</span>
+                <RvterWordmark fill="#2DA933" height={40} className="inline-block align-baseline" />
               </h2>
 
               <p className="text-base sm:text-lg text-slate-600 max-w-xl">
-                Descarga la aplicación oficial de <RvterWordmark fill="#2DA933" height={26} className="inline-block align-baseline mx-1" />. Custodia de pago C2P con liberación por PIN en destino, rastreo GPS continuo con Offline Sync y validación SIGESAI.
+                Únete a la plataforma que moderniza el transporte y la maquinaria pesada en Venezuela. Conecta sin intermediarios informales y opera con máxima seguridad financiera.
               </p>
 
               {/* Badges / Metrics */}
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
                 <div className="flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-50 border border-slate-200 text-xs font-bold text-slate-700">
                   <ShieldCheck className="w-4 h-4 text-[#2DA933]" />
-                  <span>Liberación por PIN en Destino</span>
+                  <span>Transacciones 100% Protegidas</span>
                 </div>
                 <div className="flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-50 border border-slate-200 text-xs font-bold text-slate-700">
                   <Star className="w-4 h-4 text-amber-500 fill-amber-500" />
-                  <span>Sincronización Offline en Carretera</span>
+                  <span>Cobertura en Todo el País</span>
                 </div>
               </div>
 

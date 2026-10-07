@@ -32,24 +32,24 @@ const FLOW_STEPS: FlowStep[] = [
   },
   {
     id: 3,
-    title: '3. Custodia de Pago C2P (Tasa BCV)',
+    title: '3. Custodia de Pago C2P',
     subtitle: 'Pago resguardado en custodia neutral',
     duration: 5,
     description: 'El dinero queda bloqueado de forma neutral y segura antes de iniciar viaje.'
   },
   {
     id: 4,
-    title: '4. Rastreo GPS, Dashcam & Modo Cabina',
+    title: '4. Rastreo GPS & Modo Cabina',
     subtitle: 'Telemetría satelital y acceso chofer por PIN de Cabina',
     duration: 6,
     description: 'Monitoreo en tiempo real con geocercas, telemetría de ruta y Modo Cabina para el chofer.'
   },
   {
     id: 5,
-    title: '5. Entrega en Romana y Liquidación',
+    title: '5. Entrega en Destino y Liquidación',
     subtitle: 'Liberación instantánea con código de entrega conforme',
     duration: 5,
-    description: 'El receptor suministra el código en romana y el transportista recibe su Pago Móvil al instante.'
+    description: 'El receptor suministra el código en destino y el transportista recibe su Pago Móvil al instante.'
   }
 ];
 
@@ -289,7 +289,7 @@ export const FlowVideoSimulator: React.FC = () => {
                           <div>
                             <div className="text-[11px] text-slate-500">Custodia Neutral C2P Activada</div>
                             <div className="text-xl font-black text-[#0F172A] mt-0.5">$ 340.00 USD</div>
-                            <div className="text-[10px] text-[#2DA933] font-semibold">Tasa Oficial BCV: Bs. 36.40 / $</div>
+                            <div className="text-[10px] text-[#2DA933] font-semibold">Fondos Protegidos en Custodia</div>
                           </div>
 
                           <div className="p-2.5 rounded-xl bg-slate-50 text-[10px] text-slate-600 text-left flex items-start gap-2 border border-slate-200">
@@ -371,7 +371,7 @@ export const FlowVideoSimulator: React.FC = () => {
                           <div>
                             <div className="text-xs font-bold text-[#2DA933]">¡Carga Entregada con Éxito!</div>
                             <div className="text-sm font-black text-[#0F172A] mt-0.5">Pago Móvil Liquidado al Chofer</div>
-                            <div className="text-[10px] text-slate-500 mt-1">Comprobante #C2P-882941-BCV</div>
+                            <div className="text-[10px] text-slate-500 mt-1">Comprobante #C2P-882941-PROT</div>
                           </div>
 
                           <div className="pt-2 border-t border-slate-100 flex justify-center gap-1">
