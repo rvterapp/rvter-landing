@@ -1,25 +1,26 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FAQ_ITEMS } from '../data/mockData';
 import { ChevronDown } from 'lucide-react';
 import { FormattedRvterText } from './RvterLogo';
+import { useLanguage } from '../context/LanguageContext';
 
 export const FaqSection: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
   const [activeCategory, setActiveCategory] = useState<string>('all');
+  const { t } = useLanguage();
 
   const categories = [
-    { id: 'all', label: 'Todas las Preguntas' },
-    { id: 'general', label: 'General' },
-    { id: 'maquinaria', label: 'Marketplace de Maquinaria' },
-    { id: 'pagos', label: 'Pagos y Custodia C2P' },
-    { id: 'seguridad', label: 'Seguridad y GPS' },
-    { id: 'conductores', label: 'Para Transportistas' }
+    { id: 'all', label: t.faq.catAll },
+    { id: 'general', label: t.faq.catGeneral },
+    { id: 'maquinaria', label: t.faq.catMachinery },
+    { id: 'pagos', label: t.faq.catPayments },
+    { id: 'seguridad', label: t.faq.catSecurity },
+    { id: 'conductores', label: t.faq.catDrivers }
   ];
 
   const filteredFaqs = activeCategory === 'all'
-    ? FAQ_ITEMS
-    : FAQ_ITEMS.filter(f => f.category === activeCategory);
+    ? t.faq.items
+    : t.faq.items.filter(f => f.category === activeCategory);
 
   const toggleFaq = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -32,13 +33,13 @@ export const FaqSection: React.FC = () => {
         {/* Section Heading */}
         <div className="text-center space-y-4 mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full liquid-glass border border-[#2DA933]/30 text-[#2DA933] text-xs font-bold uppercase tracking-wider shadow-xs">
-            Resolución de Dudas
+            {t.faq.badge}
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0F172A] tracking-tight">
-            Preguntas Frecuentes
+            {t.faq.title}
           </h2>
           <p className="text-base sm:text-lg text-slate-600">
-            Todo lo que necesitas saber sobre comisiones, custodia de pago, seguros y funcionamiento de la app.
+            {t.faq.desc}
           </p>
 
           {/* Category Filter Chips */}

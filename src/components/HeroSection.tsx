@@ -4,8 +4,11 @@ import {
   ShieldCheck, CheckCircle2, Truck, HardHat, Radio, 
   AlertCircle 
 } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
 export const HeroSection: React.FC = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="relative pt-36 sm:pt-44 pb-20 lg:pb-32 bg-white overflow-hidden">
       
@@ -25,24 +28,24 @@ export const HeroSection: React.FC = () => {
           className="space-y-4 max-w-4xl mx-auto"
         >
           <h1 className="text-4xl sm:text-6xl lg:text-[68px] font-black tracking-[-0.03em] text-[#0F172A] leading-[1.04]">
-            El Control De Tu Carga <br className="hidden sm:inline" />
-            <span className="text-[#2DA933]">En Tiempo Real</span>
+            {t.hero.titlePrefix} <br className="hidden sm:inline" />
+            <span className="text-[#2DA933]">{t.hero.titleHighlight}</span>
           </h1>
 
           {/* Subtitle */}
           <p className="text-base sm:text-lg lg:text-xl text-slate-600 max-w-2xl mx-auto font-normal leading-relaxed pt-2">
-            El marketplace donde dueños de carga conectan con transportistas y maquinaria en Venezuela, con pagos en custodia previa y la meta de <strong className="text-slate-900 font-bold">Cero Retornos Vacíos</strong>.
+            {t.hero.subtitlePart1} <strong className="text-slate-900 font-bold">{t.hero.subtitleHighlight}</strong>.
           </p>
 
           {/* 2. Flighty Award Badge Pair */}
           <div className="flex flex-wrap items-center justify-center gap-3 pt-3">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-50 border border-slate-200/90 text-xs font-bold text-slate-800 shadow-2xs">
               <ShieldCheck className="w-4 h-4 text-[#2DA933]" />
-              <span>Custodia 100% Protegida</span>
+              <span>{t.hero.badgeEscrow}</span>
             </div>
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-50 border border-slate-200/90 text-xs font-bold text-slate-800 shadow-2xs">
               <CheckCircle2 className="w-4 h-4 text-blue-600" />
-              <span>Cobertura Nacional</span>
+              <span>{t.hero.badgeCoverage}</span>
             </div>
           </div>
         </motion.div>
@@ -70,12 +73,12 @@ export const HeroSection: React.FC = () => {
                   <div className="space-y-1">
                     <div className="flex items-center justify-between gap-2">
                       <h3 className="text-xs sm:text-sm font-bold text-slate-900">
-                        Custodia C2P Confirmada
+                        {t.hero.left1Title}
                       </h3>
-                      <span className="text-[10px] font-bold text-slate-400">Ahora</span>
+                      <span className="text-[10px] font-bold text-slate-400">{t.hero.left1Badge}</span>
                     </div>
                     <p className="text-xs text-slate-600 leading-snug">
-                      Fondos en custodia antes de cargar. El chofer inicia viaje seguro.
+                      {t.hero.left1Desc}
                     </p>
                   </div>
                 </div>
@@ -96,12 +99,12 @@ export const HeroSection: React.FC = () => {
                   <div className="space-y-1">
                     <div className="flex items-center justify-between gap-2">
                       <h3 className="text-xs sm:text-sm font-bold text-slate-900">
-                        Ruta: Barquisimeto → Caracas
+                        {t.hero.left2Title}
                       </h3>
-                      <span className="text-[10px] font-bold text-blue-600 bg-blue-50 px-1.5 py-0.5 rounded">En Ruta</span>
+                      <span className="text-[10px] font-bold text-blue-600 bg-blue-50 px-1.5 py-0.5 rounded">{t.hero.left2Badge}</span>
                     </div>
                     <p className="text-xs text-slate-600 leading-snug">
-                      78 km/h • Telemetría satelital en vivo y geocerca activa.
+                      {t.hero.left2Desc}
                     </p>
                   </div>
                 </div>
@@ -122,12 +125,12 @@ export const HeroSection: React.FC = () => {
                   <div className="space-y-1">
                     <div className="flex items-center justify-between gap-2">
                       <h3 className="text-xs sm:text-sm font-bold text-slate-900">
-                        Regla de Seguridad
+                        {t.hero.left3Title}
                       </h3>
-                      <span className="text-[10px] font-bold text-amber-700 bg-amber-50 px-1.5 py-0.5 rounded">Estricta</span>
+                      <span className="text-[10px] font-bold text-amber-700 bg-amber-50 px-1.5 py-0.5 rounded">{t.hero.left3Badge}</span>
                     </div>
                     <p className="text-xs text-slate-600 leading-snug">
-                      El transportista nunca va a buscar la carga sin pago en custodia.
+                      {t.hero.left3Desc}
                     </p>
                   </div>
                 </div>
@@ -151,7 +154,7 @@ export const HeroSection: React.FC = () => {
                 <div className="relative rounded-[48px] p-1.5 transition-transform">
                   <img
                     src="/rvter-real-phone-gps.png"
-                    alt="RVTER GPS Satelital En Vivo - Ruta Activa Barquisimeto a Caracas"
+                    alt={t.hero.phoneAlt}
                     className="w-full h-auto object-contain block drop-shadow-2xl"
                     loading="eager"
                   />
@@ -177,12 +180,12 @@ export const HeroSection: React.FC = () => {
                   <div className="space-y-1">
                     <div className="flex items-center justify-between gap-2">
                       <h3 className="text-xs sm:text-sm font-bold text-slate-900">
-                        Jumbo CAT 320D Contratado
+                        {t.hero.right1Title}
                       </h3>
-                      <span className="text-[10px] font-bold text-amber-700 bg-amber-50 px-1.5 py-0.5 rounded">Maquinaria</span>
+                      <span className="text-[10px] font-bold text-amber-700 bg-amber-50 px-1.5 py-0.5 rounded">{t.hero.right1Badge}</span>
                     </div>
                     <p className="text-xs text-slate-600 leading-snug">
-                      Cotización por horómetro directo con el propietario.
+                      {t.hero.right1Desc}
                     </p>
                   </div>
                 </div>
@@ -203,12 +206,12 @@ export const HeroSection: React.FC = () => {
                   <div className="space-y-1">
                     <div className="flex items-center justify-between gap-2">
                       <h3 className="text-xs sm:text-sm font-bold text-slate-900">
-                        Offline Sync Activo
+                        {t.hero.right2Title}
                       </h3>
-                      <span className="text-[10px] font-bold text-blue-600 bg-blue-50 px-1.5 py-0.5 rounded">Garantía</span>
+                      <span className="text-[10px] font-bold text-blue-600 bg-blue-50 px-1.5 py-0.5 rounded">{t.hero.right2Badge}</span>
                     </div>
                     <p className="text-xs text-slate-600 leading-snug">
-                      Registro continuo de ruta en tramos sin señal celular.
+                      {t.hero.right2Desc}
                     </p>
                   </div>
                 </div>
@@ -229,12 +232,12 @@ export const HeroSection: React.FC = () => {
                   <div className="space-y-1">
                     <div className="flex items-center justify-between gap-2">
                       <h3 className="text-xs sm:text-sm font-bold text-slate-900">
-                        Retorno Vacío Evitado
+                        {t.hero.right3Title}
                       </h3>
-                      <span className="text-[10px] font-bold text-[#2DA933] bg-[#2DA933]/15 px-1.5 py-0.5 rounded">Meta Lograda</span>
+                      <span className="text-[10px] font-bold text-[#2DA933] bg-[#2DA933]/15 px-1.5 py-0.5 rounded">{t.hero.right3Badge}</span>
                     </div>
                     <p className="text-xs text-slate-600 leading-snug">
-                      Viaje de regreso enlazado con carga agrícola hacia origen.
+                      {t.hero.right3Desc}
                     </p>
                   </div>
                 </div>

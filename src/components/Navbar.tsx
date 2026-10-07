@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 import { RvterWordmark } from './RvterLogo';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Globe } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
 export const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
 
   const navLinks = [
-    { name: 'Cómo Funciona', href: '#como-funciona' },
-    { name: 'Seguridad & GPS', href: '#seguridad' },
-    { name: 'Preguntas Frecuentes', href: '#faq' },
+    { name: t.navbar.howItWorks, href: '#como-funciona' },
+    { name: t.navbar.security, href: '#seguridad' },
+    { name: t.navbar.faq, href: '#faq' },
   ];
 
   return (
@@ -21,7 +23,7 @@ export const Navbar: React.FC = () => {
           <span className="relative inline-flex rounded-full h-2 w-2 bg-[#2DA933]"></span>
         </span>
         <span className="text-slate-300 tracking-wide font-medium">
-          CARGAS PROTEGIDAS, PAGOS SEGUROS Y RUTAS LLENAS
+          {t.navbar.announcement}
         </span>
       </div>
 
@@ -51,14 +53,44 @@ export const Navbar: React.FC = () => {
             ))}
           </div>
 
-          {/* Right: Subtle Action Pill Button */}
-          <div className="hidden sm:flex items-center">
-            <a
-              href="#como-funciona"
-              className="px-4 py-1.5 rounded-full text-xs font-bold text-slate-800 bg-slate-100 hover:bg-slate-200/90 border border-slate-200 transition-all hover:scale-[1.02] active:scale-[0.98]"
-            >
-              Explorar
-            </a>
+          {/* Right: Language Selector & Action Pill */}
+          <div className="flex items-center gap-2.5">
+            {/* Language Selector ES | EN */}
+            <div className="flex items-center rounded-full bg-slate-100 p-0.5 border border-slate-200 text-[11px] font-bold">
+              <button
+                type="button"
+                onClick={() => setLanguage('es')}
+                className={`px-2.5 py-1 rounded-full transition-all ${
+                  language === 'es'
+                    ? 'bg-white text-[#0F172A] shadow-xs font-extrabold'
+                    : 'text-slate-500 hover:text-slate-800'
+                }`}
+                aria-label="Español"
+              >
+                ES
+              </button>
+              <button
+                type="button"
+                onClick={() => setLanguage('en')}
+                className={`px-2.5 py-1 rounded-full transition-all ${
+                  language === 'en'
+                    ? 'bg-white text-[#0F172A] shadow-xs font-extrabold'
+                    : 'text-slate-500 hover:text-slate-800'
+                }`}
+                aria-label="English"
+              >
+                EN
+              </button>
+            </div>
+
+            <div className="hidden sm:flex items-center">
+              <a
+                href="#como-funciona"
+                className="px-4 py-1.5 rounded-full text-xs font-bold text-slate-800 bg-slate-100 hover:bg-slate-200/90 border border-slate-200 transition-all hover:scale-[1.02] active:scale-[0.98]"
+              >
+                {t.navbar.explore}
+              </a>
+            </div>
           </div>
 
           {/* Mobile Menu Trigger */}
@@ -66,7 +98,7 @@ export const Navbar: React.FC = () => {
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-1.5 rounded-full text-slate-700 hover:text-[#2DA933]"
-              aria-label="Abrir menú"
+              aria-label={mobileMenuOpen ? t.navbar.closeMenu : t.navbar.openMenu}
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
@@ -87,14 +119,24 @@ export const Navbar: React.FC = () => {
                   {link.name}
                 </a>
               ))}
-              <div className="pt-2 border-t border-slate-100">
-                <a
-                  href="#como-funciona"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="block text-center py-2 rounded-full text-xs font-bold bg-[#2DA933] text-white shadow-sm"
-                >
-                  Explorar Plataforma
-                </a>
+              <div className="pt-2 border-t border-slate-100 flex items-center justify-between">
+                <span className="text-xs font-medium text-slate-500 flex items-center gap-1.5">
+                  <Globe className="w-3.5 h-3.5" /> Idioma / Language:
+                </span>
+                <div className="flex items-center rounded-full bg-slate-100 p-0.5 border border-slate-200 text-xs font-bold">
+                  <button
+                    onClick={() => setLanguage('es')}
+                    className={`px-3 py-1 rounded-full ${language === 'es' ? 'bg-white text-slate-900 shadow-xs' : 'text-slate-500'}`}
+                  >
+                    ES
+                  </button>
+                  <button
+                    onClick={() => setLanguage('en')}
+                    className={`px-3 py-1 rounded-full ${language === 'en' ? 'bg-white text-slate-900 shadow-xs' : 'text-slate-500'}`}
+                  >
+                    EN
+                  </button>
+                </div>
               </div>
             </div>
           </div>
