@@ -159,9 +159,9 @@ export const SecurityTechSection: React.FC = () => {
                   </div>
                   <div className="flex justify-between">
                     <span className="text-slate-500">
-                      {language === 'es' ? 'Telemetría & GPS:' : 'Telemetry & GPS:'}
+                      {language === 'es' ? 'Ubicación:' : 'Location:'}
                     </span>
-                    <span className="text-blue-600 font-bold">Offline Sync</span>
+                    <span className="text-blue-600 font-bold">{language === 'es' ? 'Al llegar' : 'On arrival'}</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-slate-500">

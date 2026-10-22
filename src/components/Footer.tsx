@@ -43,7 +43,7 @@ export const Footer: React.FC = () => {
               <li><a href="#flujo-usuarios" className="hover:text-[#1F7A25] transition-colors">{language === 'es' ? 'Para Usuarios' : 'For Shippers'}</a></li>
               <li><a href="#flujo-transportistas" className="hover:text-[#1F7A25] transition-colors">{language === 'es' ? 'Para Transportistas' : 'For Carriers'}</a></li>
               <li><a href="#seguridad" className="hover:text-[#1F7A25] transition-colors">{language === 'es' ? 'Custodia bancaria con PIN' : 'Bank custody & PIN'}</a></li>
-              <li><a href="#seguridad" className="hover:text-[#1F7A25] transition-colors">{language === 'es' ? 'Offline Sync & Rastreo GPS' : 'Offline Sync & GPS'}</a></li>
+              <li><a href="#seguridad" className="hover:text-[#1F7A25] transition-colors">{language === 'es' ? 'Ubicación y envío sin señal' : 'Location & offline sending'}</a></li>
               <li><a href="#seguridad" className="hover:text-[#1F7A25] transition-colors">{language === 'es' ? 'Guías de Movilización' : 'Transit Guides'}</a></li>
             </ul>
           </div>

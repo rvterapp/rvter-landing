@@ -112,7 +112,7 @@ const translationsData: Record<Language, Translations> = {
     navbar: {
       announcement: 'CARGAS PROTEGIDAS, PAGOS SEGUROS Y RUTAS LLENAS',
       howItWorks: 'Cómo Funciona',
-      security: 'Seguridad & GPS',
+      security: 'Seguridad & Ubicación',
       faq: 'Preguntas Frecuentes',
       explore: 'Descargar',
       closeMenu: 'Cerrar Menú',
@@ -120,27 +120,27 @@ const translationsData: Record<Language, Translations> = {
     },
     hero: {
       titlePrefix: 'El Control De Tu Carga',
-      titleHighlight: 'En Tiempo Real',
+      titleHighlight: 'Paso a Paso',
       subtitlePart1: 'El marketplace donde dueños de carga conectan con transportistas y maquinaria en Venezuela, con pago previo en custodia bancaria y la meta de',
       subtitleHighlight: 'Cero Retornos Vacíos',
       badgeEscrow: 'Pago en custodia bancaria',
       badgeCoverage: 'Cobertura Nacional',
-      phoneAlt: 'RVTER Rastreo GPS en vivo - Ruta Activa Barquisimeto a Caracas',
+      phoneAlt: 'RVTER - Ruta del viaje Barquisimeto a Caracas',
       left1Title: 'Pago en Custodia Bancaria',
       left1Badge: 'Ahora',
       left1Desc: 'Fondos en custodia bancaria antes de cargar. El chofer inicia viaje seguro.',
       left2Title: 'Ruta: Barquisimeto → Caracas',
       left2Badge: 'En Ruta',
-      left2Desc: '78 km/h • Rastreo GPS en vivo y geocerca activa.',
+      left2Desc: 'Ubicación registrada al llegar al destino.',
       left3Title: 'Regla de Seguridad',
       left3Badge: 'Estricta',
       left3Desc: 'El transportista nunca va a buscar la carga sin pago en custodia bancaria.',
       right1Title: 'Jumbo CAT 320D Contratado',
       right1Badge: 'Maquinaria',
       right1Desc: 'Cotización por horómetro directo con el propietario.',
-      right2Title: 'Offline Sync Activo',
+      right2Title: 'Sin Señal, Sin Problema',
       right2Badge: 'Activo',
-      right2Desc: 'Registro continuo de ruta en tramos sin señal celular.',
+      right2Desc: 'Tu solicitud de flete se guarda y se envía al recuperar la conexión.',
       right3Title: 'Retorno Vacío Evitado',
       right3Badge: 'Objetivo',
       right3Desc: 'Viaje de regreso enlazado con carga agrícola hacia origen.',
@@ -167,11 +167,11 @@ const translationsData: Record<Language, Translations> = {
           number: '02',
           title: 'Negocia ofertas',
           shortDesc: 'Los transportistas envían cotizaciones y puedes contraofertar.',
-          fullDesc: 'Revisa la reputación del transportista (1 a 5 estrellas), su historial de viajes, el modelo de vehículo y las placas verificadas. Acepta la tarifa o envía una contraoferta para cerrar el flete.',
+          fullDesc: 'Revisa la reputación del transportista (1 a 5 estrellas), su historial de viajes, el modelo de vehículo y las placas verificadas. Acepta la tarifa o envía una contraoferta para cerrar el flete. Al aceptar, adjuntas la guía de movilización de tu carga para que el transportista la revise.',
           badge: 'Ofertas y contraofertas',
           highlight: 'Comparación de ofertas y contraoferta directa',
-          you: 'Comparas perfiles y aceptas una tarifa o envías una contraoferta.',
-          rvter: 'Muestra la reputación, el historial y los datos verificados de cada oferta.',
+          you: 'Comparas perfiles, aceptas una tarifa y adjuntas la guía de movilización.',
+          rvter: 'Muestra la reputación de cada oferta y pasa tu guía al transportista para su revisión.',
           payment: 'Aún sin pago: el monto queda fijado al aceptar la oferta.'
         },
         {
@@ -187,13 +187,13 @@ const translationsData: Record<Language, Translations> = {
         },
         {
           number: '04',
-          title: 'Sigue tu viaje',
-          shortDesc: 'Ve el avance del camión en el mapa durante el trayecto.',
-          fullDesc: 'Consulta la posición del camión en el mapa. En tramos sin cobertura celular, la app guarda el recorrido en el teléfono y lo sincroniza al recuperar señal, por lo que en esos tramos la ruta se actualiza con retraso.',
-          badge: 'Rastreo GPS',
-          highlight: 'Mapa con ruta, hora estimada y sincronización offline',
-          you: 'Sigues la ruta, la velocidad y la hora estimada de llegada.',
-          rvter: 'Registra el recorrido y lo sincroniza al recuperar señal.',
+          title: 'Espera la entrega',
+          shortDesc: 'El transportista viaja y avisa su llegada al destino.',
+          fullDesc: 'El transportista hace el viaje. Al llegar al destino, la app registra su ubicación y tu pantalla muestra que está validando la entrega.',
+          badge: 'Llegada al destino',
+          highlight: 'Ubicación registrada al llegar al destino',
+          you: 'Esperas la entrega en el destino acordado.',
+          rvter: 'Registra la ubicación del transportista al llegar.',
           payment: 'El pago sigue retenido durante todo el viaje.'
         },
         {
@@ -244,13 +244,13 @@ const translationsData: Record<Language, Translations> = {
         },
         {
           number: '04',
-          title: 'Conduce y adjunta tu guía',
-          shortDesc: 'Navegación GPS y carga de la guía de movilización.',
-          fullDesc: 'Mientras conduces, la app registra el recorrido aun sin señal celular y lo sincroniza al recuperar conexión. Puedes subir la Guía Única de Movilización para que sea revisada antes de salir al origen.',
-          badge: 'Guía de movilización',
-          highlight: 'Carga y revisión de la guía, y registro de ruta offline',
-          you: 'Subes tu guía de movilización y conduces con la navegación GPS.',
-          rvter: 'Registra el recorrido y guarda la guía junto a la orden de flete.',
+          title: 'Revisa la guía y conduce',
+          shortDesc: 'Audita la guía del usuario y conduce al destino.',
+          fullDesc: 'Antes de ir al origen, revisas la guía de movilización que subió el usuario y la apruebas o la rechazas. Luego conduces; al llegar al destino, la app registra tu ubicación.',
+          badge: 'Guía y llegada',
+          highlight: 'Revisión de la guía y ubicación al llegar',
+          you: 'Revisas la guía, conduces y registras tu llegada.',
+          rvter: 'Guarda la guía junto a la orden y registra tu ubicación al llegar.',
           payment: 'El pago sigue retenido mientras viajas.'
         },
         {
@@ -269,7 +269,7 @@ const translationsData: Record<Language, Translations> = {
     security: {
       badge: 'Infraestructura Tecnológica & Seguridad',
       title: 'Tecnología robusta diseñada para las carreteras de Venezuela',
-      desc: 'Custodia bancaria del pago, registro GPS con sincronización offline y revisión de guías de movilización.',
+      desc: 'Custodia bancaria del pago, ubicación al llegar al destino y revisión de guías de movilización.',
       pillars: [
         {
           id: 'custodia',
@@ -279,7 +279,7 @@ const translationsData: Record<Language, Translations> = {
           bulletPoints: [
             'Pago previo obligatorio: el transportista acude a cargar con el pago confirmado en custodia bancaria.',
             'Sin pago confirmado no se inicia el viaje.',
-            'PIN de Cabina: acceso del chofer a su hoja de ruta y telemetría.',
+            'PIN de Cabina: acceso del chofer a su hoja de ruta.',
             'Código de Entrega en Destino: con él, RVTER instruye al banco la liberación de los fondos.'
           ],
           statLabel: 'Pago',
@@ -287,17 +287,17 @@ const translationsData: Record<Language, Translations> = {
         },
         {
           id: 'gps',
-          title: 'Rastreo GPS y sincronización offline',
-          subtitle: 'Registro de ruta que continúa en zonas sin cobertura celular.',
-          description: 'La app móvil registra la posición GPS del viaje. Si la señal se interrumpe en carretera, la app guarda el recorrido en el teléfono y lo envía al recuperar conectividad.',
+          title: 'Ubicación al llegar y envío sin señal',
+          subtitle: 'La app registra tu ubicación al llegar al destino y guarda tus solicitudes cuando no hay señal.',
+          description: 'Al llegar al destino, la app lee la ubicación real del teléfono y la registra; rechaza las ubicaciones simuladas. Si no hay señal al publicar una solicitud, la guarda en el teléfono y la envía cuando vuelve la conexión.',
           bulletPoints: [
-            'Mapa con velocidad y hora estimada de llegada (ETA).',
-            'Sincronización offline: el recorrido se guarda en el teléfono y se envía al reconectar.',
-            'Historial de ruta como respaldo ante cualquier eventualidad.',
-            'Alertas de desvíos y paradas no programadas.'
+            'Ubicación del teléfono registrada al llegar al destino.',
+            'Se rechazan las ubicaciones simuladas por aplicaciones de GPS falso.',
+            'Las solicitudes hechas sin señal se guardan y se envían al reconectar.',
+            'El seguimiento continuo del viaje está en desarrollo.'
           ],
-          statLabel: 'Rastreo',
-          statValue: 'GPS'
+          statLabel: 'Ubicación',
+          statValue: 'Al llegar'
         },
         {
           id: 'guias',
@@ -322,14 +322,14 @@ const translationsData: Record<Language, Translations> = {
       catAll: 'Todas',
       catGeneral: 'General',
       catPayments: 'Pagos y Custodia',
-      catSecurity: 'Seguridad y GPS',
+      catSecurity: 'Seguridad y Ubicación',
       catDrivers: 'Transportistas',
       catMachinery: 'Maquinaria',
       items: [
         {
           category: 'general',
           question: '¿Qué es RVTER y en qué se diferencia de un flete tradicional?',
-          answer: 'RVTER es la plataforma tecnológica que conecta directamente a dueños de carga con transportistas y operadores de maquinaria verificados en toda Venezuela. A diferencia del mercado informal, RVTER ofrece pago previo en custodia bancaria, rastreo GPS con sincronización offline y revisión de documentos.'
+          answer: 'RVTER es la plataforma tecnológica que conecta directamente a dueños de carga con transportistas y operadores de maquinaria verificados en toda Venezuela. A diferencia del mercado informal, RVTER ofrece pago previo en custodia bancaria, registro de ubicación al llegar y revisión de documentos.'
         },
         {
           category: 'maquinaria',
@@ -364,7 +364,7 @@ const translationsData: Record<Language, Translations> = {
         {
           category: 'seguridad',
           question: '¿Qué ocurre si se pierde la señal celular durante el viaje?',
-          answer: 'La app móvil de RVTER cuenta con tecnología Offline Sync. El teléfono sigue guardando las coordenadas satelitales GPS y eventos de telemetría en su memoria encriptada y, tan pronto detecta señal o conexión de datos, sincroniza el historial completo sin perder el registro del recorrido.'
+          answer: 'Si publicas una solicitud sin señal, la app la guarda en el teléfono y la envía cuando vuelve la conexión. El registro de ubicación se hace al llegar al destino.'
         },
         {
           category: 'seguridad',
@@ -380,7 +380,7 @@ const translationsData: Record<Language, Translations> = {
     },
     footer: {
       slogan: 'CARGAS PROTEGIDAS, PAGOS SEGUROS Y RUTAS LLENAS.',
-      desc: 'Marketplace tecnológico de transporte de carga y alquiler de maquinaria pesada en Venezuela, con pago previo en custodia bancaria y rastreo GPS.',
+      desc: 'Marketplace tecnológico de transporte de carga y alquiler de maquinaria pesada en Venezuela, con pago previo en custodia bancaria y registro de ubicación al llegar.',
       navTitle: 'Navegación',
       legalTitle: 'Legal y Transparencia',
       terms: 'Términos y Condiciones',
@@ -392,35 +392,35 @@ const translationsData: Record<Language, Translations> = {
     navbar: {
       announcement: 'PROTECTED CARGO, SECURE PAYMENTS AND FULL ROUTES',
       howItWorks: 'How It Works',
-      security: 'Security & GPS',
+      security: 'Security & Location',
       faq: 'FAQ',
       explore: 'Download',
       closeMenu: 'Close Menu',
       openMenu: 'Open Menu',
     },
     hero: {
-      titlePrefix: 'Real-Time Control',
+      titlePrefix: 'Step-by-Step Control',
       titleHighlight: 'Of Your Cargo',
       subtitlePart1: 'The marketplace connecting cargo owners with verified carriers and heavy machinery in Venezuela, with advance payment in bank custody and the goal of',
       subtitleHighlight: 'Zero Empty Returns',
       badgeEscrow: 'Payment in bank custody',
       badgeCoverage: 'National Coverage',
-      phoneAlt: 'RVTER Live GPS Tracking - Active Route Barquisimeto to Caracas',
+      phoneAlt: 'RVTER - Trip route Barquisimeto to Caracas',
       left1Title: 'Payment in Bank Custody',
       left1Badge: 'Now',
       left1Desc: 'Funds in bank custody before loading. Driver starts a safe journey.',
       left2Title: 'Route: Barquisimeto → Caracas',
       left2Badge: 'En Route',
-      left2Desc: '78 km/h • Live GPS tracking and active geofencing.',
+      left2Desc: 'Location recorded on arrival at the destination.',
       left3Title: 'Security Rule',
       left3Badge: 'Strict',
       left3Desc: 'The carrier never picks up cargo without payment in bank custody.',
       right1Title: 'CAT 320D Excavator Hired',
       right1Badge: 'Machinery',
       right1Desc: 'Direct hour-meter quoting directly with the verified owner.',
-      right2Title: 'Offline Sync Active',
+      right2Title: 'No Signal, No Problem',
       right2Badge: 'Active',
-      right2Desc: 'Continuous route logging through areas without cellular reception.',
+      right2Desc: 'Your freight request is saved and sent when the connection returns.',
       right3Title: 'Empty Return Prevented',
       right3Badge: 'Goal',
       right3Desc: 'Return haul matched with agricultural freight back to origin.',
@@ -447,11 +447,11 @@ const translationsData: Record<Language, Translations> = {
           number: '02',
           title: 'Negotiate offers',
           shortDesc: 'Carriers send quotes and you can counter-offer.',
-          fullDesc: 'Review the carrier reputation (1 to 5 stars), trip history, vehicle model and verified license plates. Accept the rate or send a counter-offer to book the load.',
+          fullDesc: 'Review the carrier reputation (1 to 5 stars), trip history, vehicle model and verified license plates. Accept the rate or send a counter-offer to book the load. When you accept, you attach the mobilization guide of your cargo for the carrier to review.',
           badge: 'Offers and counter-offers',
           highlight: 'Offer comparison and direct counter-offers',
-          you: 'You compare profiles and accept a rate or send a counter-offer.',
-          rvter: 'Shows the reputation, history and verified data behind each offer.',
+          you: 'You compare profiles, accept a rate and attach the mobilization guide.',
+          rvter: 'Shows the reputation behind each offer and passes your guide to the carrier for review.',
           payment: 'Still no payment: the amount is fixed when you accept an offer.'
         },
         {
@@ -467,13 +467,13 @@ const translationsData: Record<Language, Translations> = {
         },
         {
           number: '04',
-          title: 'Follow your trip',
-          shortDesc: 'See the truck progress on the map along the route.',
-          fullDesc: 'Check the truck position on the map. In stretches without cell coverage the app stores the route on the phone and syncs it once signal returns, so the route updates with a delay in those stretches.',
-          badge: 'GPS tracking',
-          highlight: 'Map with route, ETA and offline sync',
-          you: 'You follow the route, speed and estimated arrival time.',
-          rvter: 'Records the route and syncs it when signal returns.',
+          title: 'Wait for delivery',
+          shortDesc: 'The carrier travels and reports arrival at the destination.',
+          fullDesc: 'The carrier makes the trip. On arrival the app records the carrier location and your screen shows that delivery is being validated.',
+          badge: 'Arrival at destination',
+          highlight: 'Location recorded on arrival',
+          you: 'You wait for delivery at the agreed destination.',
+          rvter: 'Records the carrier location on arrival.',
           payment: 'The payment stays held for the whole trip.'
         },
         {
@@ -524,13 +524,13 @@ const translationsData: Record<Language, Translations> = {
         },
         {
           number: '04',
-          title: 'Drive and attach your guide',
-          shortDesc: 'GPS navigation and upload of the mobilization guide.',
-          fullDesc: 'While you drive the app records the route even without cell signal and syncs it once connection returns. You can upload the Single Mobilization Guide so it is reviewed before you leave for pickup.',
-          badge: 'Mobilization guide',
-          highlight: 'Guide upload and review, plus offline route logging',
-          you: 'You upload your mobilization guide and drive with GPS navigation.',
-          rvter: 'Records the route and stores the guide with the freight order.',
+          title: 'Review the guide and drive',
+          shortDesc: 'Audit the user guide and drive to the destination.',
+          fullDesc: 'Before heading to pickup you review the mobilization guide the user uploaded and approve or reject it. Then you drive; on arrival the app records your location.',
+          badge: 'Guide and arrival',
+          highlight: 'Guide review and location on arrival',
+          you: 'You review the guide, drive and record your arrival.',
+          rvter: 'Stores the guide with the order and records your location on arrival.',
           payment: 'The payment stays held while you travel.'
         },
         {
@@ -549,7 +549,7 @@ const translationsData: Record<Language, Translations> = {
     security: {
       badge: 'Technology Infrastructure & Security',
       title: 'Resilient technology built for Venezuelan roads',
-      desc: 'Bank custody of the payment, GPS logging with offline sync and review of mobilization guides.',
+      desc: 'Bank custody of the payment, location on arrival at the destination and review of mobilization guides.',
       pillars: [
         {
           id: 'custodia',
@@ -559,7 +559,7 @@ const translationsData: Record<Language, Translations> = {
           bulletPoints: [
             'Mandatory advance payment: the carrier goes to load with payment confirmed in bank custody.',
             'No confirmed payment, no trip.',
-            'Cabin PIN: driver access to the route sheet and telemetry.',
+            'Cabin PIN: driver access to the route sheet.',
             'Destination Delivery Code: with it, RVTER instructs the bank to release the funds.'
           ],
           statLabel: 'Payment',
@@ -567,17 +567,17 @@ const translationsData: Record<Language, Translations> = {
         },
         {
           id: 'gps',
-          title: 'GPS tracking and offline sync',
-          subtitle: 'Route logging that continues in areas without cell coverage.',
-          description: 'The mobile app records the GPS position of the trip. If the signal drops on the road, the app stores the route on the phone and sends it once connectivity returns.',
+          title: 'Arrival location and sending without signal',
+          subtitle: 'The app records your location on arrival and saves your requests when there is no signal.',
+          description: 'On arrival at the destination the app reads the real location of the phone and records it; simulated locations are rejected. If there is no signal when posting a request, it is saved on the phone and sent when the connection returns.',
           bulletPoints: [
-            'Map with speed and estimated time of arrival (ETA).',
-            'Offline sync: the route is stored on the phone and sent on reconnect.',
-            'Route history as a backup for any contingency.',
-            'Alerts for detours and unscheduled stops.'
+            'Phone location recorded on arrival at the destination.',
+            'Locations simulated by fake-GPS apps are rejected.',
+            'Requests made without signal are saved and sent on reconnect.',
+            'Continuous trip tracking is under development.'
           ],
-          statLabel: 'Tracking',
-          statValue: 'GPS'
+          statLabel: 'Location',
+          statValue: 'On arrival'
         },
         {
           id: 'guias',
@@ -602,14 +602,14 @@ const translationsData: Record<Language, Translations> = {
       catAll: 'All',
       catGeneral: 'General',
       catPayments: 'Payments & Custody',
-      catSecurity: 'Security & GPS',
+      catSecurity: 'Security & Location',
       catDrivers: 'Carriers',
       catMachinery: 'Heavy Machinery',
       items: [
         {
           category: 'general',
           question: 'What is RVTER and how does it differ from traditional freight?',
-          answer: 'RVTER is the technology platform connecting cargo owners directly with verified carriers and heavy machinery operators across Venezuela. Unlike informal middlemen, RVTER offers advance payment in bank custody, GPS tracking with offline sync, and document review.'
+          answer: 'RVTER is the technology platform connecting cargo owners directly with verified carriers and heavy machinery operators across Venezuela. Unlike informal middlemen, RVTER offers advance payment in bank custody, location recording on arrival, and document review.'
         },
         {
           category: 'maquinaria',
@@ -644,7 +644,7 @@ const translationsData: Record<Language, Translations> = {
         {
           category: 'seguridad',
           question: 'What happens if cellular signal is lost during transit?',
-          answer: 'The RVTER mobile app features Offline Sync. The smartphone records GPS coordinates and telemetry events in local encrypted storage and seamlessly syncs the full route as soon as cell signal or data connectivity is re-established.'
+          answer: 'If you post a request without signal, the app saves it on the phone and sends it when the connection returns. Location is recorded on arrival at the destination.'
         },
         {
           category: 'seguridad',
@@ -660,7 +660,7 @@ const translationsData: Record<Language, Translations> = {
     },
     footer: {
       slogan: 'PROTECTED CARGO, SECURE PAYMENTS AND FULL ROUTES.',
-      desc: 'A freight transportation and heavy machinery marketplace in Venezuela, with advance payment in bank custody and GPS tracking.',
+      desc: 'A freight transportation and heavy machinery marketplace in Venezuela, with advance payment in bank custody and location recording on arrival.',
       navTitle: 'Navigation',
       legalTitle: 'Legal & Compliance',
       terms: 'Terms & Conditions',
