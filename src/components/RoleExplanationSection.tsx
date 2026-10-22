@@ -129,8 +129,8 @@ export const RoleExplanationSection: React.FC<RoleExplanationProps> = ({ current
                     </div>
 
                     <div className="flex-1 min-w-0">
-                      <div className="flex items-center justify-between gap-2">
-                        <h3 className={`font-bold text-sm sm:text-base truncate ${isActive ? 'text-[#0F172A]' : 'text-slate-700'}`}>
+                      <div className="flex items-start justify-between gap-2">
+                        <h3 className={`font-bold text-sm sm:text-base ${isActive ? 'text-[#0F172A]' : 'text-slate-700'}`}>
                           {step.title}
                         </h3>
                         <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-[#2DA933]/15 text-[#1F7A25] shrink-0">

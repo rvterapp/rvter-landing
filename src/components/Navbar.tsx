@@ -14,7 +14,7 @@ export const Navbar: React.FC = () => {
   ];
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50">
+    <div className="fixed top-0 left-0 right-0 z-50 pb-3 bg-gradient-to-b from-[#F8FAFC] via-[#F8FAFC]/95 to-transparent">
       
       {/* 1. Top Announcement Strip (Control Room Banner) */}
       <div className="bg-[#070D1E] text-white border-b border-white/10 px-4 py-2 text-center text-xs sm:text-[13px] font-medium tracking-wide flex items-center justify-center gap-2">
