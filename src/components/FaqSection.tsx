@@ -32,7 +32,7 @@ export const FaqSection: React.FC = () => {
         
         {/* Section Heading */}
         <div className="text-center space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full liquid-glass border border-[#2DA933]/30 text-[#2DA933] text-xs font-bold uppercase tracking-wider shadow-xs">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full liquid-glass border border-[#2DA933]/30 text-[#1F7A25] text-xs font-bold uppercase tracking-wider shadow-sm">
             {t.faq.badge}
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0F172A] tracking-tight">
@@ -47,11 +47,12 @@ export const FaqSection: React.FC = () => {
             {categories.map((cat) => (
               <button
                 key={cat.id}
+                aria-pressed={activeCategory === cat.id}
                 onClick={() => { setActiveCategory(cat.id); setOpenIndex(null); }}
                 className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
                   activeCategory === cat.id
-                    ? 'bg-[#2DA933] text-white shadow-md shadow-[#2DA933]/25'
-                    : 'liquid-glass-subtle text-slate-700 hover:bg-white border border-white/60 shadow-2xs'
+                    ? 'bg-[#1F7A25] text-white shadow-md shadow-[#2DA933]/25'
+                    : 'liquid-glass-subtle text-slate-700 hover:bg-white border border-white/60 shadow-sm'
                 }`}
               >
                 {cat.label}
@@ -70,17 +71,18 @@ export const FaqSection: React.FC = () => {
                 className={`rounded-2xl transition-all overflow-hidden ${
                   isOpen
                     ? 'border-2 border-[#2DA933] liquid-glass-card shadow-lg shadow-[#2DA933]/10'
-                    : 'border border-white/70 liquid-glass hover:bg-white/80 shadow-xs'
+                    : 'border border-white/70 liquid-glass hover:bg-white/80 shadow-sm'
                 }`}
               >
                 <button
+                  aria-expanded={isOpen}
                   onClick={() => toggleFaq(index)}
                   className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4"
                 >
                   <span className="font-bold text-base sm:text-lg text-[#0F172A]">
                     <FormattedRvterText text={faq.question} wordmarkHeight={15} />
                   </span>
-                  <div className={`w-8 h-8 rounded-full flex items-center justify-center bg-slate-100/80 shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180 text-[#2DA933]' : 'text-slate-500'}`}>
+                  <div className={`w-8 h-8 rounded-full flex items-center justify-center bg-slate-100/80 shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180 text-[#1F7A25]' : 'text-slate-500'}`}>
                     <ChevronDown className="w-5 h-5" />
                   </div>
                 </button>

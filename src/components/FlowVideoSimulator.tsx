@@ -117,7 +117,7 @@ export const FlowVideoSimulator: React.FC = () => {
                     className={`cursor-pointer p-3.5 rounded-2xl border transition-all relative overflow-hidden ${
                       isActive
                         ? 'bg-white border-2 border-[#2DA933] shadow-md shadow-[#2DA933]/15'
-                        : 'bg-white border-slate-200 hover:border-slate-300 shadow-xs'
+                        : 'bg-white border-slate-200 hover:border-slate-300 shadow-sm'
                     }`}
                   >
                     {/* Active Step Progress Fill */}
@@ -180,7 +180,7 @@ export const FlowVideoSimulator: React.FC = () => {
                         transition={{ duration: 0.35 }}
                         className="space-y-3"
                       >
-                        <div className="p-3.5 rounded-2xl bg-white border border-slate-200 shadow-xs space-y-2.5">
+                        <div className="p-3.5 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-2.5">
                           <div className="flex items-center justify-between">
                             <span className="text-xs font-bold text-[#2DA933] flex items-center gap-1.5">
                               <PackagePlus className="w-4 h-4" />
@@ -343,7 +343,7 @@ export const FlowVideoSimulator: React.FC = () => {
                           </div>
                         </div>
 
-                        <div className="p-2.5 rounded-xl bg-white border border-slate-200 shadow-xs flex items-center justify-between text-xs">
+                        <div className="p-2.5 rounded-xl bg-white border border-slate-200 shadow-sm flex items-center justify-between text-xs">
                           <div className="flex items-center gap-1.5 text-blue-600">
                             <Radio className="w-3.5 h-3.5 animate-pulse" />
                             <span>GPS Satelital en Vivo</span>

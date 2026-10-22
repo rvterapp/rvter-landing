@@ -6,6 +6,7 @@ import { HeroSection } from './components/HeroSection';
 import { RoleExplanationSection } from './components/RoleExplanationSection';
 import { SecurityTechSection } from './components/SecurityTechSection';
 import { FaqSection } from './components/FaqSection';
+import { DownloadCtaSection } from './components/DownloadCtaSection';
 import { Footer } from './components/Footer';
 
 export const App: React.FC = () => {
@@ -15,19 +16,17 @@ export const App: React.FC = () => {
     <LanguageProvider>
       <ThemeProvider>
         <div className="min-h-screen bg-[#F8FAFC] text-[#0F172A] relative overflow-hidden">
-          {/* Subtle Ambient Background Gradients for Continuous Glass Depth */}
-          <div className="fixed inset-0 pointer-events-none z-0">
-            <div className="absolute top-1/4 -left-32 w-96 h-96 bg-[#2DA933]/5 rounded-full blur-3xl" />
-            <div className="absolute top-2/3 -right-32 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl" />
-            <div className="absolute bottom-10 left-1/3 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl" />
-          </div>
+          <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60] focus:px-4 focus:py-2 focus:rounded-full focus:bg-[#1F7A25] focus:text-white focus:text-sm focus:font-bold">
+            Saltar al contenido / Skip to content
+          </a>
 
           <Navbar />
-          <main className="relative z-10">
+          <main id="main" className="relative z-10">
             <HeroSection />
             <RoleExplanationSection currentRole={selectedRole} onRoleChange={setSelectedRole} />
             <SecurityTechSection />
             <FaqSection />
+            <DownloadCtaSection />
           </main>
           <div className="relative z-10">
             <Footer />

@@ -46,7 +46,7 @@ export const Navbar: React.FC = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-xs sm:text-[13px] font-semibold text-slate-700 hover:text-[#2DA933] transition-colors"
+                className="text-xs sm:text-[13px] font-semibold text-slate-700 hover:text-[#1F7A25] transition-colors"
               >
                 {link.name}
               </a>
@@ -56,28 +56,30 @@ export const Navbar: React.FC = () => {
           {/* Right: Language Selector & Action Pill */}
           <div className="flex items-center gap-2.5">
             {/* Language Selector ES | EN */}
-            <div className="flex items-center rounded-full bg-slate-100 p-0.5 border border-slate-200 text-[11px] font-bold">
+            <div className="flex items-center rounded-full bg-slate-100 p-0.5 border border-slate-200 text-xs font-bold">
               <button
                 type="button"
                 onClick={() => setLanguage('es')}
-                className={`px-2.5 py-1 rounded-full transition-all ${
+                className={`px-3 py-1.5 rounded-full transition-all ${
                   language === 'es'
-                    ? 'bg-white text-[#0F172A] shadow-xs font-extrabold'
+                    ? 'bg-white text-[#0F172A] shadow-sm font-extrabold'
                     : 'text-slate-500 hover:text-slate-800'
                 }`}
                 aria-label="Español"
+                aria-pressed={language === 'es'}
               >
                 ES
               </button>
               <button
                 type="button"
                 onClick={() => setLanguage('en')}
-                className={`px-2.5 py-1 rounded-full transition-all ${
+                className={`px-3 py-1.5 rounded-full transition-all ${
                   language === 'en'
-                    ? 'bg-white text-[#0F172A] shadow-xs font-extrabold'
+                    ? 'bg-white text-[#0F172A] shadow-sm font-extrabold'
                     : 'text-slate-500 hover:text-slate-800'
                 }`}
                 aria-label="English"
+                aria-pressed={language === 'en'}
               >
                 EN
               </button>
@@ -85,8 +87,8 @@ export const Navbar: React.FC = () => {
 
             <div className="hidden sm:flex items-center">
               <a
-                href="#como-funciona"
-                className="px-4 py-1.5 rounded-full text-xs font-bold text-slate-800 bg-slate-100 hover:bg-slate-200/90 border border-slate-200 transition-all hover:scale-[1.02] active:scale-[0.98]"
+                href="#descargar"
+                className="px-4 py-1.5 rounded-full text-xs font-bold text-white bg-[#1F7A25] hover:bg-[#186320] transition-all hover:scale-[1.02] active:scale-[0.98]"
               >
                 {t.navbar.explore}
               </a>
@@ -97,8 +99,9 @@ export const Navbar: React.FC = () => {
           <div className="flex items-center md:hidden">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-1.5 rounded-full text-slate-700 hover:text-[#2DA933]"
+              className="p-1.5 rounded-full text-slate-700 hover:text-[#1F7A25]"
               aria-label={mobileMenuOpen ? t.navbar.closeMenu : t.navbar.openMenu}
+              aria-expanded={mobileMenuOpen}
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
@@ -114,25 +117,25 @@ export const Navbar: React.FC = () => {
                   key={link.name}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="text-sm font-semibold text-slate-800 hover:text-[#2DA933] py-1"
+                  className="text-sm font-semibold text-slate-800 hover:text-[#1F7A25] py-1"
                 >
                   {link.name}
                 </a>
               ))}
               <div className="pt-2 border-t border-slate-100 flex items-center justify-between">
                 <span className="text-xs font-medium text-slate-500 flex items-center gap-1.5">
-                  <Globe className="w-3.5 h-3.5" /> Idioma / Language:
+                  <Globe className="w-3.5 h-3.5" /> {language === 'es' ? 'Idioma' : 'Language'}:
                 </span>
                 <div className="flex items-center rounded-full bg-slate-100 p-0.5 border border-slate-200 text-xs font-bold">
                   <button
                     onClick={() => setLanguage('es')}
-                    className={`px-3 py-1 rounded-full ${language === 'es' ? 'bg-white text-slate-900 shadow-xs' : 'text-slate-500'}`}
+                    className={`px-3 py-1 rounded-full ${language === 'es' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500'}`}
                   >
                     ES
                   </button>
                   <button
                     onClick={() => setLanguage('en')}
-                    className={`px-3 py-1 rounded-full ${language === 'en' ? 'bg-white text-slate-900 shadow-xs' : 'text-slate-500'}`}
+                    className={`px-3 py-1 rounded-full ${language === 'en' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500'}`}
                   >
                     EN
                   </button>

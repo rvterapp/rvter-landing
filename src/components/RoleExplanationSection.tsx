@@ -52,7 +52,7 @@ export const RoleExplanationSection: React.FC<RoleExplanationProps> = ({ current
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full liquid-glass border border-[#2DA933]/30 text-[#2DA933] text-xs font-bold uppercase tracking-wider shadow-xs">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full liquid-glass border border-[#2DA933]/30 text-[#1F7A25] text-xs font-bold uppercase tracking-wider shadow-sm">
             {t.roles.badge}
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0F172A] tracking-tight">
@@ -64,12 +64,14 @@ export const RoleExplanationSection: React.FC<RoleExplanationProps> = ({ current
 
           {/* Interactive Role Tabs - Liquid Glass Pill */}
           <div className="pt-4 flex justify-center">
-            <div className="p-1.5 rounded-2xl liquid-glass border border-white/80 inline-flex shadow-sm">
+            <div role="tablist" className="p-1.5 rounded-2xl liquid-glass border border-white/80 inline-flex shadow-sm">
               <button
+                role="tab"
+                aria-selected={currentRole === 'user'}
                 onClick={() => { onRoleChange('user'); setActiveStepIndex(0); }}
                 className={`flex items-center gap-2 px-6 py-2.5 rounded-xl text-sm font-bold transition-all ${
                   currentRole === 'user'
-                    ? 'bg-[#2DA933] text-white shadow-md shadow-[#2DA933]/25'
+                    ? 'bg-[#1F7A25] text-white shadow-md shadow-[#2DA933]/25'
                     : 'text-slate-600 hover:text-slate-900'
                 }`}
               >
@@ -77,10 +79,12 @@ export const RoleExplanationSection: React.FC<RoleExplanationProps> = ({ current
                 {t.roles.userTab}
               </button>
               <button
+                role="tab"
+                aria-selected={currentRole === 'driver'}
                 onClick={() => { onRoleChange('driver'); setActiveStepIndex(0); }}
                 className={`flex items-center gap-2 px-6 py-2.5 rounded-xl text-sm font-bold transition-all ${
                   currentRole === 'driver'
-                    ? 'bg-[#2DA933] text-white shadow-md shadow-[#2DA933]/25'
+                    ? 'bg-[#1F7A25] text-white shadow-md shadow-[#2DA933]/25'
                     : 'text-slate-600 hover:text-slate-900'
                 }`}
               >
@@ -102,18 +106,22 @@ export const RoleExplanationSection: React.FC<RoleExplanationProps> = ({ current
                 <motion.div
                   key={step.number}
                   whileHover={{ x: 4 }}
+                  role="button"
+                  tabIndex={0}
+                  aria-pressed={isActive}
+                  onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setActiveStepIndex(idx); } }}
                   onClick={() => setActiveStepIndex(idx)}
                   className={`cursor-pointer p-4 rounded-2xl transition-all ${
                     isActive
                       ? 'liquid-glass-card border-2 border-[#2DA933] shadow-lg shadow-[#2DA933]/15'
-                      : 'liquid-glass-subtle hover:bg-white/80 border border-white/60 shadow-xs'
+                      : 'liquid-glass-subtle hover:bg-white/80 border border-white/60 shadow-sm'
                   }`}
                 >
                   <div className="flex items-start gap-4">
                     <div
                       className={`w-10 h-10 rounded-xl flex items-center justify-center font-bold text-sm shrink-0 transition-colors ${
                         isActive
-                          ? 'bg-[#2DA933] text-white shadow-xs'
+                          ? 'bg-[#1F7A25] text-white shadow-sm'
                           : 'bg-slate-200/80 text-slate-700'
                       }`}
                     >
@@ -125,7 +133,7 @@ export const RoleExplanationSection: React.FC<RoleExplanationProps> = ({ current
                         <h3 className={`font-bold text-sm sm:text-base truncate ${isActive ? 'text-[#0F172A]' : 'text-slate-700'}`}>
                           {step.title}
                         </h3>
-                        <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#2DA933]/15 text-[#2DA933] shrink-0">
+                        <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-[#2DA933]/15 text-[#1F7A25] shrink-0">
                           {step.badge}
                         </span>
                       </div>
@@ -134,7 +142,7 @@ export const RoleExplanationSection: React.FC<RoleExplanationProps> = ({ current
                       </p>
                     </div>
 
-                    <ChevronRight className={`w-5 h-5 shrink-0 self-center transition-transform ${isActive ? 'text-[#2DA933] translate-x-1' : 'text-slate-400'}`} />
+                    <ChevronRight className={`w-5 h-5 shrink-0 self-center transition-transform ${isActive ? 'text-[#1F7A25] translate-x-1' : 'text-slate-500'}`} />
                   </div>
                 </motion.div>
               );
@@ -156,11 +164,11 @@ export const RoleExplanationSection: React.FC<RoleExplanationProps> = ({ current
                   {/* Step Header Badge & Icon */}
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                      <div className="w-14 h-14 rounded-2xl bg-[#2DA933]/10 border border-[#2DA933]/30 flex items-center justify-center text-[#2DA933]">
+                      <div className="w-14 h-14 rounded-2xl bg-[#2DA933]/10 border border-[#2DA933]/30 flex items-center justify-center text-[#1F7A25]">
                         {getStepIcon(currentRole, activeStepIndex)}
                       </div>
                       <div>
-                        <div className="text-xs font-bold text-[#2DA933] uppercase tracking-wider">
+                        <div className="text-xs font-bold text-[#1F7A25] uppercase tracking-wider">
                           {language === 'es' ? `Paso ${activeStep.number} de 05` : `Step ${activeStep.number} of 05`}
                         </div>
                         <h3 className="text-2xl font-black text-slate-900">
@@ -169,7 +177,7 @@ export const RoleExplanationSection: React.FC<RoleExplanationProps> = ({ current
                       </div>
                     </div>
 
-                    <span className="hidden sm:inline-block px-3 py-1 rounded-full text-xs font-semibold bg-[#2DA933]/15 text-[#2DA933]">
+                    <span className="hidden sm:inline-block px-3 py-1 rounded-full text-xs font-semibold bg-[#2DA933]/15 text-[#1F7A25]">
                       {activeStep.badge}
                     </span>
                   </div>
@@ -180,9 +188,9 @@ export const RoleExplanationSection: React.FC<RoleExplanationProps> = ({ current
                   </div>
 
                   {/* Highlight Feature Card */}
-                  <div className="p-4 rounded-2xl bg-white/70 border border-white/80 space-y-2 shadow-xs">
+                  <div className="p-4 rounded-2xl bg-white/70 border border-white/80 space-y-2 shadow-sm">
                     <div className="text-xs font-bold text-slate-500 uppercase tracking-wider flex items-center gap-1.5">
-                      <Sparkles className="w-3.5 h-3.5 text-[#2DA933]" />
+                      <Sparkles className="w-3.5 h-3.5 text-[#1F7A25]" />
                       <span>{language === 'es' ? 'Ventaja Tecnológica' : 'Key Advantage'}</span>
                       <RvterWordmark fill="#2DA933" height={13} className="inline-block align-middle ml-0.5" />
                     </div>

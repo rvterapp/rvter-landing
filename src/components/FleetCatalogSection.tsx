@@ -117,7 +117,7 @@ export const FleetCatalogSection: React.FC = () => {
 
               {/* Capacity and Volume Metrics */}
               <div className="grid grid-cols-2 gap-4">
-                <div className="p-4 rounded-2xl bg-white border border-slate-200 shadow-xs">
+                <div className="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm">
                   <div className="flex items-center gap-2 text-xs font-bold text-slate-500 mb-1">
                     <Weight className="w-4 h-4 text-[#2DA933]" />
                     <span>Capacidad de Carga</span>
@@ -127,7 +127,7 @@ export const FleetCatalogSection: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="p-4 rounded-2xl bg-white border border-slate-200 shadow-xs">
+                <div className="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm">
                   <div className="flex items-center gap-2 text-xs font-bold text-slate-500 mb-1">
                     <Box className="w-4 h-4 text-blue-500" />
                     <span>Volumen / Dimensiones</span>
@@ -147,7 +147,7 @@ export const FleetCatalogSection: React.FC = () => {
                   {selectedVehicle.idealFor.map((item, i) => (
                     <span
                       key={i}
-                      className="px-3 py-1.5 rounded-xl bg-white text-xs font-medium text-slate-700 border border-slate-200 shadow-xs"
+                      className="px-3 py-1.5 rounded-xl bg-white text-xs font-medium text-slate-700 border border-slate-200 shadow-sm"
                     >
                       {item}
                     </span>

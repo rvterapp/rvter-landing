@@ -7,7 +7,7 @@ export const Footer: React.FC = () => {
   const { language, t } = useLanguage();
 
   return (
-    <footer className="relative liquid-glass border-t border-white/60 text-slate-600 text-xs py-16 backdrop-blur-2xl">
+    <footer className="relative liquid-glass border-t border-white/60 text-slate-600 text-xs py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
@@ -18,7 +18,7 @@ export const Footer: React.FC = () => {
               <RvterWordmark fill="#0F172A" height={36} />
             </div>
 
-            <p className="text-xs font-semibold text-[#2DA933] uppercase tracking-wider">
+            <p className="text-xs font-semibold text-[#1F7A25] uppercase tracking-wider">
               {t.footer.slogan}
             </p>
 
@@ -28,7 +28,7 @@ export const Footer: React.FC = () => {
 
             <div className="flex items-center gap-3 text-slate-500 pt-2">
               <span className="flex items-center gap-1 font-medium">
-                <ShieldCheck className="w-4 h-4 text-[#2DA933]" />
+                <ShieldCheck className="w-4 h-4 text-[#1F7A25]" />
                 {language === 'es' ? 'Custodia C2P (PIN en Destino)' : 'C2P Escrow (Destination PIN)'}
               </span>
             </div>
@@ -40,11 +40,11 @@ export const Footer: React.FC = () => {
               {t.navbar.howItWorks}
             </h4>
             <ul className="space-y-2">
-              <li><a href="#flujo-usuarios" className="hover:text-[#2DA933] transition-colors">{language === 'es' ? 'Para Usuarios' : 'For Shippers'}</a></li>
-              <li><a href="#flujo-transportistas" className="hover:text-[#2DA933] transition-colors">{language === 'es' ? 'Para Transportistas' : 'For Carriers'}</a></li>
-              <li><a href="#seguridad" className="hover:text-[#2DA933] transition-colors">{language === 'es' ? 'Custodia C2P con PIN' : 'C2P Escrow & PIN'}</a></li>
-              <li><a href="#seguridad" className="hover:text-[#2DA933] transition-colors">{language === 'es' ? 'Offline Sync & Rastreo GPS' : 'Offline Sync & GPS'}</a></li>
-              <li><a href="#seguridad" className="hover:text-[#2DA933] transition-colors">{language === 'es' ? 'Guías de Movilización' : 'Transit Guides'}</a></li>
+              <li><a href="#flujo-usuarios" className="hover:text-[#1F7A25] transition-colors">{language === 'es' ? 'Para Usuarios' : 'For Shippers'}</a></li>
+              <li><a href="#flujo-transportistas" className="hover:text-[#1F7A25] transition-colors">{language === 'es' ? 'Para Transportistas' : 'For Carriers'}</a></li>
+              <li><a href="#seguridad" className="hover:text-[#1F7A25] transition-colors">{language === 'es' ? 'Custodia C2P con PIN' : 'C2P Escrow & PIN'}</a></li>
+              <li><a href="#seguridad" className="hover:text-[#1F7A25] transition-colors">{language === 'es' ? 'Offline Sync & Rastreo GPS' : 'Offline Sync & GPS'}</a></li>
+              <li><a href="#seguridad" className="hover:text-[#1F7A25] transition-colors">{language === 'es' ? 'Guías de Movilización' : 'Transit Guides'}</a></li>
             </ul>
           </div>
 
@@ -54,10 +54,10 @@ export const Footer: React.FC = () => {
               {language === 'es' ? 'Intermediación Segura' : 'Secure Marketplace'}
             </h4>
             <ul className="space-y-2">
-              <li><a href="#como-funciona" className="hover:text-[#2DA933] transition-colors">{language === 'es' ? 'Fletes Terrestres' : 'Ground Freight'}</a></li>
-              <li><a href="#como-funciona" className="hover:text-[#2DA933] transition-colors">{language === 'es' ? 'Marketplace de Maquinaria' : 'Heavy Equipment'}</a></li>
-              <li><a href="#seguridad" className="hover:text-[#2DA933] transition-colors">{language === 'es' ? 'Custodia de Pago C2P' : 'C2P Payment Escrow'}</a></li>
-              <li><a href="#seguridad" className="hover:text-[#2DA933] transition-colors">{language === 'es' ? 'Verificación de Choferes' : 'Driver Verification'}</a></li>
+              <li><a href="#como-funciona" className="hover:text-[#1F7A25] transition-colors">{language === 'es' ? 'Fletes Terrestres' : 'Ground Freight'}</a></li>
+              <li><a href="#como-funciona" className="hover:text-[#1F7A25] transition-colors">{language === 'es' ? 'Marketplace de Maquinaria' : 'Heavy Equipment'}</a></li>
+              <li><a href="#seguridad" className="hover:text-[#1F7A25] transition-colors">{language === 'es' ? 'Custodia de Pago C2P' : 'C2P Payment Escrow'}</a></li>
+              <li><a href="#seguridad" className="hover:text-[#1F7A25] transition-colors">{language === 'es' ? 'Verificación de Choferes' : 'Driver Verification'}</a></li>
             </ul>
           </div>
 
@@ -67,14 +67,14 @@ export const Footer: React.FC = () => {
               {t.footer.legalTitle}
             </h4>
             <ul className="space-y-2">
-              <li><a href="#faq" className="hover:text-[#2DA933] transition-colors">{t.navbar.faq}</a></li>
+              <li><a href="#faq" className="hover:text-[#1F7A25] transition-colors">{t.navbar.faq}</a></li>
               <li>
-                <a href="/terms.html" className="hover:text-[#2DA933] transition-colors flex items-center gap-1 font-medium">
+                <a href="/terms.html" className="hover:text-[#1F7A25] transition-colors flex items-center gap-1 font-medium">
                   <span>{t.footer.terms}</span>
                   <RvterWordmark fill="#0F172A" height={11} className="inline-block align-middle" />
                 </a>
               </li>
-              <li><a href="/privacy.html" className="hover:text-[#2DA933] transition-colors font-medium">{t.footer.privacy}</a></li>
+              <li><a href="/privacy.html" className="hover:text-[#1F7A25] transition-colors font-medium">{t.footer.privacy}</a></li>
             </ul>
           </div>
 
@@ -87,10 +87,10 @@ export const Footer: React.FC = () => {
             <RvterWordmark fill="#475569" height={13} className="inline-block align-middle" />
             <span>v2.0. {t.footer.rights}</span>
           </div>
-          <p className="text-[11px]">
+          <p className="text-xs">
             {language === 'es'
-              ? 'Diseño y Tecnología con Estándares de Seguridad Bancaria C2P.'
-              : 'Designed and Engineered with C2P Banking Security Standards.'}
+              ? 'Diseño y Tecnología con Resguardo Bancario del Pago C2P.'
+              : 'Designed and Engineered with C2P Bank-Held Payments.'}
           </p>
         </div>
 

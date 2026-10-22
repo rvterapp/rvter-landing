@@ -29,7 +29,7 @@ export const HeroSection: React.FC = () => {
         >
           <h1 className="text-4xl sm:text-6xl lg:text-[68px] font-black tracking-[-0.03em] text-[#0F172A] leading-[1.04]">
             {t.hero.titlePrefix} <br className="hidden sm:inline" />
-            <span className="text-[#2DA933]">{t.hero.titleHighlight}</span>
+            <span className="text-[#1F7A25]">{t.hero.titleHighlight}</span>
           </h1>
 
           {/* Subtitle */}
@@ -39,14 +39,23 @@ export const HeroSection: React.FC = () => {
 
           {/* 2. Flighty Award Badge Pair */}
           <div className="flex flex-wrap items-center justify-center gap-3 pt-3">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-50 border border-slate-200/90 text-xs font-bold text-slate-800 shadow-2xs">
-              <ShieldCheck className="w-4 h-4 text-[#2DA933]" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-50 border border-slate-200/90 text-xs font-bold text-slate-800 shadow-sm">
+              <ShieldCheck className="w-4 h-4 text-[#1F7A25]" />
               <span>{t.hero.badgeEscrow}</span>
             </div>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-50 border border-slate-200/90 text-xs font-bold text-slate-800 shadow-2xs">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-50 border border-slate-200/90 text-xs font-bold text-slate-800 shadow-sm">
               <CheckCircle2 className="w-4 h-4 text-blue-600" />
               <span>{t.hero.badgeCoverage}</span>
             </div>
+          </div>
+
+          <div className="pt-5">
+            <a
+              href="#descargar"
+              className="inline-flex items-center justify-center px-7 py-3 rounded-full bg-[#1F7A25] hover:bg-[#186320] text-white text-sm font-bold shadow-md shadow-[#1F7A25]/25 transition-all hover:scale-[1.02] active:scale-[0.98]"
+            >
+              {t.navbar.explore}
+            </a>
           </div>
         </motion.div>
 
@@ -64,10 +73,10 @@ export const HeroSection: React.FC = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 whileHover={{ scale: 1.02, rotate: 0 }}
-                className="p-4 sm:p-5 rounded-[20px] bg-white border border-slate-200/90 shadow-md shadow-slate-900/5 lg:-rotate-2 transition-transform"
+                className="p-4 sm:p-5 rounded-[20px] bg-white border border-slate-200/90 shadow-md shadow-slate-900/5 transition-transform"
               >
                 <div className="flex items-start gap-3.5">
-                  <div className="w-10 h-10 rounded-2xl bg-[#2DA933]/15 text-[#2DA933] flex items-center justify-center shrink-0">
+                  <div className="w-10 h-10 rounded-2xl bg-[#2DA933]/15 text-[#1F7A25] flex items-center justify-center shrink-0">
                     <ShieldCheck className="w-5 h-5" />
                   </div>
                   <div className="space-y-1">
@@ -75,7 +84,7 @@ export const HeroSection: React.FC = () => {
                       <h3 className="text-xs sm:text-sm font-bold text-slate-900">
                         {t.hero.left1Title}
                       </h3>
-                      <span className="text-[10px] font-bold text-slate-400">{t.hero.left1Badge}</span>
+                      <span className="text-xs font-bold text-slate-500">{t.hero.left1Badge}</span>
                     </div>
                     <p className="text-xs text-slate-600 leading-snug">
                       {t.hero.left1Desc}
@@ -90,7 +99,7 @@ export const HeroSection: React.FC = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 whileHover={{ scale: 1.02, rotate: 0 }}
-                className="p-4 sm:p-5 rounded-[20px] bg-white border border-slate-200/90 shadow-md shadow-slate-900/5 lg:rotate-1 transition-transform"
+                className="p-4 sm:p-5 rounded-[20px] bg-white border border-slate-200/90 shadow-md shadow-slate-900/5 transition-transform"
               >
                 <div className="flex items-start gap-3.5">
                   <div className="w-10 h-10 rounded-2xl bg-blue-500/15 text-blue-600 flex items-center justify-center shrink-0">
@@ -101,7 +110,7 @@ export const HeroSection: React.FC = () => {
                       <h3 className="text-xs sm:text-sm font-bold text-slate-900">
                         {t.hero.left2Title}
                       </h3>
-                      <span className="text-[10px] font-bold text-blue-600 bg-blue-50 px-1.5 py-0.5 rounded">{t.hero.left2Badge}</span>
+                      <span className="text-xs font-bold text-blue-600 bg-blue-50 px-1.5 py-0.5 rounded">{t.hero.left2Badge}</span>
                     </div>
                     <p className="text-xs text-slate-600 leading-snug">
                       {t.hero.left2Desc}
@@ -116,10 +125,10 @@ export const HeroSection: React.FC = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 whileHover={{ scale: 1.02, rotate: 0 }}
-                className="p-4 sm:p-5 rounded-[20px] bg-white border border-slate-200/90 shadow-md shadow-slate-900/5 lg:-rotate-1 transition-transform"
+                className="p-4 sm:p-5 rounded-[20px] bg-white border border-slate-200/90 shadow-md shadow-slate-900/5 transition-transform"
               >
                 <div className="flex items-start gap-3.5">
-                  <div className="w-10 h-10 rounded-2xl bg-amber-500/15 text-amber-600 flex items-center justify-center shrink-0">
+                  <div className="w-10 h-10 rounded-2xl bg-amber-500/15 text-amber-700 flex items-center justify-center shrink-0">
                     <AlertCircle className="w-5 h-5" />
                   </div>
                   <div className="space-y-1">
@@ -127,7 +136,7 @@ export const HeroSection: React.FC = () => {
                       <h3 className="text-xs sm:text-sm font-bold text-slate-900">
                         {t.hero.left3Title}
                       </h3>
-                      <span className="text-[10px] font-bold text-amber-700 bg-amber-50 px-1.5 py-0.5 rounded">{t.hero.left3Badge}</span>
+                      <span className="text-xs font-bold text-amber-700 bg-amber-50 px-1.5 py-0.5 rounded">{t.hero.left3Badge}</span>
                     </div>
                     <p className="text-xs text-slate-600 leading-snug">
                       {t.hero.left3Desc}
@@ -171,10 +180,10 @@ export const HeroSection: React.FC = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.15 }}
                 whileHover={{ scale: 1.02, rotate: 0 }}
-                className="p-4 sm:p-5 rounded-[20px] bg-white border border-slate-200/90 shadow-md shadow-slate-900/5 lg:rotate-2 transition-transform"
+                className="p-4 sm:p-5 rounded-[20px] bg-white border border-slate-200/90 shadow-md shadow-slate-900/5 transition-transform"
               >
                 <div className="flex items-start gap-3.5">
-                  <div className="w-10 h-10 rounded-2xl bg-amber-500/15 text-amber-600 flex items-center justify-center shrink-0">
+                  <div className="w-10 h-10 rounded-2xl bg-amber-500/15 text-amber-700 flex items-center justify-center shrink-0">
                     <HardHat className="w-5 h-5" />
                   </div>
                   <div className="space-y-1">
@@ -182,7 +191,7 @@ export const HeroSection: React.FC = () => {
                       <h3 className="text-xs sm:text-sm font-bold text-slate-900">
                         {t.hero.right1Title}
                       </h3>
-                      <span className="text-[10px] font-bold text-amber-700 bg-amber-50 px-1.5 py-0.5 rounded">{t.hero.right1Badge}</span>
+                      <span className="text-xs font-bold text-amber-700 bg-amber-50 px-1.5 py-0.5 rounded">{t.hero.right1Badge}</span>
                     </div>
                     <p className="text-xs text-slate-600 leading-snug">
                       {t.hero.right1Desc}
@@ -197,7 +206,7 @@ export const HeroSection: React.FC = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.25 }}
                 whileHover={{ scale: 1.02, rotate: 0 }}
-                className="p-4 sm:p-5 rounded-[20px] bg-white border border-slate-200/90 shadow-md shadow-slate-900/5 lg:-rotate-1 transition-transform"
+                className="p-4 sm:p-5 rounded-[20px] bg-white border border-slate-200/90 shadow-md shadow-slate-900/5 transition-transform"
               >
                 <div className="flex items-start gap-3.5">
                   <div className="w-10 h-10 rounded-2xl bg-blue-500/15 text-blue-600 flex items-center justify-center shrink-0">
@@ -208,7 +217,7 @@ export const HeroSection: React.FC = () => {
                       <h3 className="text-xs sm:text-sm font-bold text-slate-900">
                         {t.hero.right2Title}
                       </h3>
-                      <span className="text-[10px] font-bold text-blue-600 bg-blue-50 px-1.5 py-0.5 rounded">{t.hero.right2Badge}</span>
+                      <span className="text-xs font-bold text-blue-600 bg-blue-50 px-1.5 py-0.5 rounded">{t.hero.right2Badge}</span>
                     </div>
                     <p className="text-xs text-slate-600 leading-snug">
                       {t.hero.right2Desc}
@@ -223,10 +232,10 @@ export const HeroSection: React.FC = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.35 }}
                 whileHover={{ scale: 1.02, rotate: 0 }}
-                className="p-4 sm:p-5 rounded-[20px] bg-white border border-slate-200/90 shadow-md shadow-slate-900/5 lg:rotate-2 transition-transform"
+                className="p-4 sm:p-5 rounded-[20px] bg-white border border-slate-200/90 shadow-md shadow-slate-900/5 transition-transform"
               >
                 <div className="flex items-start gap-3.5">
-                  <div className="w-10 h-10 rounded-2xl bg-[#2DA933]/15 text-[#2DA933] flex items-center justify-center shrink-0">
+                  <div className="w-10 h-10 rounded-2xl bg-[#2DA933]/15 text-[#1F7A25] flex items-center justify-center shrink-0">
                     <CheckCircle2 className="w-5 h-5" />
                   </div>
                   <div className="space-y-1">
@@ -234,7 +243,7 @@ export const HeroSection: React.FC = () => {
                       <h3 className="text-xs sm:text-sm font-bold text-slate-900">
                         {t.hero.right3Title}
                       </h3>
-                      <span className="text-[10px] font-bold text-[#2DA933] bg-[#2DA933]/15 px-1.5 py-0.5 rounded">{t.hero.right3Badge}</span>
+                      <span className="text-xs font-bold text-[#1F7A25] bg-[#2DA933]/15 px-1.5 py-0.5 rounded">{t.hero.right3Badge}</span>
                     </div>
                     <p className="text-xs text-slate-600 leading-snug">
                       {t.hero.right3Desc}

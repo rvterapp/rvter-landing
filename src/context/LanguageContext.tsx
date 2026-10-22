@@ -111,16 +111,16 @@ const translationsData: Record<Language, Translations> = {
       howItWorks: 'Cómo Funciona',
       security: 'Seguridad & GPS',
       faq: 'Preguntas Frecuentes',
-      explore: 'Explorar',
+      explore: 'Descargar',
       closeMenu: 'Cerrar Menú',
       openMenu: 'Abrir Menú',
     },
     hero: {
       titlePrefix: 'El Control De Tu Carga',
       titleHighlight: 'En Tiempo Real',
-      subtitlePart1: 'El marketplace donde dueños de carga conectan con transportistas y maquinaria en Venezuela, con pagos en custodia previa y la meta de',
+      subtitlePart1: 'El marketplace donde dueños de carga conectan con transportistas y maquinaria en Venezuela, con pago previo resguardado en banco y la meta de',
       subtitleHighlight: 'Cero Retornos Vacíos',
-      badgeEscrow: 'Custodia 100% Protegida',
+      badgeEscrow: 'Pago resguardado en banco',
       badgeCoverage: 'Cobertura Nacional',
       phoneAlt: 'RVTER GPS Satelital En Vivo - Ruta Activa Barquisimeto a Caracas',
       left1Title: 'Custodia C2P Confirmada',
@@ -169,7 +169,7 @@ const translationsData: Record<Language, Translations> = {
           number: '03',
           title: 'Custodia C2P (Pago Previo al Viaje)',
           shortDesc: 'Pagas antes de iniciar. El transportista solo busca la carga cuando los fondos están en custodia.',
-          fullDesc: 'Pagas de forma segura vía Pago Móvil C2P o transferencia bancaria antes de iniciar. Únicamente cuando el dinero está confirmado en custodia neutral, el transportista acude a buscar la carga e inicia el viaje; nunca se busca la carga sin antes tener el pago en custodia garantizado.',
+          fullDesc: 'Pagas de forma segura vía Pago Móvil C2P o transferencia bancaria antes de iniciar. Únicamente cuando el dinero está confirmado en resguardo bancario, el transportista acude a buscar la carga e inicia el viaje; nunca se busca la carga sin antes tener el pago resguardado confirmado.',
           badge: 'Pago Previo al Viaje',
           highlight: 'El transportista solo busca la carga tras confirmar el dinero en custodia'
         },
@@ -210,7 +210,7 @@ const translationsData: Record<Language, Translations> = {
         {
           number: '03',
           title: 'Garantía de Pago Previo y Modo Cabina',
-          shortDesc: 'Cero riesgos: nunca buscas la carga sin antes tener el pago en custodia garantizado.',
+          shortDesc: 'Cero riesgos: nunca buscas la carga sin antes tener el pago resguardado confirmado.',
           fullDesc: 'Antes de mover tu unidad o acudir al origen, tienes la certeza de que el cliente depositó el flete en Custodia C2P. El transportista acude a buscar la carga y comienza el viaje únicamente cuando el dinero está en custodia; nunca vas a buscar la carga sin el pago previamente resguardado. Además, accedes a tu hoja de ruta con tu PIN de Cabina temporal.',
           badge: 'Cobro Garantizado Previo a Cargar',
           highlight: 'Solo buscas la carga y viajas con los fondos confirmados en custodia'
@@ -227,7 +227,7 @@ const translationsData: Record<Language, Translations> = {
           number: '05',
           title: 'Liquidación al Instante con Código de Entrega',
           shortDesc: 'El receptor suministra el código en destino y el Pago Móvil se liquida de inmediato.',
-          fullDesc: 'Al descargar en destino o finalizar la faena de maquinaria, el receptor o contratante te entrega el código de confirmación. Al ingresarlo en la app, la custodia de pago se libera automáticamente a tu cuenta bancaria.',
+          fullDesc: 'Al descargar en destino o finalizar la faena de maquinaria, el receptor o contratante te entrega el código de confirmación. Al ingresarlo en la app, RVTER instruye a la institución bancaria la liberación del pago a tu cuenta bancaria.',
           badge: 'Pago Móvil Automático',
           highlight: 'Liquidación automática por validación en destino'
         }
@@ -236,13 +236,13 @@ const translationsData: Record<Language, Translations> = {
     security: {
       badge: 'Infraestructura Tecnológica & Seguridad',
       title: 'Tecnología robusta diseñada para las carreteras de Venezuela',
-      desc: 'Mecanismos de protección fiduciaria, telemetría satelital sin dependencia de cobertura y cumplimiento normativo integral.',
+      desc: 'Resguardo bancario del pago, telemetría satelital sin dependencia de cobertura y cumplimiento normativo integral.',
       pillars: [
         {
           id: 'custodia',
           title: 'Custodia C2P & Doble Validación',
           subtitle: 'El transportista busca la carga únicamente cuando el dinero está en custodia.',
-          description: 'RVTER actúa como intermediario fiduciario neutral. El cliente deposita el 100% en custodia protegida antes de comenzar la operación. El transportista acude a buscar la carga y comienza el viaje cuando el dinero está en custodia; nunca va a buscar la carga sin antes tener el pago garantizado en custodia. Para la operación se aplican dos niveles: PIN de Cabina en carretera y Código de Entrega en destino para liberar los fondos.',
+          description: 'El pago queda retenido en una institución bancaria autorizada y RVTER solo emite las instrucciones técnicas de liberación. El cliente paga antes de comenzar la operación. El transportista acude a buscar la carga y comienza el viaje cuando el pago está confirmado en resguardo; nunca va a buscar la carga sin tenerlo confirmado. Para la operación se aplican dos niveles: PIN de Cabina en carretera y Código de Entrega en destino para liberar los fondos.',
           bulletPoints: [
             'Pago previo obligatorio: el transportista solo acude a cargar con fondos en custodia.',
             'Cero viajes sin garantía: jamás se busca la carga sin el pago previamente resguardado.',
@@ -250,7 +250,7 @@ const translationsData: Record<Language, Translations> = {
             'Código de Entrega en Destino: Liberación irrevocable de fondos al certificar la carga.'
           ],
           statLabel: 'Transacciones Seguras',
-          statValue: '100%'
+          statValue: 'C2P'
         },
         {
           id: 'gps',
@@ -301,7 +301,7 @@ const translationsData: Record<Language, Translations> = {
         {
           category: 'maquinaria',
           question: '¿Cómo funciona el marketplace de maquinaria pesada en RVTER?',
-          answer: 'RVTER no posee ni arrienda maquinaria propia; funciona como un marketplace tecnológico donde dueños y empresas de maquinaria pesada certificadas publican sus equipos disponibles (Jumbos, Retroexcavadoras, Payloaders, Motoniveladoras, Vibrocompactadores y Grúas). Como cliente o contratista, puedes contactar y cotizar directamente con los propietarios por Jornada (8 horas) o por Horómetro, pactar si incluye operador y combustible, coordinar el traslado en camión Lowboy y resguardar el pago mediante custodia fiduciaria C2P.'
+          answer: 'RVTER no posee ni arrienda maquinaria propia; funciona como un marketplace tecnológico donde dueños y empresas de maquinaria pesada certificadas publican sus equipos disponibles (Jumbos, Retroexcavadoras, Payloaders, Motoniveladoras, Vibrocompactadores y Grúas). Como cliente o contratista, puedes contactar y cotizar directamente con los propietarios por Jornada (8 horas) o por Horómetro, pactar si incluye operador y combustible, coordinar el traslado en camión Lowboy y resguardar el pago mediante el Resguardo Bancario C2P.'
         },
         {
           category: 'maquinaria',
@@ -311,7 +311,7 @@ const translationsData: Record<Language, Translations> = {
         {
           category: 'pagos',
           question: '¿Cuándo se realiza el pago y cuándo acude el transportista a buscar la carga?',
-          answer: 'El pago se realiza en su totalidad antes de comenzar el viaje. Al acordar un flete o servicio de maquinaria, el usuario deposita mediante Pago Móvil C2P o transferencia bancaria. Cuando el dinero está confirmado en custodia, el transportista busca la carga y comienza el viaje; el transportista nunca va a buscar la carga sin antes tener el pago en custodia garantizado. Solo cuando el receptor certifica la entrega conforme en destino o culminación de faena mediante el código de entrega, el sistema transfiere los fondos automáticamente.'
+          answer: 'El pago se realiza en su totalidad antes de comenzar el viaje. Al acordar un flete o servicio de maquinaria, el usuario deposita mediante Pago Móvil C2P o transferencia bancaria. Cuando el dinero está confirmado en custodia, el transportista busca la carga y comienza el viaje; el transportista nunca va a buscar la carga sin antes tener el pago confirmado en resguardo. Solo cuando el receptor certifica la entrega conforme en destino o culminación de faena mediante el código de entrega, RVTER instruye a la institución bancaria la liberación de los fondos.'
         },
         {
           category: 'seguridad',
@@ -361,16 +361,16 @@ const translationsData: Record<Language, Translations> = {
       howItWorks: 'How It Works',
       security: 'Security & GPS',
       faq: 'FAQ',
-      explore: 'Explore',
+      explore: 'Download',
       closeMenu: 'Close Menu',
       openMenu: 'Open Menu',
     },
     hero: {
       titlePrefix: 'Real-Time Control',
       titleHighlight: 'Of Your Cargo',
-      subtitlePart1: 'The marketplace connecting cargo owners with certified carriers and heavy machinery in Venezuela, with protected advance escrow payments and the goal of',
+      subtitlePart1: 'The marketplace connecting cargo owners with certified carriers and heavy machinery in Venezuela, with advance payments held at a bank and the goal of',
       subtitleHighlight: 'Zero Empty Returns',
-      badgeEscrow: '100% Protected Escrow',
+      badgeEscrow: 'Payment held at a bank',
       badgeCoverage: 'National Coverage',
       phoneAlt: 'RVTER Live Satellite GPS - Active Route Barquisimeto to Caracas',
       left1Title: 'C2P Escrow Confirmed',
@@ -417,9 +417,9 @@ const translationsData: Record<Language, Translations> = {
         },
         {
           number: '03',
-          title: 'C2P Neutral Escrow (Pre-Trip Payment)',
+          title: 'C2P Bank-Held Payment (Pre-Trip)',
           shortDesc: 'Pay securely in advance. Carriers only load once funds are safely held in escrow.',
-          fullDesc: 'Pay safely via C2P Mobile Payment or bank transfer before dispatch. Only when money is locked in neutral custody does the carrier head to the pickup site; pickups are never done without secured escrow.',
+          fullDesc: 'Pay safely via C2P Mobile Payment or bank transfer before dispatch. Only when money is held at a bank does the carrier head to the pickup site; pickups are never done without confirmed payment.',
           badge: 'Pre-Trip Secured Payment',
           highlight: 'Carriers only pick up cargo once escrow funds are fully confirmed'
         },
@@ -463,7 +463,7 @@ const translationsData: Record<Language, Translations> = {
           shortDesc: 'Zero payment risk: never drive to pickup without payment held in escrow.',
           fullDesc: 'Before moving your unit, you have complete peace of mind that the shipper locked payment in C2P Escrow. You only head to the loading dock once funds are confirmed; never work on unbacked promises. Access your dispatch route with your temporary Cabin PIN.',
           badge: 'Guaranteed Payment Before Pickup',
-          highlight: 'Only drive to load with funds confirmed in neutral custody'
+          highlight: 'Only drive to load with payment confirmed and held at a bank'
         },
         {
           number: '04',
@@ -486,13 +486,13 @@ const translationsData: Record<Language, Translations> = {
     security: {
       badge: 'Technology Infrastructure & Security',
       title: 'Resilient technology built for Venezuelan roads',
-      desc: 'Neutral escrow protection, cell-independent satellite telemetry, and comprehensive regulatory compliance.',
+      desc: 'Bank-held payment, cell-independent satellite telemetry, and comprehensive regulatory compliance.',
       pillars: [
         {
           id: 'custodia',
           title: 'C2P Escrow & Dual Validation',
           subtitle: 'Carriers only pick up cargo once payment is securely locked in escrow.',
-          description: 'RVTER acts as a neutral fiduciary intermediary. The client deposits 100% of the freight into protected escrow before loading begins. The driver only heads to the loading dock when funds are confirmed; trips are never initiated without guaranteed escrow. Two-factor operation: Cabin PIN on the road and Delivery Code at destination to release funds.',
+          description: 'The payment is held at an authorized bank and RVTER only issues the technical release instructions. The client pays before loading begins. The driver only heads to the loading dock when payment is confirmed; trips are never initiated without it. Two-factor operation: Cabin PIN on the road and Delivery Code at destination to release funds.',
           bulletPoints: [
             'Mandatory advance payment: drivers only proceed to load with confirmed escrow.',
             'Zero unprotected trips: never drive to pick up cargo without secured funds.',
@@ -500,7 +500,7 @@ const translationsData: Record<Language, Translations> = {
             'Destination Delivery PIN: Irrevocable release of funds upon signed inspection.'
           ],
           statLabel: 'Secure Transactions',
-          statValue: '100%'
+          statValue: 'C2P'
         },
         {
           id: 'gps',
