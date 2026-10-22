@@ -29,7 +29,7 @@ export const Footer: React.FC = () => {
             <div className="flex items-center gap-3 text-slate-500 pt-2">
               <span className="flex items-center gap-1 font-medium">
                 <ShieldCheck className="w-4 h-4 text-[#1F7A25]" />
-                {language === 'es' ? 'Custodia C2P (PIN en Destino)' : 'C2P Escrow (Destination PIN)'}
+                {language === 'es' ? 'Custodia bancaria (PIN en destino)' : 'Bank custody (Destination PIN)'}
               </span>
             </div>
           </div>
@@ -42,7 +42,7 @@ export const Footer: React.FC = () => {
             <ul className="space-y-2">
               <li><a href="#flujo-usuarios" className="hover:text-[#1F7A25] transition-colors">{language === 'es' ? 'Para Usuarios' : 'For Shippers'}</a></li>
               <li><a href="#flujo-transportistas" className="hover:text-[#1F7A25] transition-colors">{language === 'es' ? 'Para Transportistas' : 'For Carriers'}</a></li>
-              <li><a href="#seguridad" className="hover:text-[#1F7A25] transition-colors">{language === 'es' ? 'Custodia C2P con PIN' : 'C2P Escrow & PIN'}</a></li>
+              <li><a href="#seguridad" className="hover:text-[#1F7A25] transition-colors">{language === 'es' ? 'Custodia bancaria con PIN' : 'Bank custody & PIN'}</a></li>
               <li><a href="#seguridad" className="hover:text-[#1F7A25] transition-colors">{language === 'es' ? 'Offline Sync & Rastreo GPS' : 'Offline Sync & GPS'}</a></li>
               <li><a href="#seguridad" className="hover:text-[#1F7A25] transition-colors">{language === 'es' ? 'Guías de Movilización' : 'Transit Guides'}</a></li>
             </ul>
@@ -56,7 +56,7 @@ export const Footer: React.FC = () => {
             <ul className="space-y-2">
               <li><a href="#como-funciona" className="hover:text-[#1F7A25] transition-colors">{language === 'es' ? 'Fletes Terrestres' : 'Ground Freight'}</a></li>
               <li><a href="#como-funciona" className="hover:text-[#1F7A25] transition-colors">{language === 'es' ? 'Marketplace de Maquinaria' : 'Heavy Equipment'}</a></li>
-              <li><a href="#seguridad" className="hover:text-[#1F7A25] transition-colors">{language === 'es' ? 'Custodia de Pago C2P' : 'C2P Payment Escrow'}</a></li>
+              <li><a href="#seguridad" className="hover:text-[#1F7A25] transition-colors">{language === 'es' ? 'Custodia bancaria del pago' : 'Bank-custody payment'}</a></li>
               <li><a href="#seguridad" className="hover:text-[#1F7A25] transition-colors">{language === 'es' ? 'Verificación de Choferes' : 'Driver Verification'}</a></li>
             </ul>
           </div>
@@ -89,8 +89,8 @@ export const Footer: React.FC = () => {
           </div>
           <p className="text-xs">
             {language === 'es'
-              ? 'Diseño y Tecnología con Resguardo Bancario del Pago C2P.'
-              : 'Designed and Engineered with C2P Bank-Held Payments.'}
+              ? 'Diseño y tecnología con custodia bancaria del pago.'
+              : 'Designed and engineered with bank-custody payments.'}
           </p>
         </div>
 

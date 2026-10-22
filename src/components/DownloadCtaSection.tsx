@@ -29,15 +29,15 @@ export const DownloadCtaSection: React.FC = () => {
 
               <p className="text-base sm:text-lg text-slate-600 max-w-xl mx-auto">
                 {es
-                  ? 'Únete a la plataforma que moderniza el transporte y la maquinaria pesada en Venezuela. Conecta sin intermediarios informales y opera con pago resguardado en institución bancaria.'
-                  : 'Join the platform modernizing freight and heavy machinery in Venezuela. Connect without informal middlemen and operate with payment held at a bank.'}
+                  ? 'Únete a la plataforma que moderniza el transporte y la maquinaria pesada en Venezuela. Conecta sin intermediarios informales y opera con pago en custodia bancaria.'
+                  : 'Join the platform modernizing freight and heavy machinery in Venezuela. Connect without informal middlemen and operate with payment in bank custody.'}
               </p>
 
               {/* Badges / Metrics */}
               <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
                 <div className="flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-50 border border-slate-200 text-xs font-bold text-slate-700">
                   <ShieldCheck className="w-4 h-4 text-[#1F7A25]" />
-                  <span>{es ? 'Pago resguardado en banco' : 'Payment held at a bank'}</span>
+                  <span>{es ? 'Pago en custodia bancaria' : 'Payment in bank custody'}</span>
                 </div>
                 <div className="flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-50 border border-slate-200 text-xs font-bold text-slate-700">
                   <Star className="w-4 h-4 text-amber-500 fill-amber-500" />

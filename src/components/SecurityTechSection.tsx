@@ -142,33 +142,33 @@ export const SecurityTechSection: React.FC = () => {
                 </div>
                 <div>
                   <div className="text-xs uppercase tracking-wider text-slate-500 font-bold">
-                    {language === 'es' ? 'Estado del Sistema' : 'System Status'}
+                    {language === 'es' ? 'Resumen' : 'Summary'}
                   </div>
                   <div className="text-lg font-black text-[#0F172A] mt-1">
-                    {language === 'es' ? 'Pago resguardado en banco' : 'Payment held at a bank'}
+                    {language === 'es' ? 'Pago en custodia bancaria' : 'Payment in bank custody'}
                   </div>
                 </div>
                 <div className="p-3.5 rounded-xl bg-slate-50/80 text-left text-xs text-slate-700 space-y-2.5 border border-slate-100">
                   <div className="flex justify-between">
                     <span className="text-slate-500">
-                      {language === 'es' ? 'Custodia Financiera:' : 'Financial Escrow:'}
+                      {language === 'es' ? 'Pago:' : 'Payment:'}
                     </span>
                     <span className="text-[#1F7A25] font-bold">
-                      {language === 'es' ? 'Resguardo bancario' : 'Bank-held'}
+                      {language === 'es' ? 'Custodia bancaria' : 'Bank custody'}
                     </span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-slate-500">
                       {language === 'es' ? 'Telemetría & GPS:' : 'Telemetry & GPS:'}
                     </span>
-                    <span className="text-blue-600 font-bold">&lt; 3 seg • Offline Sync</span>
+                    <span className="text-blue-600 font-bold">Offline Sync</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-slate-500">
                       {language === 'es' ? 'Guías de Movilización:' : 'Transit Guides:'}
                     </span>
                     <span className="text-amber-700 font-bold">
-                      {language === 'es' ? 'Validación Digital' : 'Digital Verification'}
+                      {language === 'es' ? 'Carga y revisión' : 'Upload & review'}
                     </span>
                   </div>
                   <div className="flex justify-between">

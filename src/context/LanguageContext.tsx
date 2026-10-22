@@ -9,6 +9,9 @@ export interface StepTranslation {
   fullDesc: string;
   badge: string;
   highlight: string;
+  you: string;
+  rvter: string;
+  payment: string;
 }
 
 export interface PillarTranslation {
@@ -118,17 +121,17 @@ const translationsData: Record<Language, Translations> = {
     hero: {
       titlePrefix: 'El Control De Tu Carga',
       titleHighlight: 'En Tiempo Real',
-      subtitlePart1: 'El marketplace donde dueños de carga conectan con transportistas y maquinaria en Venezuela, con pago previo resguardado en banco y la meta de',
+      subtitlePart1: 'El marketplace donde dueños de carga conectan con transportistas y maquinaria en Venezuela, con pago previo en custodia bancaria y la meta de',
       subtitleHighlight: 'Cero Retornos Vacíos',
-      badgeEscrow: 'Pago resguardado en banco',
+      badgeEscrow: 'Pago en custodia bancaria',
       badgeCoverage: 'Cobertura Nacional',
-      phoneAlt: 'RVTER GPS Satelital En Vivo - Ruta Activa Barquisimeto a Caracas',
+      phoneAlt: 'RVTER Rastreo GPS en vivo - Ruta Activa Barquisimeto a Caracas',
       left1Title: 'Pago en Custodia Bancaria',
       left1Badge: 'Ahora',
       left1Desc: 'Fondos en custodia bancaria antes de cargar. El chofer inicia viaje seguro.',
       left2Title: 'Ruta: Barquisimeto → Caracas',
       left2Badge: 'En Ruta',
-      left2Desc: '78 km/h • Telemetría satelital en vivo y geocerca activa.',
+      left2Desc: '78 km/h • Rastreo GPS en vivo y geocerca activa.',
       left3Title: 'Regla de Seguridad',
       left3Badge: 'Estricta',
       left3Desc: 'El transportista nunca va a buscar la carga sin pago en custodia bancaria.',
@@ -145,147 +148,177 @@ const translationsData: Record<Language, Translations> = {
     roles: {
       badge: 'Flujo Operativo Paso a Paso',
       title: '¿Cómo funciona el servicio de fletes y maquinaria?',
-      desc: 'Un marketplace transparente y directo: publica requerimientos de fletes o contrata maquinaria pesada directamente con sus propietarios certificados.',
+      desc: 'Un marketplace directo: publica requerimientos de fletes o contrata maquinaria pesada directamente con sus propietarios verificados.',
       userTab: 'Dueño de Carga o Contratante',
       driverTab: 'Transportista o Dueño de Maquinaria',
       userSteps: [
         {
           number: '01',
-          title: 'Publica tu Carga o Requerimiento de Maquinaria',
-          shortDesc: 'Indica origen, destino, tipo de producto, o el equipo pesado que necesitas para tu obra.',
-          fullDesc: 'Define tu necesidad: flete terrestre (Agropecuario, Mercancía General, Graneles) o alquiler de maquinaria en nuestro marketplace. Puedes cotizar directamente con propietarios verificados y calcular tarifas con la Brújula de Costos.',
-          badge: 'Sin Costo Inicial',
-          highlight: 'Marketplace directo con propietarios y Brújula de Costos'
+          title: 'Publica tu carga o maquinaria',
+          shortDesc: 'Indica origen, destino y tipo de carga, o el equipo que necesitas.',
+          fullDesc: 'Define tu necesidad: flete terrestre (agropecuario, mercancía general, graneles) o alquiler de maquinaria. Cotiza directamente con propietarios verificados y estima una tarifa de referencia con la Brújula de Costos.',
+          badge: 'Tu solicitud',
+          highlight: 'Marketplace directo con propietarios y Brújula de Costos',
+          you: 'Describes tu carga o el equipo que necesitas, y su ubicación.',
+          rvter: 'Publica tu solicitud para transportistas y propietarios verificados.',
+          payment: 'Todavía no se paga nada: el pago se hace al acordar el servicio.'
         },
         {
           number: '02',
-          title: 'Recibe Ofertas y Negocia Contraofertas en Vivo',
-          shortDesc: 'Conductores certificados envían cotizaciones y puedes contraofertar al instante.',
-          fullDesc: 'Visualiza la reputación del transportista (1 a 5 estrellas), historial de viajes completados, modelo de vehículo y placas verificadas. Acepta la tarifa o envía una contraoferta directa para cerrar el flete.',
-          badge: 'Negociación Transparente',
-          highlight: 'Comparación en vivo y contraoferta directa (counter-price)'
+          title: 'Negocia ofertas',
+          shortDesc: 'Los transportistas envían cotizaciones y puedes contraofertar.',
+          fullDesc: 'Revisa la reputación del transportista (1 a 5 estrellas), su historial de viajes, el modelo de vehículo y las placas verificadas. Acepta la tarifa o envía una contraoferta para cerrar el flete.',
+          badge: 'Ofertas y contraofertas',
+          highlight: 'Comparación de ofertas y contraoferta directa',
+          you: 'Comparas perfiles y aceptas una tarifa o envías una contraoferta.',
+          rvter: 'Muestra la reputación, el historial y los datos verificados de cada oferta.',
+          payment: 'Aún sin pago: el monto queda fijado al aceptar la oferta.'
         },
         {
           number: '03',
-          title: 'Custodia C2P (Pago Previo al Viaje)',
-          shortDesc: 'Pagas antes de iniciar. El transportista solo busca la carga cuando los fondos están en custodia bancaria.',
-          fullDesc: 'Pagas de forma segura vía Pago Móvil C2P o transferencia bancaria antes de iniciar. Únicamente cuando el dinero está confirmado en resguardo bancario, el transportista acude a buscar la carga e inicia el viaje; nunca se busca la carga sin antes tener el pago resguardado confirmado.',
-          badge: 'Pago Previo al Viaje',
-          highlight: 'El transportista solo busca la carga tras confirmar el dinero en custodia bancaria'
+          title: 'Paga con custodia bancaria',
+          shortDesc: 'Pagas antes de iniciar y el dinero queda en custodia bancaria.',
+          fullDesc: 'Pagas por Pago Móvil C2P o transferencia bancaria antes de iniciar. El pago queda retenido en una institución bancaria autorizada y RVTER solo emite las instrucciones técnicas de liberación. El transportista acude a buscar la carga cuando el pago está confirmado en custodia bancaria.',
+          badge: 'Pago previo al viaje',
+          highlight: 'El transportista busca la carga con el pago confirmado en custodia bancaria',
+          you: 'Pagas el monto acordado por Pago Móvil C2P o transferencia.',
+          rvter: 'Confirma el pago en custodia bancaria y habilita al transportista.',
+          payment: 'Queda retenido en el banco hasta que confirmes la entrega.'
         },
         {
           number: '04',
-          title: 'Rastreo GPS & Sincronización Offline',
-          shortDesc: 'Monitorea el avance del camión con telemetría continua incluso en tramos sin señal.',
-          fullDesc: 'Visualiza la telemetría satelital en vivo en el mapa. En tramos de carretera sin cobertura celular, la app almacena localmente el recorrido y lo sincroniza de inmediato al recuperar señal.',
-          badge: 'Monitoreo Satelital Continuo',
-          highlight: 'Geocercas activas, sincronización offline en carretera y telemetría'
+          title: 'Sigue tu viaje',
+          shortDesc: 'Ve el avance del camión en el mapa durante el trayecto.',
+          fullDesc: 'Consulta la posición del camión en el mapa. En tramos sin cobertura celular, la app guarda el recorrido en el teléfono y lo sincroniza al recuperar señal, por lo que en esos tramos la ruta se actualiza con retraso.',
+          badge: 'Rastreo GPS',
+          highlight: 'Mapa con ruta, hora estimada y sincronización offline',
+          you: 'Sigues la ruta, la velocidad y la hora estimada de llegada.',
+          rvter: 'Registra el recorrido y lo sincroniza al recuperar señal.',
+          payment: 'El pago sigue retenido durante todo el viaje.'
         },
         {
           number: '05',
-          title: 'Entrega en Destino y Código de Liberación',
-          shortDesc: 'Verifica la mercancía en destino, suministra el código de entrega y libera los fondos.',
-          fullDesc: 'Al recibir la carga a satisfacción o certificar la faena en destino o almacén, entregas el código de entrega de seguridad. Al validarlo en la app, los fondos en custodia de pago se transfieren de forma irrevocable al transportista.',
-          badge: 'Liberación Inmediata',
-          highlight: 'Código de entrega en destino y liquidación bancaria instantánea'
+          title: 'Confirma con tu código',
+          shortDesc: 'Entrega el código en destino para dar por recibida la carga.',
+          fullDesc: 'Al recibir la carga a satisfacción o certificar la faena, entregas el código de entrega al transportista. Al ingresarlo en la app, RVTER instruye a la institución bancaria la liberación de los fondos retenidos al transportista.',
+          badge: 'Código de entrega',
+          highlight: 'RVTER instruye al banco la liberación con tu código',
+          you: 'Verificas la carga o la faena y entregas el código de entrega.',
+          rvter: 'Valida el código y envía la instrucción de liberación al banco.',
+          payment: 'El banco libera los fondos; el plazo depende de la institución bancaria.'
         }
       ],
       driverSteps: [
         {
           number: '01',
-          title: 'Registro y Verificación KYC de Unidad o Maquinaria',
-          shortDesc: 'Sube tu Cédula, Licencia, RIF y documentación de tu camión o equipo pesado.',
-          fullDesc: 'Validamos la titularidad de tu unidad o maquinaria pesada para otorgarte el sello certificado. Dueños de equipos pesados pueden publicar su maquinaria para recibir ofertas de contratación directa.',
-          badge: 'Verificación Digital KYC',
-          highlight: 'Certificación oficial de choferes, unidades y maquinaria'
+          title: 'Regístrate y verifica tu unidad',
+          shortDesc: 'Sube tu cédula, licencia, RIF y los documentos de tu camión o equipo.',
+          fullDesc: 'Verificamos la titularidad de tu unidad o maquinaria y tus documentos para mostrar el sello de verificado en tu perfil. Los dueños de maquinaria pueden publicar sus equipos para recibir solicitudes directas.',
+          badge: 'Verificación digital',
+          highlight: 'Perfil verificado de choferes, unidades y maquinaria',
+          you: 'Subes tus documentos personales y los de tu unidad o equipo.',
+          rvter: 'Revisa la titularidad y marca tu perfil como verificado.',
+          payment: 'Registras tu cuenta bancaria para recibir los pagos.'
         },
         {
           number: '02',
-          title: 'Marketplace de Cargas, Faenas y Cero Retornos Vacíos',
-          shortDesc: 'Dueños de camiones y maquinaria reciben solicitudes directas de clientes sin intermediarios informales.',
-          fullDesc: 'Accede a la bolsa de fletes y requerimientos de obra. Para transportistas, la meta operativa es lograr cero retornos vacíos enlazando viajes de regreso. Para dueños de maquinaria, el marketplace te conecta con contratistas que requieren tus equipos en su zona.',
-          badge: 'Meta Cero Retornos Vacíos',
-          highlight: 'Filtro por unidad o maquinaria y conexión directa con clientes'
+          title: 'Encuentra cargas y trabajos',
+          shortDesc: 'Recibe solicitudes de clientes y envía tus ofertas.',
+          fullDesc: 'Accede a los fletes y requerimientos de obra publicados. Si eres transportista, puedes registrar tu ruta de regreso para buscar carga hacia tu origen y reducir los viajes vacíos. Si eres dueño de maquinaria, el marketplace te conecta con contratistas que necesitan tus equipos en su zona.',
+          badge: 'Cargas y faenas',
+          highlight: 'Filtros por unidad o maquinaria y contacto directo con clientes',
+          you: 'Eliges las solicitudes que se ajustan a tu unidad y envías tu oferta.',
+          rvter: 'Muestra las solicitudes publicadas y te conecta con el cliente.',
+          payment: 'Aún sin pago: se confirma cuando el cliente acepta tu oferta.'
         },
         {
           number: '03',
-          title: 'Garantía de Pago Previo y Modo Cabina',
-          shortDesc: 'Cero riesgos: nunca buscas la carga sin antes tener el pago resguardado confirmado.',
-          fullDesc: 'Antes de mover tu unidad o acudir al origen, tienes la certeza de que el cliente depositó el flete en Custodia C2P. El transportista acude a buscar la carga y comienza el viaje únicamente cuando el dinero está en custodia; nunca vas a buscar la carga sin el pago previamente resguardado. Además, accedes a tu hoja de ruta con tu PIN de Cabina temporal.',
-          badge: 'Cobro Garantizado Previo a Cargar',
-          highlight: 'Solo buscas la carga y viajas con los fondos confirmados en custodia bancaria'
+          title: 'Sal a cargar con el pago confirmado',
+          shortDesc: 'Vas al origen cuando el pago ya está en custodia bancaria.',
+          fullDesc: 'Antes de mover tu unidad, verás que el cliente ya pagó y que el monto está en custodia bancaria. Solo vas a buscar la carga con el pago confirmado. Con tu PIN de Cabina temporal accedes a tu hoja de ruta.',
+          badge: 'Pago previo confirmado',
+          highlight: 'Sales a cargar con el pago confirmado en custodia bancaria',
+          you: 'Esperas la confirmación del pago antes de ir al origen.',
+          rvter: 'Confirma el pago en custodia bancaria y te da acceso a la hoja de ruta con tu PIN de Cabina.',
+          payment: 'El dinero está retenido en el banco; lo recibes al confirmarse la entrega.'
         },
         {
           number: '04',
-          title: 'Conducción en Ruta & Guías de Movilización',
-          shortDesc: 'Navegación GPS, verificación de Guías Únicas de Movilización y telemetría.',
-          fullDesc: 'Transmite telemetría en tiempo real mientras conduces con registro continuo aun sin señal celular. Verifica los datos de la Guía Única de Movilización para transitar sin demoras por alcabalas.',
-          badge: 'Guías de Movilización',
-          highlight: 'Validación de Guías Únicas de Movilización y telemetría Offline'
+          title: 'Conduce y adjunta tu guía',
+          shortDesc: 'Navegación GPS y carga de la guía de movilización.',
+          fullDesc: 'Mientras conduces, la app registra el recorrido aun sin señal celular y lo sincroniza al recuperar conexión. Puedes subir la Guía Única de Movilización para que sea revisada antes de salir al origen.',
+          badge: 'Guía de movilización',
+          highlight: 'Carga y revisión de la guía, y registro de ruta offline',
+          you: 'Subes tu guía de movilización y conduces con la navegación GPS.',
+          rvter: 'Registra el recorrido y guarda la guía junto a la orden de flete.',
+          payment: 'El pago sigue retenido mientras viajas.'
         },
         {
           number: '05',
-          title: 'Liquidación al Instante con Código de Entrega',
-          shortDesc: 'El receptor suministra el código en destino y el Pago Móvil se liquida de inmediato.',
-          fullDesc: 'Al descargar en destino o finalizar la faena de maquinaria, el receptor o contratante te entrega el código de confirmación. Al ingresarlo en la app, RVTER instruye a la institución bancaria la liberación del pago a tu cuenta bancaria.',
-          badge: 'Pago Móvil Automático',
-          highlight: 'Liquidación automática por validación en destino'
+          title: 'Cobra con el código de entrega',
+          shortDesc: 'El receptor te da el código en destino y RVTER instruye la liberación.',
+          fullDesc: 'Al descargar en destino o finalizar la faena, el receptor o contratante te entrega el código de confirmación. Al ingresarlo en la app, RVTER instruye a la institución bancaria la liberación del pago a tu cuenta bancaria.',
+          badge: 'Liberación por código',
+          highlight: 'Liberación instruida al banco al validar la entrega',
+          you: 'Ingresas en la app el código que te entrega el receptor.',
+          rvter: 'Valida el código y envía la instrucción de liberación al banco.',
+          payment: 'El banco acredita tu cuenta; el plazo depende de la institución.'
         }
       ]
     },
     security: {
       badge: 'Infraestructura Tecnológica & Seguridad',
       title: 'Tecnología robusta diseñada para las carreteras de Venezuela',
-      desc: 'Resguardo bancario del pago, telemetría satelital sin dependencia de cobertura y cumplimiento normativo integral.',
+      desc: 'Custodia bancaria del pago, registro GPS con sincronización offline y revisión de guías de movilización.',
       pillars: [
         {
           id: 'custodia',
-          title: 'Custodia C2P & Doble Validación',
-          subtitle: 'El transportista busca la carga únicamente cuando el dinero está en custodia bancaria.',
-          description: 'El pago queda retenido en una institución bancaria autorizada y RVTER solo emite las instrucciones técnicas de liberación. El cliente paga antes de comenzar la operación. El transportista acude a buscar la carga y comienza el viaje cuando el pago está confirmado en resguardo; nunca va a buscar la carga sin tenerlo confirmado. Para la operación se aplican dos niveles: PIN de Cabina en carretera y Código de Entrega en destino para liberar los fondos.',
+          title: 'Custodia bancaria y doble validación',
+          subtitle: 'El transportista busca la carga cuando el pago está confirmado en custodia bancaria.',
+          description: 'El pago queda retenido en una institución bancaria autorizada y RVTER solo emite las instrucciones técnicas de liberación. El cliente paga antes de comenzar la operación y el transportista busca la carga con el pago confirmado. Se aplican dos niveles de validación: PIN de Cabina en carretera y Código de Entrega en destino para liberar los fondos.',
           bulletPoints: [
-            'Pago previo obligatorio: el transportista solo acude a cargar con fondos en custodia bancaria.',
-            'Cero viajes sin garantía: jamás se busca la carga sin el pago previamente resguardado.',
-            'PIN de Cabina: Acceso expedito del chofer a su hoja de ruta y telemetría.',
-            'Código de Entrega en Destino: Liberación irrevocable de fondos al certificar la carga.'
+            'Pago previo obligatorio: el transportista acude a cargar con el pago confirmado en custodia bancaria.',
+            'Sin pago confirmado no se inicia el viaje.',
+            'PIN de Cabina: acceso del chofer a su hoja de ruta y telemetría.',
+            'Código de Entrega en Destino: con él, RVTER instruye al banco la liberación de los fondos.'
           ],
-          statLabel: 'Transacciones Seguras',
-          statValue: 'C2P'
+          statLabel: 'Pago',
+          statValue: 'Custodia'
         },
         {
           id: 'gps',
-          title: 'Rastreo GPS & Offline Sync',
-          subtitle: 'Telemetría continua de carretera garantizada aun en zonas sin cobertura celular.',
-          description: 'La app móvil transmite la posición satelital del viaje. Si la señal se interrumpe en carretera, el módulo de sincronización offline almacena la telemetría en memoria local y la transmite de inmediato al recuperar conectividad.',
+          title: 'Rastreo GPS y sincronización offline',
+          subtitle: 'Registro de ruta que continúa en zonas sin cobertura celular.',
+          description: 'La app móvil registra la posición GPS del viaje. Si la señal se interrumpe en carretera, la app guarda el recorrido en el teléfono y lo envía al recuperar conectividad.',
           bulletPoints: [
-            'Seguimiento visual en vivo con cálculo dinámico de velocidad y tiempo estimado (ETA).',
-            'Tecnología Offline Sync: telemetría continua ininterrumpida sin pérdida de datos.',
-            'Historial de ruta verificado para respaldo ante cualquier eventualidad.',
-            'Detección automática de desvíos, paradas no programadas y alertas de viaje.'
+            'Mapa con velocidad y hora estimada de llegada (ETA).',
+            'Sincronización offline: el recorrido se guarda en el teléfono y se envía al reconectar.',
+            'Historial de ruta como respaldo ante cualquier eventualidad.',
+            'Alertas de desvíos y paradas no programadas.'
           ],
-          statLabel: 'Precisión Satelital',
-          statValue: 'Sub-métrica'
+          statLabel: 'Rastreo',
+          statValue: 'GPS'
         },
         {
           id: 'guias',
-          title: 'Guías Únicas de Movilización',
-          subtitle: 'Cruce y validación digital de Guías Únicas de Movilización para el transporte de carga.',
-          description: 'RVTER incorpora validación y lectura de Guías Únicas de Movilización, cruzando datos del vehículo asignado, transportista y rubro para agilizar el tránsito y evitar demoras en puntos de control vial.',
+          title: 'Guías de movilización',
+          subtitle: 'Carga y revisión de la Guía Única de Movilización del flete.',
+          description: 'RVTER permite adjuntar la Guía Única de Movilización a la orden de flete para que sea revisada antes de salir al origen, y guarda una copia digital vinculada a la orden.',
           bulletPoints: [
-            'Lectura digital instantánea de datos y código de la Guía Única de Movilización.',
-            'Cruce de concordancia entre vehículo asignado, transportista y rubro de carga.',
-            'Reducción drástica de tiempos de espera en puntos de control y alcabalas viales.',
-            'Archivo digital de la guía vinculado a la orden de flete para respaldo contable.'
+            'Carga del documento o del código QR de la guía.',
+            'Revisión, aprobación o rechazo antes de salir al origen.',
+            'Copia digital vinculada a la orden de flete como respaldo.',
+            'Motivo registrado cuando el documento se rechaza.'
           ],
-          statLabel: 'Validación',
-          statValue: 'Guías de Movilización'
+          statLabel: 'Revisión',
+          statValue: 'Guías'
         }
       ]
     },
     faq: {
       badge: 'Resolución de Dudas',
       title: 'Preguntas Frecuentes',
-      desc: 'Todo lo que necesitas saber sobre pagos en custodia, contratación de maquinaria y seguridad vial en RVTER.',
+      desc: 'Todo lo que necesitas saber sobre pagos en custodia bancaria, contratación de maquinaria y seguridad vial en RVTER.',
       catAll: 'Todas',
       catGeneral: 'General',
       catPayments: 'Pagos y Custodia',
@@ -296,12 +329,12 @@ const translationsData: Record<Language, Translations> = {
         {
           category: 'general',
           question: '¿Qué es RVTER y en qué se diferencia de un flete tradicional?',
-          answer: 'RVTER es la plataforma tecnológica que conecta directamente a dueños de carga con transportistas y operadores de maquinaria certificados en toda Venezuela. A diferencia del mercado informal, RVTER garantiza pagos seguros con custodia C2P protegida, rastreo GPS continuo y validación de documentos oficiales.'
+          answer: 'RVTER es la plataforma tecnológica que conecta directamente a dueños de carga con transportistas y operadores de maquinaria verificados en toda Venezuela. A diferencia del mercado informal, RVTER ofrece pago previo en custodia bancaria, rastreo GPS con sincronización offline y revisión de documentos.'
         },
         {
           category: 'maquinaria',
           question: '¿Cómo funciona el marketplace de maquinaria pesada en RVTER?',
-          answer: 'RVTER no posee ni arrienda maquinaria propia; funciona como un marketplace tecnológico donde dueños y empresas de maquinaria pesada certificadas publican sus equipos disponibles (Jumbos, Retroexcavadoras, Payloaders, Motoniveladoras, Vibrocompactadores y Grúas). Como cliente o contratista, puedes contactar y cotizar directamente con los propietarios por Jornada (8 horas) o por Horómetro, pactar si incluye operador y combustible, coordinar el traslado en camión Lowboy y resguardar el pago mediante el Resguardo Bancario C2P.'
+          answer: 'RVTER no posee ni arrienda maquinaria propia; funciona como un marketplace tecnológico donde dueños y empresas de maquinaria pesada verificadas publican sus equipos disponibles (Jumbos, Retroexcavadoras, Payloaders, Motoniveladoras, Vibrocompactadores y Grúas). Como cliente o contratista, puedes contactar y cotizar directamente con los propietarios por Jornada (8 horas) o por Horómetro, pactar si incluye operador y combustible, coordinar el traslado en camión Lowboy y resguardar el pago en custodia bancaria.'
         },
         {
           category: 'maquinaria',
@@ -311,22 +344,22 @@ const translationsData: Record<Language, Translations> = {
         {
           category: 'pagos',
           question: '¿Cuándo se realiza el pago y cuándo acude el transportista a buscar la carga?',
-          answer: 'El pago se realiza en su totalidad antes de comenzar el viaje. Al acordar un flete o servicio de maquinaria, el usuario deposita mediante Pago Móvil C2P o transferencia bancaria. Cuando el dinero está confirmado en custodia, el transportista busca la carga y comienza el viaje; el transportista nunca va a buscar la carga sin antes tener el pago confirmado en resguardo. Solo cuando el receptor certifica la entrega conforme en destino o culminación de faena mediante el código de entrega, RVTER instruye a la institución bancaria la liberación de los fondos.'
+          answer: 'El pago se realiza en su totalidad antes de comenzar el viaje. Al acordar un flete o servicio de maquinaria, el usuario deposita mediante Pago Móvil C2P o transferencia bancaria. Cuando el dinero está confirmado en custodia bancaria, el transportista busca la carga y comienza el viaje; el transportista nunca va a buscar la carga sin antes tener el pago confirmado en custodia bancaria. Solo cuando el receptor certifica la entrega conforme en destino o culminación de faena mediante el código de entrega, RVTER instruye a la institución bancaria la liberación de los fondos.'
         },
         {
           category: 'seguridad',
           question: '¿Cuál es la diferencia entre el PIN de Cabina y el Código de Entrega en Destino?',
-          answer: 'El PIN de Cabina es un código temporal que el transportista o dueño de unidad genera para que el chofer acceda de inmediato al Modo Cabina en carretera sin compartir credenciales. El Código de Entrega en Destino es el código que el receptor entrega al chofer al verificar la carga; al ingresarlo en la app, se valida la descarga y se liberan automáticamente los fondos en custodia de pago.'
+          answer: 'El PIN de Cabina es un código temporal que el transportista o dueño de unidad genera para que el chofer acceda de inmediato al Modo Cabina en carretera sin compartir credenciales. El Código de Entrega en Destino es el código que el receptor entrega al chofer al verificar la carga; al ingresarlo en la app, se valida la descarga y RVTER instruye al banco la liberación de los fondos en custodia bancaria.'
         },
         {
           category: 'conductores',
           question: '¿Cómo funciona el sistema de ofertas y contraofertas?',
-          answer: 'Cuando un usuario publica un flete con un precio propuesto, los transportistas certificados pueden postularse aceptando esa tarifa o enviando una contraoferta directa (counter-price). El usuario evalúa el perfil, camión y contraoferta para adjudicar el viaje de inmediato.'
+          answer: 'Cuando un usuario publica un flete con un precio propuesto, los transportistas verificados pueden postularse aceptando esa tarifa o enviando una contraoferta directa. El usuario evalúa el perfil, el camión y la contraoferta para adjudicar el viaje.'
         },
         {
           category: 'conductores',
           question: '¿Cómo me ayuda RVTER a evitar retornos vacíos?',
-          answer: 'La meta central de RVTER es lograr cero retornos vacíos. La plataforma permite a los transportistas registrar su ruta planificada de regreso; si viajaste con carga en un trayecto, el sistema te enlaza de inmediato con cargas disponibles hacia tu origen o ciudades intermedias, asegurando que ruedes siempre con flete asignado y maximices tu rentabilidad.'
+          answer: 'La meta de RVTER es reducir los retornos vacíos. La plataforma permite a los transportistas registrar su ruta de regreso para ver las cargas disponibles hacia su origen o ciudades intermedias, cuando las haya.'
         },
         {
           category: 'seguridad',
@@ -336,18 +369,18 @@ const translationsData: Record<Language, Translations> = {
         {
           category: 'seguridad',
           question: '¿Cómo se manejan las Guías Únicas de Movilización?',
-          answer: 'Al publicar una carga, el usuario puede adjuntar el número o código de su Guía Única de Movilización. El transportista y las autoridades pueden verificar en la app la vigencia del documento mediante cruce digital, agilizando el paso por puntos de control y alcabalas.'
+          answer: 'Al publicar una carga, el usuario puede adjuntar su Guía Única de Movilización. Un usuario de la plataforma la revisa en la app y la aprueba o rechaza antes de salir al origen; la copia digital queda vinculada a la orden de flete.'
         },
         {
           category: 'conductores',
           question: '¿Qué requisitos necesito para registrarme como transportista o maquinaria?',
-          answer: 'Solo necesitas tu documento de identidad (Cédula/RIF), Licencia de Conducir (5ta grado para carga pesada), Certificado Médico Vial vigente y el Título de Propiedad o carnet de circulación del vehículo (o autorización legal si no eres el propietario directo). La verificación toma pocos minutos gracias a nuestro sistema de validación digital.'
+          answer: 'Solo necesitas tu documento de identidad (Cédula/RIF), Licencia de Conducir (5ta grado para carga pesada), Certificado Médico Vial vigente y el Título de Propiedad o carnet de circulación del vehículo (o autorización legal si no eres el propietario directo). La verificación se realiza de forma digital.'
         }
       ]
     },
     footer: {
       slogan: 'CARGAS PROTEGIDAS, PAGOS SEGUROS Y RUTAS LLENAS.',
-      desc: 'El ecosistema tecnológico líder de transporte de carga y alquiler de maquinaria pesada en Venezuela con custodia previa protegida y telemetría continua.',
+      desc: 'Marketplace tecnológico de transporte de carga y alquiler de maquinaria pesada en Venezuela, con pago previo en custodia bancaria y rastreo GPS.',
       navTitle: 'Navegación',
       legalTitle: 'Legal y Transparencia',
       terms: 'Términos y Condiciones',
@@ -368,20 +401,20 @@ const translationsData: Record<Language, Translations> = {
     hero: {
       titlePrefix: 'Real-Time Control',
       titleHighlight: 'Of Your Cargo',
-      subtitlePart1: 'The marketplace connecting cargo owners with certified carriers and heavy machinery in Venezuela, with advance payments held at a bank and the goal of',
+      subtitlePart1: 'The marketplace connecting cargo owners with verified carriers and heavy machinery in Venezuela, with advance payment in bank custody and the goal of',
       subtitleHighlight: 'Zero Empty Returns',
-      badgeEscrow: 'Payment held at a bank',
+      badgeEscrow: 'Payment in bank custody',
       badgeCoverage: 'National Coverage',
-      phoneAlt: 'RVTER Live Satellite GPS - Active Route Barquisimeto to Caracas',
-      left1Title: 'C2P Escrow Confirmed',
+      phoneAlt: 'RVTER Live GPS Tracking - Active Route Barquisimeto to Caracas',
+      left1Title: 'Payment in Bank Custody',
       left1Badge: 'Now',
-      left1Desc: 'Funds held in escrow prior to loading. Driver starts a safe journey.',
+      left1Desc: 'Funds in bank custody before loading. Driver starts a safe journey.',
       left2Title: 'Route: Barquisimeto → Caracas',
       left2Badge: 'En Route',
-      left2Desc: '78 km/h • Live satellite telemetry and active geofencing.',
+      left2Desc: '78 km/h • Live GPS tracking and active geofencing.',
       left3Title: 'Security Rule',
       left3Badge: 'Strict',
-      left3Desc: 'The carrier never picks up cargo without payment held in escrow.',
+      left3Desc: 'The carrier never picks up cargo without payment in bank custody.',
       right1Title: 'CAT 320D Excavator Hired',
       right1Badge: 'Machinery',
       right1Desc: 'Direct hour-meter quoting directly with the verified owner.',
@@ -395,150 +428,180 @@ const translationsData: Record<Language, Translations> = {
     roles: {
       badge: 'Step-by-Step Operational Flow',
       title: 'How does freight and machinery rental work?',
-      desc: 'A transparent, direct marketplace: post freight loads or hire heavy equipment directly from verified certified owners.',
+      desc: 'A direct marketplace: post freight requests or hire heavy equipment directly from verified owners.',
       userTab: 'Cargo Owner & Contractor',
       driverTab: 'Carrier & Machinery Owner',
       userSteps: [
         {
           number: '01',
-          title: 'Post your Freight or Heavy Machinery Request',
-          shortDesc: 'Specify origin, destination, cargo type, or the heavy equipment needed for your job.',
-          fullDesc: 'Define your requirement: ground freight (Agricultural, General Merchandise, Bulk) or heavy equipment rental. Quote directly with verified owners and calculate fair rates with the Cost Compass.',
-          badge: 'No Upfront Cost',
-          highlight: 'Direct marketplace with equipment owners and Cost Compass'
+          title: 'Post your cargo or machinery',
+          shortDesc: 'Specify origin, destination and cargo type, or the equipment you need.',
+          fullDesc: 'Define your requirement: ground freight (agricultural, general merchandise, bulk) or heavy equipment rental. Quote directly with verified owners and estimate a reference rate with the Cost Compass.',
+          badge: 'Your request',
+          highlight: 'Direct marketplace with equipment owners and Cost Compass',
+          you: 'You describe your cargo or the equipment you need, and where.',
+          rvter: 'Publishes your request to verified carriers and owners.',
+          payment: 'Nothing is paid yet: payment is made when you agree on the service.'
         },
         {
           number: '02',
-          title: 'Receive Real-Time Offers & Counter-Offers',
-          shortDesc: 'Certified drivers submit bids and you can counter-offer instantly.',
-          fullDesc: 'Review carrier reputation (1 to 5 stars), completed trips history, vehicle model, and verified license plates. Accept the rate or submit an instant counter-offer to book the load.',
-          badge: 'Transparent Bidding',
-          highlight: 'Live bid comparisons and direct counter-offers (counter-price)'
+          title: 'Negotiate offers',
+          shortDesc: 'Carriers send quotes and you can counter-offer.',
+          fullDesc: 'Review the carrier reputation (1 to 5 stars), trip history, vehicle model and verified license plates. Accept the rate or send a counter-offer to book the load.',
+          badge: 'Offers and counter-offers',
+          highlight: 'Offer comparison and direct counter-offers',
+          you: 'You compare profiles and accept a rate or send a counter-offer.',
+          rvter: 'Shows the reputation, history and verified data behind each offer.',
+          payment: 'Still no payment: the amount is fixed when you accept an offer.'
         },
         {
           number: '03',
-          title: 'C2P Bank-Held Payment (Pre-Trip)',
-          shortDesc: 'Pay securely in advance. Carriers only load once funds are safely held in escrow.',
-          fullDesc: 'Pay safely via C2P Mobile Payment or bank transfer before dispatch. Only when money is held at a bank does the carrier head to the pickup site; pickups are never done without confirmed payment.',
-          badge: 'Pre-Trip Secured Payment',
-          highlight: 'Carriers only pick up cargo once escrow funds are fully confirmed'
+          title: 'Pay into bank custody',
+          shortDesc: 'You pay before the trip and the money stays in bank custody.',
+          fullDesc: 'Pay via C2P Mobile Payment or bank transfer before the trip starts. The payment is held at an authorized bank and RVTER only issues the technical release instructions. The carrier heads to the pickup once the payment is confirmed in bank custody.',
+          badge: 'Pre-trip payment',
+          highlight: 'The carrier picks up the cargo with payment confirmed in bank custody',
+          you: 'You pay the agreed amount via C2P Mobile Payment or bank transfer.',
+          rvter: 'Confirms the payment in bank custody and clears the carrier to go.',
+          payment: 'It stays held at the bank until you confirm delivery.'
         },
         {
           number: '04',
-          title: 'Satellite GPS & Highway Offline Sync',
-          shortDesc: 'Track truck progression with continuous telemetry even through blind zones.',
-          fullDesc: 'Watch live satellite telemetry on the interactive map. Across highway corridors without cell signal, the app securely stores telemetry and auto-syncs as soon as connection restores.',
-          badge: 'Continuous Telemetry',
-          highlight: 'Active geofencing, highway offline sync, and real-time telemetry'
+          title: 'Follow your trip',
+          shortDesc: 'See the truck progress on the map along the route.',
+          fullDesc: 'Check the truck position on the map. In stretches without cell coverage the app stores the route on the phone and syncs it once signal returns, so the route updates with a delay in those stretches.',
+          badge: 'GPS tracking',
+          highlight: 'Map with route, ETA and offline sync',
+          you: 'You follow the route, speed and estimated arrival time.',
+          rvter: 'Records the route and syncs it when signal returns.',
+          payment: 'The payment stays held for the whole trip.'
         },
         {
           number: '05',
-          title: 'Destination Delivery & Release PIN',
-          shortDesc: 'Inspect merchandise upon arrival, share delivery code, and release funds.',
-          fullDesc: 'Once goods arrive safely or machine work is inspected, supply the secure delivery code. Once verified in-app, escrow funds transfer irrevocably to the carrier.',
-          badge: 'Instant Settlement',
-          highlight: 'Destination delivery PIN and instant automatic bank settlement'
+          title: 'Confirm with your code',
+          shortDesc: 'Share the code at destination to confirm receipt.',
+          fullDesc: 'Once the cargo is received in good condition or the job is certified, you give the delivery code to the carrier. When it is entered in the app, RVTER instructs the bank to release the held funds to the carrier.',
+          badge: 'Delivery code',
+          highlight: 'RVTER instructs the bank to release funds with your code',
+          you: 'You verify the cargo or the job and give the delivery code.',
+          rvter: 'Validates the code and sends the release instruction to the bank.',
+          payment: 'The bank releases the funds; timing depends on the bank.'
         }
       ],
       driverSteps: [
         {
           number: '01',
-          title: 'Digital KYC Verification of Vehicle or Machinery',
-          shortDesc: 'Upload your ID, Driver License, Tax ID (RIF), and vehicle or equipment title.',
-          fullDesc: 'We authenticate vehicle ownership and operator licenses to grant verified certification badges. Equipment owners can list their fleet to receive direct job requests.',
-          badge: 'Digital KYC Verification',
-          highlight: 'Official verification for drivers, trucks, and heavy machinery'
+          title: 'Register and verify your unit',
+          shortDesc: 'Upload your ID, license, tax ID (RIF) and your vehicle or equipment documents.',
+          fullDesc: 'We verify the ownership of your vehicle or machinery and your documents so your profile shows the verified badge. Equipment owners can list their machines to receive direct requests.',
+          badge: 'Digital verification',
+          highlight: 'Verified profile for drivers, trucks and machinery',
+          you: 'You upload your personal documents and those of your unit or equipment.',
+          rvter: 'Reviews ownership and marks your profile as verified.',
+          payment: 'You register your bank account to receive payments.'
         },
         {
           number: '02',
-          title: 'Freight Marketplace & Zero Empty Returns',
-          shortDesc: 'Truck and machine owners receive direct requests without informal middlemen.',
-          fullDesc: 'Access load boards and project jobs. For carriers, the operational goal is zero empty returns by booking backhaul loads. For machine owners, match with nearby projects seeking your units.',
-          badge: 'Zero Empty Returns Goal',
-          highlight: 'Filter by equipment and connect directly with shippers'
+          title: 'Find loads and jobs',
+          shortDesc: 'Receive client requests and send your offers.',
+          fullDesc: 'Access the published freight and job requests. Carriers can register their return route to look for loads heading back to origin and reduce empty trips. Machinery owners are connected with contractors who need their equipment nearby.',
+          badge: 'Loads and jobs',
+          highlight: 'Filters by equipment and direct contact with clients',
+          you: 'You pick the requests that fit your unit and send your offer.',
+          rvter: 'Shows published requests and connects you with the client.',
+          payment: 'Still no payment: it is confirmed when the client accepts your offer.'
         },
         {
           number: '03',
-          title: 'Guaranteed Advance Escrow & Cabin Mode',
-          shortDesc: 'Zero payment risk: never drive to pickup without payment held in escrow.',
-          fullDesc: 'Before moving your unit, you have complete peace of mind that the shipper locked payment in C2P Escrow. You only head to the loading dock once funds are confirmed; never work on unbacked promises. Access your dispatch route with your temporary Cabin PIN.',
-          badge: 'Guaranteed Payment Before Pickup',
-          highlight: 'Only drive to load with payment confirmed and held at a bank'
+          title: 'Head out with payment confirmed',
+          shortDesc: 'You go to pickup once payment is in bank custody.',
+          fullDesc: 'Before moving your unit you will see that the client has paid and that the amount is in bank custody. You only head to pick up the cargo with payment confirmed. Your temporary Cabin PIN gives you access to your route sheet.',
+          badge: 'Payment confirmed first',
+          highlight: 'You head out with payment confirmed in bank custody',
+          you: 'You wait for payment confirmation before going to pickup.',
+          rvter: 'Confirms the payment in bank custody and gives you the route sheet with your Cabin PIN.',
+          payment: 'The money is held at the bank; you receive it once delivery is confirmed.'
         },
         {
           number: '04',
-          title: 'Route Navigation & Transit Clearance Guides',
-          shortDesc: 'GPS navigation, transit guides digital verification, and telemetry.',
-          fullDesc: 'Stream telemetry in real time with continuous logging even without cellular service. Verify official transit clearance documentation to pass through highway checkpoints without delay.',
-          badge: 'Transit Documentation',
-          highlight: 'Digital documentation checks and offline highway telemetry'
+          title: 'Drive and attach your guide',
+          shortDesc: 'GPS navigation and upload of the mobilization guide.',
+          fullDesc: 'While you drive the app records the route even without cell signal and syncs it once connection returns. You can upload the Single Mobilization Guide so it is reviewed before you leave for pickup.',
+          badge: 'Mobilization guide',
+          highlight: 'Guide upload and review, plus offline route logging',
+          you: 'You upload your mobilization guide and drive with GPS navigation.',
+          rvter: 'Records the route and stores the guide with the freight order.',
+          payment: 'The payment stays held while you travel.'
         },
         {
           number: '05',
-          title: 'Instant Payout upon Destination Verification',
-          shortDesc: 'Recipient shares the code at delivery and payment is settled immediately.',
-          fullDesc: 'Upon unloading at destination or concluding machine shifts, the receiving party provides the completion code. Entering it triggers automatic escrow release directly to your account.',
-          badge: 'Instant Automated Payout',
-          highlight: 'Instant payout release verified on-site'
+          title: 'Get paid with the delivery code',
+          shortDesc: 'The receiver gives you the code at destination and RVTER instructs the release.',
+          fullDesc: 'On unloading at destination or finishing the job, the receiver or client gives you the confirmation code. When you enter it in the app, RVTER instructs the bank to release the payment to your bank account.',
+          badge: 'Release by code',
+          highlight: 'Release instructed to the bank when delivery is validated',
+          you: 'You enter in the app the code the receiver gives you.',
+          rvter: 'Validates the code and sends the release instruction to the bank.',
+          payment: 'The bank credits your account; timing depends on the bank.'
         }
       ]
     },
     security: {
       badge: 'Technology Infrastructure & Security',
       title: 'Resilient technology built for Venezuelan roads',
-      desc: 'Bank-held payment, cell-independent satellite telemetry, and comprehensive regulatory compliance.',
+      desc: 'Bank custody of the payment, GPS logging with offline sync and review of mobilization guides.',
       pillars: [
         {
           id: 'custodia',
-          title: 'C2P Escrow & Dual Validation',
-          subtitle: 'Carriers only pick up cargo once payment is securely locked in escrow.',
-          description: 'The payment is held at an authorized bank and RVTER only issues the technical release instructions. The client pays before loading begins. The driver only heads to the loading dock when payment is confirmed; trips are never initiated without it. Two-factor operation: Cabin PIN on the road and Delivery Code at destination to release funds.',
+          title: 'Bank custody and dual validation',
+          subtitle: 'The carrier picks up the cargo once payment is confirmed in bank custody.',
+          description: 'The payment is held at an authorized bank and RVTER only issues the technical release instructions. The client pays before the operation begins and the carrier picks up the cargo with payment confirmed. Two validation levels apply: Cabin PIN on the road and Delivery Code at destination to release the funds.',
           bulletPoints: [
-            'Mandatory advance payment: drivers only proceed to load with confirmed escrow.',
-            'Zero unprotected trips: never drive to pick up cargo without secured funds.',
-            'Cabin PIN: Fast, credential-free route and telemetry access for drivers.',
-            'Destination Delivery PIN: Irrevocable release of funds upon signed inspection.'
+            'Mandatory advance payment: the carrier goes to load with payment confirmed in bank custody.',
+            'No confirmed payment, no trip.',
+            'Cabin PIN: driver access to the route sheet and telemetry.',
+            'Destination Delivery Code: with it, RVTER instructs the bank to release the funds.'
           ],
-          statLabel: 'Secure Transactions',
-          statValue: 'C2P'
+          statLabel: 'Payment',
+          statValue: 'Custody'
         },
         {
           id: 'gps',
-          title: 'Satellite GPS & Offline Sync',
-          subtitle: 'Continuous highway telemetry guaranteed even through blind cell zones.',
-          description: 'The mobile app broadcasts satellite trip telemetry. If cellular reception drops along the road, the offline sync module stores data in local encrypted memory and syncs immediately upon reconnecting.',
+          title: 'GPS tracking and offline sync',
+          subtitle: 'Route logging that continues in areas without cell coverage.',
+          description: 'The mobile app records the GPS position of the trip. If the signal drops on the road, the app stores the route on the phone and sends it once connectivity returns.',
           bulletPoints: [
-            'Live visual map tracking with dynamic speed and ETA calculations.',
-            'Offline Sync technology: uninterrupted highway tracking with zero data loss.',
-            'Verified route history logs to support any contingency or audit.',
-            'Automated alerts for detours, unexpected stops, and route anomalies.'
+            'Map with speed and estimated time of arrival (ETA).',
+            'Offline sync: the route is stored on the phone and sent on reconnect.',
+            'Route history as a backup for any contingency.',
+            'Alerts for detours and unscheduled stops.'
           ],
-          statLabel: 'Satellite Accuracy',
-          statValue: 'Sub-metric'
+          statLabel: 'Tracking',
+          statValue: 'GPS'
         },
         {
           id: 'guias',
-          title: 'Transit Clearance Guides',
-          subtitle: 'Digital matching and verification of Transit Mobilization Guides.',
-          description: 'RVTER includes digital verification and reading of Mobilization Guides, cross-checking driver, assigned vehicle, and cargo category to streamline transit through highway checkpoints.',
+          title: 'Mobilization guides',
+          subtitle: 'Upload and review of the Single Mobilization Guide for the freight.',
+          description: 'RVTER lets you attach the Single Mobilization Guide to the freight order so it is reviewed before leaving for pickup, and stores a digital copy linked to the order.',
           bulletPoints: [
-            'Instant digital parsing of transit guide identifiers and QR codes.',
-            'Exact consistency check between assigned vehicle, driver, and freight type.',
-            'Drastic reduction of waiting times at road checkpoints and tolls.',
-            'Permanent digital archive linked to the dispatch order for auditing.'
+            'Upload of the guide document or QR code.',
+            'Review, approval or rejection before leaving for pickup.',
+            'Digital copy linked to the freight order as backup.',
+            'Reason recorded when the document is rejected.'
           ],
-          statLabel: 'Validation',
-          statValue: 'Transit Clearance'
+          statLabel: 'Review',
+          statValue: 'Guides'
         }
       ]
     },
     faq: {
       badge: 'Frequently Asked Questions',
       title: 'Common Questions',
-      desc: 'Everything you need to know about protected escrow, equipment rental, and highway security on RVTER.',
+      desc: 'Everything you need to know about bank-custody payments, equipment rental, and highway security on RVTER.',
       catAll: 'All',
       catGeneral: 'General',
-      catPayments: 'Payments & Escrow',
+      catPayments: 'Payments & Custody',
       catSecurity: 'Security & GPS',
       catDrivers: 'Carriers',
       catMachinery: 'Heavy Machinery',
@@ -546,12 +609,12 @@ const translationsData: Record<Language, Translations> = {
         {
           category: 'general',
           question: 'What is RVTER and how does it differ from traditional freight?',
-          answer: 'RVTER is the technology platform connecting cargo owners directly with certified carriers and heavy machinery operators across Venezuela. Unlike informal middlemen, RVTER guarantees secure payments through protected C2P escrow, continuous GPS tracking, and verified document checks.'
+          answer: 'RVTER is the technology platform connecting cargo owners directly with verified carriers and heavy machinery operators across Venezuela. Unlike informal middlemen, RVTER offers advance payment in bank custody, GPS tracking with offline sync, and document review.'
         },
         {
           category: 'maquinaria',
           question: 'How does the heavy machinery marketplace work on RVTER?',
-          answer: 'RVTER does not own or rent its own machines; it functions as a digital marketplace where verified equipment owners list available units (Excavators, Backhoes, Wheel Loaders, Motor Graders, Compactors, and Cranes). As a client, you quote directly with owners per 8-hour shift or per hour-meter, agree on operator and fuel inclusion, arrange lowboy transport, and safeguard payments with C2P escrow.'
+          answer: 'RVTER does not own or rent its own machines; it functions as a digital marketplace where verified equipment owners list available units (Excavators, Backhoes, Wheel Loaders, Motor Graders, Compactors, and Cranes). As a client, you quote directly with owners per 8-hour shift or per hour-meter, agree on operator and fuel inclusion, arrange lowboy transport, and hold the payment in bank custody.'
         },
         {
           category: 'maquinaria',
@@ -561,22 +624,22 @@ const translationsData: Record<Language, Translations> = {
         {
           category: 'pagos',
           question: 'When is payment made, and when does the carrier head to pick up the load?',
-          answer: 'Full payment is deposited into escrow before the trip begins. When booking freight or machinery, the user deposits funds via C2P Mobile Payment or wire transfer. Only when money is locked in escrow does the carrier drive to load; carriers never pick up cargo without confirmed escrow. Once delivery is certified with the completion PIN, funds are automatically transferred.'
+          answer: 'Full payment is made before the trip begins. When booking freight or machinery, the user deposits funds via C2P Mobile Payment or wire transfer. Only when the money is confirmed in bank custody does the carrier drive to load. Once delivery is certified with the completion PIN, RVTER instructs the bank to release the funds.'
         },
         {
           category: 'seguridad',
           question: 'What is the difference between the Cabin PIN and Destination Delivery PIN?',
-          answer: 'The Cabin PIN is a temporary access code generated for the driver to use Cabin Mode on the highway without sharing personal login credentials. The Destination Delivery PIN is provided by the consignee upon inspecting the delivered cargo; entering it validates delivery and instantly releases the escrow payment.'
+          answer: 'The Cabin PIN is a temporary access code generated for the driver to use Cabin Mode on the highway without sharing personal login credentials. The Destination Delivery PIN is provided by the consignee upon inspecting the delivered cargo; entering it validates delivery and RVTER instructs the bank to release the payment held in bank custody.'
         },
         {
           category: 'conductores',
           question: 'How does the bidding and counter-offer system work?',
-          answer: 'When a shipper posts a freight request with a proposed rate, certified carriers can apply accepting that rate or submitting an instant counter-offer. The shipper reviews profiles, truck specifications, and counter-prices to book the trip immediately.'
+          answer: 'When a shipper posts a freight request with a proposed rate, verified carriers can apply accepting that rate or submitting a counter-offer. The shipper reviews profiles, truck specifications, and counter-offers to book the trip.'
         },
         {
           category: 'conductores',
           question: 'How does RVTER help carriers avoid empty return trips?',
-          answer: 'The primary mission of RVTER is achieving zero empty returns. The platform allows carriers to declare their return route; while completing a delivery, the system matches available return freight heading back to origin or intermediate hubs, maximizing profitability.'
+          answer: 'RVTER aims to reduce empty returns. The platform lets carriers declare their return route to see available freight heading back to origin or intermediate cities, when there is any.'
         },
         {
           category: 'seguridad',
@@ -586,18 +649,18 @@ const translationsData: Record<Language, Translations> = {
         {
           category: 'seguridad',
           question: 'How are official Mobilization Guides handled?',
-          answer: 'When posting freight, shippers can attach their official Mobilization Guide code. Carriers and authorities can cross-reference document validity in-app, significantly speeding up highway checkpoint inspections.'
+          answer: 'When posting freight, shippers can attach their official Mobilization Guide. A platform user reviews it in-app and approves or rejects it before leaving for pickup; the digital copy stays linked to the freight order.'
         },
         {
           category: 'conductores',
           question: 'What requirements are needed to sign up as a carrier or machine operator?',
-          answer: 'You only need valid national identification, a heavy vehicle driver license, valid medical certificate, and vehicle or equipment title registration. Digital validation takes only a few minutes through our automated verification flow.'
+          answer: 'You only need valid national identification, a heavy vehicle driver license, valid medical certificate, and vehicle or equipment title registration. Verification is done digitally.'
         }
       ]
     },
     footer: {
       slogan: 'PROTECTED CARGO, SECURE PAYMENTS AND FULL ROUTES.',
-      desc: 'The leading freight transportation and heavy machinery marketplace in Venezuela with protected advance escrow and continuous telemetry.',
+      desc: 'A freight transportation and heavy machinery marketplace in Venezuela, with advance payment in bank custody and GPS tracking.',
       navTitle: 'Navigation',
       legalTitle: 'Legal & Compliance',
       terms: 'Terms & Conditions',

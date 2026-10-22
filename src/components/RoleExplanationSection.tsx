@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { 
   PackagePlus, Gavel, ShieldCheck, MapPin, CheckCircle2, 
   UserCheck, Truck, BadgeDollarSign, Navigation, Wallet, 
-  ChevronRight, Sparkles 
+  ChevronRight, ChevronLeft, Sparkles, User, Smartphone, Landmark
 } from 'lucide-react';
 import { RvterWordmark, FormattedRvterText } from './RvterLogo';
 import { useLanguage } from '../context/LanguageContext';
@@ -96,10 +96,10 @@ export const RoleExplanationSection: React.FC<RoleExplanationProps> = ({ current
         </div>
 
         {/* Interactive Step Explorer (Desktop 2-Column Layout / Mobile Stack) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           
           {/* Left Navigation Steps List */}
-          <div className="lg:col-span-5 space-y-3">
+          <div className="lg:col-span-5 flex flex-col gap-3">
             {steps.map((step, idx) => {
               const isActive = idx === activeStepIndex;
               return (
@@ -111,13 +111,13 @@ export const RoleExplanationSection: React.FC<RoleExplanationProps> = ({ current
                   aria-pressed={isActive}
                   onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setActiveStepIndex(idx); } }}
                   onClick={() => setActiveStepIndex(idx)}
-                  className={`cursor-pointer p-4 rounded-2xl transition-all ${
+                  className={`cursor-pointer p-4 rounded-2xl transition-all lg:flex-1 ${
                     isActive
                       ? 'liquid-glass-card border-2 border-[#2DA933] shadow-lg shadow-[#2DA933]/15'
                       : 'liquid-glass-subtle hover:bg-white/80 border border-white/60 shadow-sm'
                   }`}
                 >
-                  <div className="flex items-start gap-4">
+                  <div className="flex items-center gap-4 h-full">
                     <div
                       className={`w-10 h-10 rounded-xl flex items-center justify-center font-bold text-sm shrink-0 transition-colors ${
                         isActive
@@ -150,7 +150,7 @@ export const RoleExplanationSection: React.FC<RoleExplanationProps> = ({ current
           </div>
 
           {/* Right Detailed Step Showcase Card */}
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-7 flex">
             <AnimatePresence mode="wait">
               <motion.div
                 key={`${currentRole}-${activeStep.number}`}
@@ -158,25 +158,22 @@ export const RoleExplanationSection: React.FC<RoleExplanationProps> = ({ current
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -15 }}
                 transition={{ duration: 0.3 }}
-                className="p-8 sm:p-10 rounded-3xl liquid-glass-card shadow-2xl relative overflow-hidden"
+                className="flex-1 flex flex-col p-8 sm:p-10 rounded-3xl liquid-glass-card shadow-2xl relative overflow-hidden"
               >
-                <div className="relative z-10 space-y-6">
+                <div className="relative z-10 flex flex-col flex-1 gap-6">
                   {/* Step Header Badge & Icon */}
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                      <div className="w-14 h-14 rounded-2xl bg-[#2DA933]/10 border border-[#2DA933]/30 flex items-center justify-center text-[#1F7A25]">
-                        {getStepIcon(currentRole, activeStepIndex)}
-                      </div>
-                      <div>
-                        <div className="text-xs font-bold text-[#1F7A25] uppercase tracking-wider">
-                          {language === 'es' ? `Paso ${activeStep.number} de 05` : `Step ${activeStep.number} of 05`}
-                        </div>
-                        <h3 className="text-2xl font-black text-slate-900">
-                          {activeStep.title}
-                        </h3>
-                      </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-14 h-14 rounded-2xl bg-[#2DA933]/10 border border-[#2DA933]/30 flex items-center justify-center text-[#1F7A25] shrink-0">
+                      {getStepIcon(currentRole, activeStepIndex)}
                     </div>
-
+                    <div>
+                      <div className="text-xs font-bold text-[#1F7A25] uppercase tracking-wider">
+                        {language === 'es' ? `Paso ${activeStep.number} de 05` : `Step ${activeStep.number} of 05`}
+                      </div>
+                      <h3 className="text-2xl font-black text-slate-900">
+                        {activeStep.title}
+                      </h3>
+                    </div>
                   </div>
 
                   {/* Full Step Explanation */}
@@ -184,15 +181,70 @@ export const RoleExplanationSection: React.FC<RoleExplanationProps> = ({ current
                     <FormattedRvterText text={activeStep.fullDesc} wordmarkHeight={14} />
                   </div>
 
-                  {/* Highlight Feature Card */}
-                  <div className="p-4 rounded-2xl bg-white/70 border border-white/80 space-y-2 shadow-sm">
-                    <div className="text-xs font-bold text-slate-500 uppercase tracking-wider flex items-center gap-1.5">
-                      <Sparkles className="w-3.5 h-3.5 text-[#1F7A25]" />
-                      <span>{language === 'es' ? 'Ventaja Tecnológica' : 'Key Advantage'}</span>
-                      <RvterWordmark fill="#2DA933" height={13} className="inline-block align-middle ml-0.5" />
+                  {/* You / RVTER / Payment */}
+                  <dl className="space-y-3">
+                    {[
+                      { Icon: User, label: language === 'es' ? 'Tú haces' : 'You do', text: activeStep.you },
+                      { Icon: Smartphone, label: language === 'es' ? 'RVTER hace' : 'RVTER does', text: activeStep.rvter },
+                      { Icon: Landmark, label: language === 'es' ? 'Sobre el pago' : 'About the payment', text: activeStep.payment },
+                    ].map(({ Icon, label, text }) => (
+                      <div key={label} className="flex items-start gap-3 p-3.5 rounded-2xl bg-slate-50 border border-slate-200">
+                        <div className="w-9 h-9 rounded-xl bg-[#2DA933]/10 text-[#1F7A25] flex items-center justify-center shrink-0">
+                          <Icon className="w-[18px] h-[18px]" />
+                        </div>
+                        <div className="min-w-0">
+                          <dt className="text-xs font-bold text-slate-500 uppercase tracking-wider">{label}</dt>
+                          <dd className="text-sm font-semibold text-[#0F172A] mt-0.5">{text}</dd>
+                        </div>
+                      </div>
+                    ))}
+                  </dl>
+
+                  <div className="mt-auto space-y-5">
+                    {/* Highlight Feature Card */}
+                    <div className="p-4 rounded-2xl bg-white border border-slate-200 space-y-2 shadow-sm">
+                      <div className="text-xs font-bold text-slate-500 uppercase tracking-wider flex items-center gap-1.5">
+                        <Sparkles className="w-3.5 h-3.5 text-[#1F7A25]" />
+                        <span>{language === 'es' ? 'Ventaja Tecnológica' : 'Key Advantage'}</span>
+                        <RvterWordmark fill="#2DA933" height={13} className="inline-block align-middle ml-0.5" />
+                      </div>
+                      <div className="text-sm font-semibold text-[#0F172A]">
+                        {activeStep.highlight}
+                      </div>
                     </div>
-                    <div className="text-sm font-semibold text-[#0F172A]">
-                      {activeStep.highlight}
+
+                    {/* Progress & Prev/Next */}
+                    <div className="flex items-center justify-between gap-4">
+                      <button
+                        type="button"
+                        onClick={() => setActiveStepIndex(Math.max(0, activeStepIndex - 1))}
+                        disabled={activeStepIndex === 0}
+                        className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-bold text-slate-700 bg-slate-100 hover:bg-slate-200 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+                      >
+                        <ChevronLeft className="w-4 h-4" />
+                        {language === 'es' ? 'Anterior' : 'Previous'}
+                      </button>
+                      <div className="flex items-center gap-2">
+                        {steps.map((step, idx) => (
+                          <button
+                            key={step.number}
+                            type="button"
+                            onClick={() => setActiveStepIndex(idx)}
+                            aria-label={language === 'es' ? `Ir al paso ${step.number}` : `Go to step ${step.number}`}
+                            aria-current={idx === activeStepIndex}
+                            className={`h-2 rounded-full transition-all ${idx === activeStepIndex ? 'w-6 bg-[#1F7A25]' : 'w-2 bg-slate-300 hover:bg-slate-400'}`}
+                          />
+                        ))}
+                      </div>
+                      <button
+                        type="button"
+                        onClick={() => setActiveStepIndex(Math.min(steps.length - 1, activeStepIndex + 1))}
+                        disabled={activeStepIndex === steps.length - 1}
+                        className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-bold text-white bg-[#1F7A25] hover:bg-[#186320] disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+                      >
+                        {language === 'es' ? 'Siguiente' : 'Next'}
+                        <ChevronRight className="w-4 h-4" />
+                      </button>
                     </div>
                   </div>
 
