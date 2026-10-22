@@ -123,23 +123,23 @@ const translationsData: Record<Language, Translations> = {
       badgeEscrow: 'Pago resguardado en banco',
       badgeCoverage: 'Cobertura Nacional',
       phoneAlt: 'RVTER GPS Satelital En Vivo - Ruta Activa Barquisimeto a Caracas',
-      left1Title: 'Custodia C2P Confirmada',
+      left1Title: 'Pago en Custodia Bancaria',
       left1Badge: 'Ahora',
-      left1Desc: 'Fondos en custodia antes de cargar. El chofer inicia viaje seguro.',
+      left1Desc: 'Fondos en custodia bancaria antes de cargar. El chofer inicia viaje seguro.',
       left2Title: 'Ruta: Barquisimeto → Caracas',
       left2Badge: 'En Ruta',
       left2Desc: '78 km/h • Telemetría satelital en vivo y geocerca activa.',
       left3Title: 'Regla de Seguridad',
       left3Badge: 'Estricta',
-      left3Desc: 'El transportista nunca va a buscar la carga sin pago en custodia.',
+      left3Desc: 'El transportista nunca va a buscar la carga sin pago en custodia bancaria.',
       right1Title: 'Jumbo CAT 320D Contratado',
       right1Badge: 'Maquinaria',
       right1Desc: 'Cotización por horómetro directo con el propietario.',
       right2Title: 'Offline Sync Activo',
-      right2Badge: 'Garantía',
+      right2Badge: 'Activo',
       right2Desc: 'Registro continuo de ruta en tramos sin señal celular.',
       right3Title: 'Retorno Vacío Evitado',
-      right3Badge: 'Meta Lograda',
+      right3Badge: 'Objetivo',
       right3Desc: 'Viaje de regreso enlazado con carga agrícola hacia origen.',
     },
     roles: {
@@ -168,10 +168,10 @@ const translationsData: Record<Language, Translations> = {
         {
           number: '03',
           title: 'Custodia C2P (Pago Previo al Viaje)',
-          shortDesc: 'Pagas antes de iniciar. El transportista solo busca la carga cuando los fondos están en custodia.',
+          shortDesc: 'Pagas antes de iniciar. El transportista solo busca la carga cuando los fondos están en custodia bancaria.',
           fullDesc: 'Pagas de forma segura vía Pago Móvil C2P o transferencia bancaria antes de iniciar. Únicamente cuando el dinero está confirmado en resguardo bancario, el transportista acude a buscar la carga e inicia el viaje; nunca se busca la carga sin antes tener el pago resguardado confirmado.',
           badge: 'Pago Previo al Viaje',
-          highlight: 'El transportista solo busca la carga tras confirmar el dinero en custodia'
+          highlight: 'El transportista solo busca la carga tras confirmar el dinero en custodia bancaria'
         },
         {
           number: '04',
@@ -213,7 +213,7 @@ const translationsData: Record<Language, Translations> = {
           shortDesc: 'Cero riesgos: nunca buscas la carga sin antes tener el pago resguardado confirmado.',
           fullDesc: 'Antes de mover tu unidad o acudir al origen, tienes la certeza de que el cliente depositó el flete en Custodia C2P. El transportista acude a buscar la carga y comienza el viaje únicamente cuando el dinero está en custodia; nunca vas a buscar la carga sin el pago previamente resguardado. Además, accedes a tu hoja de ruta con tu PIN de Cabina temporal.',
           badge: 'Cobro Garantizado Previo a Cargar',
-          highlight: 'Solo buscas la carga y viajas con los fondos confirmados en custodia'
+          highlight: 'Solo buscas la carga y viajas con los fondos confirmados en custodia bancaria'
         },
         {
           number: '04',
@@ -241,10 +241,10 @@ const translationsData: Record<Language, Translations> = {
         {
           id: 'custodia',
           title: 'Custodia C2P & Doble Validación',
-          subtitle: 'El transportista busca la carga únicamente cuando el dinero está en custodia.',
+          subtitle: 'El transportista busca la carga únicamente cuando el dinero está en custodia bancaria.',
           description: 'El pago queda retenido en una institución bancaria autorizada y RVTER solo emite las instrucciones técnicas de liberación. El cliente paga antes de comenzar la operación. El transportista acude a buscar la carga y comienza el viaje cuando el pago está confirmado en resguardo; nunca va a buscar la carga sin tenerlo confirmado. Para la operación se aplican dos niveles: PIN de Cabina en carretera y Código de Entrega en destino para liberar los fondos.',
           bulletPoints: [
-            'Pago previo obligatorio: el transportista solo acude a cargar con fondos en custodia.',
+            'Pago previo obligatorio: el transportista solo acude a cargar con fondos en custodia bancaria.',
             'Cero viajes sin garantía: jamás se busca la carga sin el pago previamente resguardado.',
             'PIN de Cabina: Acceso expedito del chofer a su hoja de ruta y telemetría.',
             'Código de Entrega en Destino: Liberación irrevocable de fondos al certificar la carga.'
@@ -386,10 +386,10 @@ const translationsData: Record<Language, Translations> = {
       right1Badge: 'Machinery',
       right1Desc: 'Direct hour-meter quoting directly with the verified owner.',
       right2Title: 'Offline Sync Active',
-      right2Badge: 'Guarantee',
+      right2Badge: 'Active',
       right2Desc: 'Continuous route logging through areas without cellular reception.',
       right3Title: 'Empty Return Prevented',
-      right3Badge: 'Goal Met',
+      right3Badge: 'Goal',
       right3Desc: 'Return haul matched with agricultural freight back to origin.',
     },
     roles: {

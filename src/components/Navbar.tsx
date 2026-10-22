@@ -1,10 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { RvterWordmark } from './RvterLogo';
 import { Menu, X, Globe } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 export const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
   const { language, setLanguage, t } = useLanguage();
 
   const navLinks = [
@@ -17,7 +25,7 @@ export const Navbar: React.FC = () => {
     <div className="fixed top-0 left-0 right-0 z-50 pb-3 bg-gradient-to-b from-[#F8FAFC] via-[#F8FAFC]/95 to-transparent">
       
       {/* 1. Top Announcement Strip (Control Room Banner) */}
-      <div className="bg-[#070D1E] text-white border-b border-white/10 px-4 py-2 text-center text-xs sm:text-[13px] font-medium tracking-wide flex items-center justify-center gap-2">
+      <div className={`bg-[#070D1E] text-white border-b border-white/10 px-4 py-2 text-center text-xs sm:text-[13px] font-medium tracking-wide items-center justify-center gap-2 ${scrolled ? 'hidden' : 'flex'}`}>
         <span className="relative flex h-2 w-2">
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#2DA933] opacity-75"></span>
           <span className="relative inline-flex rounded-full h-2 w-2 bg-[#2DA933]"></span>

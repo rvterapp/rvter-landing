@@ -129,7 +129,7 @@ export const RoleExplanationSection: React.FC<RoleExplanationProps> = ({ current
                     </div>
 
                     <div className="flex-1 min-w-0">
-                      <div className="flex items-start justify-between gap-2">
+                      <div className="flex flex-col items-start gap-1">
                         <h3 className={`font-bold text-sm sm:text-base ${isActive ? 'text-[#0F172A]' : 'text-slate-700'}`}>
                           {step.title}
                         </h3>
@@ -177,9 +177,6 @@ export const RoleExplanationSection: React.FC<RoleExplanationProps> = ({ current
                       </div>
                     </div>
 
-                    <span className="hidden sm:inline-block px-3 py-1 rounded-full text-xs font-semibold bg-[#2DA933]/15 text-[#1F7A25]">
-                      {activeStep.badge}
-                    </span>
                   </div>
 
                   {/* Full Step Explanation */}
