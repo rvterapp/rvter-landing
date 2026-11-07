@@ -226,11 +226,11 @@
       <span class="badge-clause">CLÁUSULA SEGUNDA</span>
       <h2>Mecánica de Custodia C2P y Liberación con Código/PIN en Destino</h2>
       <p>
-        Para garantizar la protección bilateral contra fraudes e impagos, la plataforma implementa el <strong>Resguardo Bancario del Pago (Custodia C2P)</strong>, mediante el cual el pago queda retenido en una institución bancaria autorizada y RVTER solo emite instrucciones técnicas de liberación:
+        Para garantizar la protección bilateral contra fraudes e impagos, la plataforma implementa el <strong>Resguardo Bancario del Pago (Custodia C2P)</strong>, mediante el cual el pago queda retenido en una institución bancaria autorizada y solo se libera cuando el usuario lo autoriza con su Código de Entrega:
       </p>
       <ul>
         <li><strong>Consignación previa:</strong> Al confirmar la contratación de un flete o servicio de maquinaria pesada, el generador de carga paga el monto acordado, que queda retenido en la institución bancaria a través de los canales de pago autorizados (tasa oficial BCV del día).</li>
-        <li><strong>Fondos retenidos en garantía:</strong> El transportista u operador inicia el traslado sabiendo que los fondos están garantizados y bloqueados de forma neutral.</li>
+        <li><strong>Fondos retenidos en garantía:</strong> El transportista u operador inicia el traslado sabiendo que los fondos están reservados para esa operación.</li>
         <li><strong>Generación del Código PIN de Seguridad:</strong> El sistema emite un código PIN alfanumérico único (o código QR) que se entrega exclusivamente al destinatario o generador de la carga.</li>
         <li><strong>Liberación irrevocable en destino:</strong> Una vez que el camión arriba al punto de entrega, se verifica la mercancía o se certifica la faena de maquinaria, el receptor entrega el <strong>Código PIN al transportista</strong>. Al introducir dicho PIN en la aplicación de RVTER, RVTER instruye a la institución bancaria la liberación de los fondos retenidos a la cuenta bancaria del transportista.</li>
         <li><strong>Limitación de responsabilidad:</strong> RVTER no recibe ni dispone libremente del monto principal y no responde por demoras, fallas, indisponibilidad o decisiones de la institución bancaria. En caso de disputa, las decisiones de RVTER constituyen instrucciones de liberación o retención dirigidas a la institución bancaria.</li>
@@ -251,12 +251,12 @@
 
     <section class="section-block">
       <span class="badge-clause">CLÁUSULA CUARTA</span>
-      <h2>Modo Offline Sync y Telemetría en Carretera</h2>
+      <h2>Modo Offline Sync</h2>
       <p>
         Dadas las condiciones geográficas de las rutas de carga pesada, la aplicación móvil de RVTER incorpora tecnología <strong>Offline Sync</strong>:
       </p>
       <p>
-        Durante tramos de carretera sin cobertura celular, la aplicación continúa registrando de forma autónoma los puntos satelitales GPS, estados de ruta e hitos de viaje en la memoria local encriptada del dispositivo móvil. En cuanto el teléfono detecta señal o conectividad de datos, el historial de viaje se sincroniza automáticamente con los servidores de la Mesa de Control.
+        Si no hay señal al publicar una solicitud, la aplicación la guarda en el teléfono y la envía cuando vuelve la conexión.
       </p>
     </section>
 
