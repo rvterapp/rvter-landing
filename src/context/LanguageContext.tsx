@@ -128,7 +128,7 @@ const translationsData: Record<Language, Translations> = {
       phoneAlt: 'RVTER - Ruta del viaje Barquisimeto a Caracas',
       left1Title: 'Pago en Custodia Bancaria',
       left1Badge: 'Ahora',
-      left1Desc: 'Fondos en custodia bancaria antes de cargar. El chofer inicia viaje seguro.',
+      left1Desc: 'Fondos en custodia bancaria antes de cargar. El chofer sale con el pago confirmado.',
       left2Title: 'Ruta: Barquisimeto → Caracas',
       left2Badge: 'En Ruta',
       left2Desc: 'Ubicación registrada al llegar al destino.',
@@ -178,7 +178,7 @@ const translationsData: Record<Language, Translations> = {
           number: '03',
           title: 'Paga con custodia bancaria',
           shortDesc: 'Pagas antes de iniciar y el dinero queda en custodia bancaria.',
-          fullDesc: 'Pagas por Pago Móvil C2P o transferencia bancaria antes de iniciar. El pago queda retenido en una institución bancaria autorizada y RVTER solo emite las instrucciones técnicas de liberación. El transportista acude a buscar la carga cuando el pago está confirmado en custodia bancaria.',
+          fullDesc: 'Pagas por Pago Móvil C2P o transferencia bancaria antes de iniciar. El pago queda retenido en una institución bancaria autorizada y solo se libera cuando tú lo autorizas con tu código de entrega. El transportista acude a buscar la carga cuando el pago está confirmado en custodia bancaria.',
           badge: 'Pago previo al viaje',
           highlight: 'El transportista busca la carga con el pago confirmado en custodia bancaria',
           you: 'Pagas el monto acordado por Pago Móvil C2P o transferencia.',
@@ -200,12 +200,12 @@ const translationsData: Record<Language, Translations> = {
           number: '05',
           title: 'Confirma con tu código',
           shortDesc: 'Entrega el código en destino para dar por recibida la carga.',
-          fullDesc: 'Al recibir la carga a satisfacción o certificar la faena, entregas el código de entrega al transportista. Al ingresarlo en la app, RVTER instruye a la institución bancaria la liberación de los fondos retenidos al transportista.',
+          fullDesc: 'Al recibir la carga a satisfacción o certificar la faena, entregas el código de entrega al transportista. Con ese código le indicas a RVTER que libere los fondos retenidos al transportista.',
           badge: 'Código de entrega',
-          highlight: 'RVTER instruye al banco la liberación con tu código',
+          highlight: 'Tú autorizas la liberación con tu código',
           you: 'Verificas la carga o la faena y entregas el código de entrega.',
-          rvter: 'Valida el código y envía la instrucción de liberación al banco.',
-          payment: 'El banco libera los fondos; el plazo depende de la institución bancaria.'
+          rvter: 'Valida tu código y libera el pago que autorizaste.',
+          payment: 'Se liberan los fondos; el plazo depende de la institución bancaria.'
         }
       ],
       driverSteps: [
@@ -256,12 +256,12 @@ const translationsData: Record<Language, Translations> = {
         {
           number: '05',
           title: 'Cobra con el código de entrega',
-          shortDesc: 'El receptor te da el código en destino y RVTER instruye la liberación.',
-          fullDesc: 'Al descargar en destino o finalizar la faena, el receptor o contratante te entrega el código de confirmación. Al ingresarlo en la app, RVTER instruye a la institución bancaria la liberación del pago a tu cuenta bancaria.',
+          shortDesc: 'El receptor te da el código en destino: con él autoriza tu pago.',
+          fullDesc: 'Al descargar en destino o finalizar la faena, el receptor o contratante te entrega el código de confirmación. Al ingresarlo en la app se cumple la autorización del cliente y RVTER libera el pago a tu cuenta bancaria.',
           badge: 'Liberación por código',
-          highlight: 'Liberación instruida al banco al validar la entrega',
+          highlight: 'Liberación autorizada por el cliente con su código',
           you: 'Ingresas en la app el código que te entrega el receptor.',
-          rvter: 'Valida el código y envía la instrucción de liberación al banco.',
+          rvter: 'Valida el código del cliente y libera tu pago.',
           payment: 'El banco acredita tu cuenta; el plazo depende de la institución.'
         }
       ]
@@ -275,12 +275,12 @@ const translationsData: Record<Language, Translations> = {
           id: 'custodia',
           title: 'Custodia bancaria y doble validación',
           subtitle: 'El transportista busca la carga cuando el pago está confirmado en custodia bancaria.',
-          description: 'El pago queda retenido en una institución bancaria autorizada y RVTER solo emite las instrucciones técnicas de liberación. El cliente paga antes de comenzar la operación y el transportista busca la carga con el pago confirmado. Se aplican dos niveles de validación: PIN de Cabina en carretera y Código de Entrega en destino para liberar los fondos.',
+          description: 'El pago queda retenido en una institución bancaria autorizada y solo se libera cuando el cliente lo autoriza con su Código de Entrega. El cliente paga antes de comenzar la operación y el transportista busca la carga con el pago confirmado. Se aplican dos niveles de validación: PIN de Cabina en carretera y Código de Entrega en destino para liberar los fondos.',
           bulletPoints: [
             'Pago previo obligatorio: el transportista acude a cargar con el pago confirmado en custodia bancaria.',
             'Sin pago confirmado no se inicia el viaje.',
             'PIN de Cabina: acceso del chofer a su hoja de ruta.',
-            'Código de Entrega en Destino: con él, RVTER instruye al banco la liberación de los fondos.'
+            'Código de Entrega en Destino: con él, el cliente autoriza la liberación de los fondos.'
           ],
           statLabel: 'Pago',
           statValue: 'Custodia'
@@ -344,12 +344,12 @@ const translationsData: Record<Language, Translations> = {
         {
           category: 'pagos',
           question: '¿Cuándo se realiza el pago y cuándo acude el transportista a buscar la carga?',
-          answer: 'El pago se realiza en su totalidad antes de comenzar el viaje. Al acordar un flete o servicio de maquinaria, el usuario deposita mediante Pago Móvil C2P o transferencia bancaria. Cuando el dinero está confirmado en custodia bancaria, el transportista busca la carga y comienza el viaje; el transportista nunca va a buscar la carga sin antes tener el pago confirmado en custodia bancaria. Solo cuando el receptor certifica la entrega conforme en destino o culminación de faena mediante el código de entrega, RVTER instruye a la institución bancaria la liberación de los fondos.'
+          answer: 'El pago se realiza en su totalidad antes de comenzar el viaje. Al acordar un flete o servicio de maquinaria, el usuario deposita mediante Pago Móvil C2P o transferencia bancaria. Cuando el dinero está confirmado en custodia bancaria, el transportista busca la carga y comienza el viaje; el transportista nunca va a buscar la carga sin antes tener el pago confirmado en custodia bancaria. Solo cuando el receptor certifica la entrega conforme en destino o culminación de faena mediante el código de entrega, el cliente le indica a RVTER que libere los fondos.'
         },
         {
           category: 'seguridad',
           question: '¿Cuál es la diferencia entre el PIN de Cabina y el Código de Entrega en Destino?',
-          answer: 'El PIN de Cabina es un código temporal que el transportista o dueño de unidad genera para que el chofer acceda de inmediato al Modo Cabina en carretera sin compartir credenciales. El Código de Entrega en Destino es el código que el receptor entrega al chofer al verificar la carga; al ingresarlo en la app, se valida la descarga y RVTER instruye al banco la liberación de los fondos en custodia bancaria.'
+          answer: 'El PIN de Cabina es un código temporal que el transportista o dueño de unidad genera para que el chofer acceda de inmediato al Modo Cabina en carretera sin compartir credenciales. El Código de Entrega en Destino es el código que el receptor entrega al chofer al verificar la carga; al ingresarlo en la app, se valida la descarga y se cumple la orden de liberación que dio el cliente.'
         },
         {
           category: 'conductores',
@@ -408,7 +408,7 @@ const translationsData: Record<Language, Translations> = {
       phoneAlt: 'RVTER - Trip route Barquisimeto to Caracas',
       left1Title: 'Payment in Bank Custody',
       left1Badge: 'Now',
-      left1Desc: 'Funds in bank custody before loading. Driver starts a safe journey.',
+      left1Desc: 'Funds in bank custody before loading. Driver departs with payment confirmed.',
       left2Title: 'Route: Barquisimeto → Caracas',
       left2Badge: 'En Route',
       left2Desc: 'Location recorded on arrival at the destination.',
@@ -458,7 +458,7 @@ const translationsData: Record<Language, Translations> = {
           number: '03',
           title: 'Pay into bank custody',
           shortDesc: 'You pay before the trip and the money stays in bank custody.',
-          fullDesc: 'Pay via C2P Mobile Payment or bank transfer before the trip starts. The payment is held at an authorized bank and RVTER only issues the technical release instructions. The carrier heads to the pickup once the payment is confirmed in bank custody.',
+          fullDesc: 'Pay via C2P Mobile Payment or bank transfer before the trip starts. The payment is held at an authorized bank and is released only when you authorize it with your delivery code. The carrier heads to the pickup once the payment is confirmed in bank custody.',
           badge: 'Pre-trip payment',
           highlight: 'The carrier picks up the cargo with payment confirmed in bank custody',
           you: 'You pay the agreed amount via C2P Mobile Payment or bank transfer.',
@@ -480,11 +480,11 @@ const translationsData: Record<Language, Translations> = {
           number: '05',
           title: 'Confirm with your code',
           shortDesc: 'Share the code at destination to confirm receipt.',
-          fullDesc: 'Once the cargo is received in good condition or the job is certified, you give the delivery code to the carrier. When it is entered in the app, RVTER instructs the bank to release the held funds to the carrier.',
+          fullDesc: 'Once the cargo is received in good condition or the job is certified, you give the delivery code to the carrier. With that code you tell RVTER to release the held funds to the carrier.',
           badge: 'Delivery code',
-          highlight: 'RVTER instructs the bank to release funds with your code',
+          highlight: 'You authorize the release with your code',
           you: 'You verify the cargo or the job and give the delivery code.',
-          rvter: 'Validates the code and sends the release instruction to the bank.',
+          rvter: 'Validates your code and releases the payment you authorized.',
           payment: 'The bank releases the funds; timing depends on the bank.'
         }
       ],
@@ -536,12 +536,12 @@ const translationsData: Record<Language, Translations> = {
         {
           number: '05',
           title: 'Get paid with the delivery code',
-          shortDesc: 'The receiver gives you the code at destination and RVTER instructs the release.',
-          fullDesc: 'On unloading at destination or finishing the job, the receiver or client gives you the confirmation code. When you enter it in the app, RVTER instructs the bank to release the payment to your bank account.',
+          shortDesc: 'The receiver gives you the code at destination: it authorizes your payment.',
+          fullDesc: 'On unloading at destination or finishing the job, the receiver or client gives you the confirmation code. When you enter it in the app, the client authorization is fulfilled and RVTER releases the payment to your bank account.',
           badge: 'Release by code',
-          highlight: 'Release instructed to the bank when delivery is validated',
+          highlight: 'Release authorized by the client with their code',
           you: 'You enter in the app the code the receiver gives you.',
-          rvter: 'Validates the code and sends the release instruction to the bank.',
+          rvter: 'Validates the client code and releases your payment.',
           payment: 'The bank credits your account; timing depends on the bank.'
         }
       ]
@@ -555,12 +555,12 @@ const translationsData: Record<Language, Translations> = {
           id: 'custodia',
           title: 'Bank custody and dual validation',
           subtitle: 'The carrier picks up the cargo once payment is confirmed in bank custody.',
-          description: 'The payment is held at an authorized bank and RVTER only issues the technical release instructions. The client pays before the operation begins and the carrier picks up the cargo with payment confirmed. Two validation levels apply: Cabin PIN on the road and Delivery Code at destination to release the funds.',
+          description: 'The payment is held at an authorized bank and is released only when the client authorizes it with the Delivery Code. The client pays before the operation begins and the carrier picks up the cargo with payment confirmed. Two validation levels apply: Cabin PIN on the road and Delivery Code at destination to release the funds.',
           bulletPoints: [
             'Mandatory advance payment: the carrier goes to load with payment confirmed in bank custody.',
             'No confirmed payment, no trip.',
             'Cabin PIN: driver access to the route sheet.',
-            'Destination Delivery Code: with it, RVTER instructs the bank to release the funds.'
+            'Destination Delivery Code: with it, the client authorizes the release of the funds.'
           ],
           statLabel: 'Payment',
           statValue: 'Custody'
@@ -624,12 +624,12 @@ const translationsData: Record<Language, Translations> = {
         {
           category: 'pagos',
           question: 'When is payment made, and when does the carrier head to pick up the load?',
-          answer: 'Full payment is made before the trip begins. When booking freight or machinery, the user deposits funds via C2P Mobile Payment or wire transfer. Only when the money is confirmed in bank custody does the carrier drive to load. Once delivery is certified with the completion PIN, RVTER instructs the bank to release the funds.'
+          answer: 'Full payment is made before the trip begins. When booking freight or machinery, the user deposits funds via C2P Mobile Payment or wire transfer. Only when the money is confirmed in bank custody does the carrier drive to load. Once delivery is certified with the delivery code, the client tells RVTER to release the funds.'
         },
         {
           category: 'seguridad',
           question: 'What is the difference between the Cabin PIN and Destination Delivery PIN?',
-          answer: 'The Cabin PIN is a temporary access code generated for the driver to use Cabin Mode on the highway without sharing personal login credentials. The Destination Delivery PIN is provided by the consignee upon inspecting the delivered cargo; entering it validates delivery and RVTER instructs the bank to release the payment held in bank custody.'
+          answer: 'The Cabin PIN is a temporary access code generated for the driver to use Cabin Mode on the highway without sharing personal login credentials. The Destination Delivery PIN is provided by the consignee upon inspecting the delivered cargo; entering it validates delivery and carries out the release order given by the client.'
         },
         {
           category: 'conductores',
