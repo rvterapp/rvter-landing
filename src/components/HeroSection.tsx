@@ -162,7 +162,7 @@ export const HeroSection: React.FC = () => {
                 {/* Real Smartphone with Active GPS Navigation Map */}
                 <div className="relative rounded-[48px] p-1.5 transition-transform">
                   <img
-                    src="/rvter-real-phone-gps.png"
+                    src="/rvter-app-pago-reservado.png"
                     alt={t.hero.phoneAlt}
                     className="w-full h-auto object-contain block drop-shadow-2xl"
                     loading="eager"
